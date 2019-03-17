@@ -11,7 +11,7 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
 
 
  
-# Features 
+
 # Main functionality
 - A user viewing all brands in well spent.
  - A user can select a brand :
