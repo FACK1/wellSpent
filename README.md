@@ -45,7 +45,7 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
 
 
 # Team Member
-- Sama Amro[https://github.com/Samaamro20]
-- Shaima Ihdoosh[https://github.com/shaima96]
-- Safa Amro[https://github.com/safaaamro]
+- [Sama Amro](https://github.com/Samaamro20)
+- [Shaima Ihdoosh](https://github.com/shaima96)
+- [Safa Amro](https://github.com/safaaamro)
     
