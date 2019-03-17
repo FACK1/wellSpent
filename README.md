@@ -4,7 +4,7 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
 
 # Breif summary of key requierments/features
 - Well Spent contains all brands that ethically.
-- - Each brand contains all details related to it.
+- Each brand contains all details related to it.
 - User can add suggestion brand and feedback .
 - Admin must be authorized to using the website .
 - Admin can add and update brand also delete feedback.
