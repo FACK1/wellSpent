@@ -4,7 +4,7 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
 
 # Breif summary of key requierments/features
 - Well Spent contains all brands that ethically.
-- Each brand contains all details releated to it.
+- - Each brand contains all details related to it.
 - User can add suggestion brand and feedback .
 - Admin must be authorized to using the website .
 - Admin can add and update brand also delete feedback.
@@ -13,16 +13,17 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
  
 # Features 
 # Main functionality
- - User viewing all brands in well spent.
- - User can select brand :
+- A user viewing all brands in well spent.
+ - A user can select a brand :
     - Enable to see all details about a brand.
     - Enable to suggest a new brand.
     - Enable to add feedback.
- - Admin can log in using the general user and password .
+ - Admin can log in using the general user and password.
  - Admin can select brand :
     - Enable to add and update details about a brand.
     - Enable to delete feedback.
  - Leave the account
+ 
  # Key Technologies   
  - React.js : https://reactjs.org/docs/getting-started.html
  - Sequalize : http://docs.sequelizejs.com/
