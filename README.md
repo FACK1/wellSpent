@@ -33,7 +33,7 @@ Well Spent is a web app that enables you to shope easy and  ethically using mode
  - Color Picker:https://www.npmjs.com/package/react-color-picker
  
 
-# User Guide
+
 # Development Setup
 - Make sure you have Node 8 and and NPM>5 installed
 - Run npm i to install npm deps
