@@ -1,0 +1,27 @@
+{
+  "name": "wellspent",
+  "version": "1.0.0",
+  "description": "WellSpent is a web app that enables you to shop ethically and get the ethical details about brands.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm run start",
+    "dev": "cd Server && concurrently \"npm run start \" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACK1/wellSpent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACK1/wellSpent/issues"
+  },
+  "homepage": "https://github.com/FACK1/wellSpent#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "env2": "^2.2.2",
+    "express": "^4.16.4",
+    "i": "^0.3.6"
+  }
+}
