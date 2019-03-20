@@ -8,7 +8,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -16,11 +16,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:9000",
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:5000"
 }

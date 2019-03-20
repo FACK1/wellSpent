@@ -4,9 +4,11 @@
   "description": "WellSpent is a web app that enables you to shop ethically and get the ethical details about brands.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-client": "cd client && npm i",
+    "build": "cd client && npm run build",
     "client": "cd client && npm run start",
-    "dev": "cd Server && concurrently \"npm run start \" \"npm run client\""
+    "server": "nodemon Server/server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server \" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
     "concurrently": "^4.1.0",
     "env2": "^2.2.2",
     "express": "^4.16.4",
-    "i": "^0.3.6"
+    "i": "^0.3.6",
+    "nodemon": "^1.18.10",
+    "path": "^0.12.7"
   }
 }
