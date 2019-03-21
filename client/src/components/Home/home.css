@@ -70,8 +70,8 @@
 }
 .aboutus{
   display: inline-flex;
-  padding-left: 30px;
-  padding-right: 40px;
+  padding-left: 70px;
+  padding-right: 70px;
   max-width: 100%;
 }
 .a1{
@@ -83,8 +83,9 @@
 }
 .a1 p{
   font-size: 25pt;
-  color: darkkhaki;
+  color: #c5c4b9;
   font-weight: bold;
+  text-align: left;
 }
 
 .ext{
@@ -93,7 +94,7 @@
 }
 
 .ext a{
-  color: blue;
+  color: #1389A6;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
 }
@@ -103,4 +104,14 @@
   padding-top: 50px !important;
   padding-bottom: 50px;
   font-weight: lighter !important;
+}
+.a1{
+  display: inline-flex;
+}
+
+.pd{
+  padding-top: 28px;
+}
+.bd{
+  margin-top: 51px;
 }
