@@ -42,13 +42,9 @@ class Brand extends React.Component {
           </div>
         </div>
         <div className="more">
-          <h3> Cost:10$</h3>
+          <h3> Cost:10</h3>
           <h3> ProductType:Socided Anonima</h3>
-          <h3>
-            Explanation : We looked at Zara's score in the TearFund report
-            <br /> and the got a ranking of A+ for transparency,
-            <br /> which is why we gave it a score of 80 for Labour policy.
-          </h3>
+          <h3>Explanation :The got a ranking of A for transparency</h3>
         </div>
       </div>
     );
