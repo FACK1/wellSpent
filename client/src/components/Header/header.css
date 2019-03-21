@@ -30,6 +30,11 @@ display: inline-flex;
 padding-right: 20px;
 }
 
+.nav-2 button{
+  background-color: #1389A6;
+  border-style: none;
+}
+
 .nav-1 span{
   font-weight: bold;
   font-size: 17pt;
