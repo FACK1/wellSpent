@@ -2,7 +2,7 @@
 .main{
   background-image: url(./assets/bg.jpeg);
   height: 360px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .main h1{
@@ -16,9 +16,10 @@
   text-align: center;
   font-family: 'Alegreya Sans SC', sans-serif;
   margin-top: auto;
+  font-size: 20pt;
 }
 
-.isearch{
+.pt-input{
   height:40px;
   width:500px;
   border-radius: 20px;
@@ -29,7 +30,7 @@
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: Gray;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 19px;
 }
 
@@ -38,11 +39,68 @@
   border-radius: 10px;
   height: 40px;
   font-size: 19pt;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 5px;
+  border-style: none;
 }
 .main-2{
   display: inline-flex;
-  margin-left: 30%;
+  margin-left: 26%;
+}
 
+.result{
+    margin-left: 33%;
+    width: 484px;
+    border-radius: 10px;
+  margin-top: -17px;
+  display: none;
+
+}
+
+.tabout{
+  margin-top: 105px;
+}
+
+.tabout h3{
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 20pt;
+}
+.aboutus{
+  display: inline-flex;
+  padding-left: 30px;
+  padding-right: 40px;
+  max-width: 100%;
+}
+.a1{
+  margin-left: 10px;
+  width: 30%;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: center;
+}
+.a1 p{
+  font-size: 25pt;
+  color: darkkhaki;
+  font-weight: bold;
+}
+
+.ext{
+  background-color: #F9F9F9;
+  margin-bottom: 20px;
+}
+
+.ext a{
+  color: blue;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ext h1{
+  font-family: 'Roboto', sans-serif;
+  padding-top: 50px !important;
+  padding-bottom: 50px;
+  font-weight: lighter !important;
 }
