@@ -1,0 +1,100 @@
+.back{
+  width:30px;
+  height:30px;
+  padding-right: 18px;
+  padding-top: 15px;
+
+}
+.pargraph{
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: 'Alegreya Sans SC', sans-serif;
+
+}
+.images{
+  width:250px;
+  height:250px;
+  padding-left: 90px;
+}
+ .name{
+   font-size: 16pt;
+   font-weight: bold;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   color: black;
+   padding-left: 180px;
+
+ }
+.score{
+ width: 150px;
+ padding:0.5px;
+ background-color:#4EA077;
+ text-align: center;
+ height:150px;
+ border-radius: 5px;
+
+}
+.score1{
+  width: 170px;
+  padding:0.5px;
+  background-color:#4EA077;
+  text-align: center;
+  border-radius: 5px;
+}
+.score2{
+  width: 170px;
+  padding:0.5px;
+  background-color:red;
+  text-align: center;
+  border-radius: 5px;
+}
+.score3{
+  width: 170px;
+  padding:0.5px;
+  background-color:yellow;
+  text-align: center;
+  border-radius: 5px;
+}
+ .overall{
+  color:black;
+  font-size: 12pt;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  padding-left: 400px;
+  margin-top: -320px;
+ }
+ .more{
+   font-size: 14px;
+   font-family: 'Alegreya Sans SC', sans-serif;
+ }
+ .labour {
+   padding-left: 700px;
+   padding-right: 0.2px;
+   font-size: 12px;
+
+ }
+ .enviorment{
+  padding-left: 700px;
+  font-size: 12px;
+   padding-top: 12px;
+
+ }
+ .animal{
+  padding-left: 700px;
+  font-size: 12px;
+   padding-top: 12px;
+ }
+ .detail{
+     margin-top: -150px;
+     margin-left: -80px;
+}
+ .more{
+   margin-left: 400px;
+   margin-top: 40px;
+ }
+ .root{
+   margin-left: 100px;
+   padding-top: 50px;
+ }
+
+.container{
+  display: inline-flex;
+}

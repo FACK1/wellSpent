@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from './components/Header'
-
+import Header from "./components/Header";
+import Brand from "./components/Brand";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header />
-      
-          <h1>Hello Buty Girls ^_^</h1>
-
+        <Header />
+        <Brand />
       </div>
     );
   }
