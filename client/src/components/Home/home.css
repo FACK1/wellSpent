@@ -1,0 +1,48 @@
+
+.main{
+  background-image: url(./assets/bg.jpeg);
+  height: 360px;
+  width: 100%;
+}
+
+.main h1{
+  text-align: center;
+  padding-top: 100px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  margin-top: auto;
+}
+
+.main h2{
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  margin-top: auto;
+}
+
+.isearch{
+  height:40px;
+  width:500px;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: Gray;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 19px;
+}
+
+.brands{
+  background-color:#1389A6;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 19pt;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  margin-top: 5px;
+}
+.main-2{
+  display: inline-flex;
+  margin-left: 30%;
+
+}
