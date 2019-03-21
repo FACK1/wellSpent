@@ -1,22 +1,12 @@
 import React, {Component} from 'react';
 import './home.css';
 
-export default class AutoComplete extends Component {
+export default class Home extends Component {
 
   constructor(props) {
       super(props);
-      this.ensureFocus = this.ensureFocus;
     }
-  renderContent() {
-      const items = [1,2,3,4];
-      if (this.props.items) {
-        let index = 0;
-        this.props.items.forEach((item) => {
-          index++;
-          items.push(this.renderItem({item, index}));
-        });
-      }
-    }
+
   render() {
     return (
       <div className='main'>
