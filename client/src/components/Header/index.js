@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css'
-const Header = ({ classes, history }) =>{
+const Header = () =>{
     return (
       <div className='nav'>
       <div className="nav-1">
