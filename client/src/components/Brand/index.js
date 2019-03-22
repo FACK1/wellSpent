@@ -2,8 +2,30 @@ import React from "react";
 import imageback from "./image.png";
 import brand from "./Rectangle.png";
 import "./brand.css";
+import axios from "axios";
 
 class Brand extends React.Component {
+  componentDidMount() {
+    const id = 1;
+    axios
+      .get(`/brand/${id}`)
+      .then(({ data }) => {
+        this.setState({
+          image: data.image,
+          name: data.name,
+          OverallScore: data.OverallScore,
+          EnviormentScore: data.EnviormentScore,
+          AnimalRightScore: data.AnimalRightScore,
+          Cost: data.Cost,
+          ProductType: data.ProductType,
+          Explanation: data.Explanation
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   render() {
     return (
       <div className="root">
