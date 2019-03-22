@@ -1,28 +1,25 @@
 .back{
   width:30px;
   height:30px;
-  padding-right: 18px;
-  padding-top: 15px;
-
+  padding-top: 10px;
+  padding-right: 12px;
 }
 .pargraph{
   font-size: 16pt;
   font-weight: bold;
-  font-family: 'Alegreya Sans SC', sans-serif;
-
+  font-family: 'Roboto', sans-serif;
 }
 .images{
   width:250px;
   height:250px;
-  padding-left: 90px;
+  padding-right: 800px;
 }
  .name{
    font-size: 16pt;
    font-weight: bold;
-   font-family: 'Alegreya Sans SC', sans-serif;
+   font-family: 'Roboto', sans-serif;
    color: black;
-   padding-left: 180px;
-
+   padding-right: 800px;
  }
 .score{
  width: 150px;
@@ -33,6 +30,7 @@
  border-radius: 5px;
 
 }
+
 .score1{
   width: 170px;
   padding:0.5px;
@@ -57,13 +55,16 @@
  .overall{
   color:black;
   font-size: 12pt;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-left: 400px;
   margin-top: -320px;
  }
  .more{
    font-size: 14px;
-   font-family: 'Alegreya Sans SC', sans-serif;
+   font-family: 'Roboto', sans-serif;
+   text-align: left;
+   margin-left: 402px;
+
  }
  .labour {
    padding-left: 700px;
@@ -86,15 +87,13 @@
      margin-top: -150px;
      margin-left: -80px;
 }
- .more{
-   margin-left: 400px;
-   margin-top: 40px;
- }
+
  .root{
-   margin-left: 100px;
+   margin-left: 110px;
    padding-top: 50px;
  }
 
 .container{
   display: inline-flex;
+  margin-right:1000px;
 }
