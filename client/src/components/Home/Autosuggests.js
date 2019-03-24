@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './Autosuggests.css';
 import Autosuggest from 'react-autosuggest';
+import axios from "axios";
+
 const brands = [
   'Andy','Zara','ADAM','Ball','AA','AB','AC','BA','BB'
 ];
@@ -28,14 +30,33 @@ function renderSuggestion(suggestion) {
   );
 }
 export default class Autosuggests extends Component {
-
   constructor() {
     super();
-
     this.state = {
       value: '',
-      suggestions: []
+      suggestions: [],
+      loading: false
     };
+  }
+  componentDidMount() {
+    axios
+      .get("/brands")
+      .then(({ data }) => {
+        const brands = data.map(brand => {
+          return {
+            id: brand.id,
+            name: brand.name
+          };
+        });
+        this.setState({
+          brands,
+          loading: true
+        });
+      })
+      .catch(() => {
+        const { history } = this.props;
+        history.push("/error");
+      });
   }
 
   onChange = (event, { newValue, method }) => {
@@ -48,7 +69,6 @@ export default class Autosuggests extends Component {
     this.setState({
       suggestions: getSuggestions(value)
     });
-    console.log(this.suggestions);
   };
 
   onSuggestionsClearRequested = () => {
