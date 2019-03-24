@@ -3,14 +3,10 @@ import './Autosuggests.css';
 import Autosuggest from 'react-autosuggest';
 import axios from "axios";
 
-const brands = [
-  'Andy','Zara','ADAM','Ball','AA','AB','AC','BA','BB'
-];
-
+let brands = [];
 function escapeRegexCharacters(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
-
 function getSuggestions(value) {
   const escapedValue = escapeRegexCharacters(value.trim());
   if (escapedValue === '') {
@@ -19,40 +15,42 @@ function getSuggestions(value) {
   const regex = new RegExp('^' + escapedValue, 'i');
   return brands.filter(brand => regex.test(brand));
 }
-
 function getSuggestionValue(suggestion) {
   return suggestion;
 }
-
 function renderSuggestion(suggestion) {
   return (
     <span>{suggestion}</span>
   );
 }
+
 export default class Autosuggests extends Component {
   state = {
       value: '',
       suggestions: [],
-      loading: false
+      loading: false,
+      brandss:[]
     };
     componentDidMount() {
        axios
          .get("/brands")
          .then(({ data }) => {
-           const brands = data.map(brand => {
+            this.brandss = data.slice();
+            brands = data.map(brand => {
              return {
                id: brand.id,
                name: brand.name
              };
            });
            this.setState({
-             brands,
+             brandss:brands,
              loading: true
            });
+           brands=this.brandss.slice();
          })
+
          .catch(() => {
-           const { history } = this.props;
-           history.push("/error");
+          console.log("Error");
          });
      }
   onChange = (event, { newValue, method }) => {
@@ -72,6 +70,7 @@ export default class Autosuggests extends Component {
       suggestions: []
     });
   };
+
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
