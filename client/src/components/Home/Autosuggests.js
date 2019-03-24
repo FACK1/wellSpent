@@ -30,35 +30,31 @@ function renderSuggestion(suggestion) {
   );
 }
 export default class Autosuggests extends Component {
-  constructor() {
-    super();
-    this.state = {
+  state = {
       value: '',
       suggestions: [],
       loading: false
     };
-  }
-  componentDidMount() {
-    axios
-      .get("/brands")
-      .then(({ data }) => {
-        const brands = data.map(brand => {
-          return {
-            id: brand.id,
-            name: brand.name
-          };
-        });
-        this.setState({
-          brands,
-          loading: true
-        });
-      })
-      .catch(() => {
-        const { history } = this.props;
-        history.push("/error");
-      });
-  }
-
+    componentDidMount() {
+       axios
+         .get("/brands")
+         .then(({ data }) => {
+           const brands = data.map(brand => {
+             return {
+               id: brand.id,
+               name: brand.name
+             };
+           });
+           this.setState({
+             brands,
+             loading: true
+           });
+         })
+         .catch(() => {
+           const { history } = this.props;
+           history.push("/error");
+         });
+     }
   onChange = (event, { newValue, method }) => {
     this.setState({
       value: newValue

@@ -24,6 +24,7 @@
   "homepage": "https://github.com/FACK1/wellSpent#readme",
   "dependencies": {
     "@blueprintjs/core": "^3.14.1",
+    "airtable": "^0.5.9",
     "env2": "^2.2.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
