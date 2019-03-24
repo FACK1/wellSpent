@@ -48,7 +48,6 @@ export default class Autosuggests extends Component {
     this.setState({
       suggestions: getSuggestions(value)
     });
-    console.log(this.suggestions);
   };
 
   onSuggestionsClearRequested = () => {
