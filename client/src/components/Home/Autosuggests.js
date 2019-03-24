@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Autosuggests.css';
 import Autosuggest from 'react-autosuggest';
+
 const brands = [
   'Andy','Zara','ADAM','Ball','AA','AB','AC','BA','BB'
 ];
