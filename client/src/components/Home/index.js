@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './home.css';
-import Autocomplete from './AutoComplete';
+import Autosuggests from './Autosuggests'
+
 export default class Home extends Component {
   render() {
     return (
@@ -10,7 +11,7 @@ export default class Home extends Component {
         <h2>Helping you to make your shop more ethical</h2>
       </div>
       <div className="main-2">
-      <Autocomplete/>
+      <Autosuggests />
         <button className="brands">Brands</button>
       </div>
       <div className="result">
