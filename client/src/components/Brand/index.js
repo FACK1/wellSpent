@@ -11,13 +11,10 @@ class Brand extends React.Component {
           <img className="back" src={imageback} alt="img" />
           <p className="pargraph"> Brand Details </p>
         </div>
-        <div className="image">
-          <img className="images" src={brand} alt="img" />
-        </div>
+        <img className="images" src={brand} alt="img" />
         <div className="name">
           <h3>Zara</h3>
         </div>
-        <div className="details" />
         <div className="overall">
           <div className="score">
             <h3>95 </h3>
