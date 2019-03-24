@@ -6,7 +6,7 @@ exports.getBrands = (req, res) => {
 
 
   var Airtable = require('airtable');
-  var base = new Airtable({apiKey:process.env.APIKEY}).base(DB_NAME);
+  var base = new Airtable({apiKey:process.env.APIKEY}).base(process.env.DB_NAME);
 
   base('Brands').select({
     view: 'Grid view'
@@ -20,6 +20,4 @@ exports.getBrands = (req, res) => {
     if (err) { console.error(err); return; }
 
 });
-
-
 };

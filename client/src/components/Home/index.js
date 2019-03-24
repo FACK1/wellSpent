@@ -14,10 +14,6 @@ export default class Home extends Component {
       <Autosuggests />
         <button className="brands">Brands</button>
       </div>
-      <div className="result">
-        <p>res1</p>
-        <p>res2</p>
-      </div>
       <br/>
       <div className="tabout">
       <h3>About US</h3>
