@@ -7,28 +7,6 @@ class Brands extends Component {
     loading: false
   };
 
-  // componentDidMount() {
-  //   axios
-  //     .get("/brands")
-  //     .then(({ data }) => {
-  //       const brands = data.map(brands => {
-  //         return {
-  //           id: brands.id,
-  //           image_url: brands.imge,
-  //           name: brands.name
-  //         };
-  //       });
-  //       this.setState({
-  //         brands,
-  //         loading: true
-  //       });
-  //     })
-  //     .catch(() => {
-  //       const { history } = this.props;
-  //       history.push("/error");
-  //     });
-  // }
-
   render() {
     let Brands = this.state.brands;
     return (
