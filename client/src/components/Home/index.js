@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './home.css';
-
+import Autocomplete from './AutoComplete';
 export default class Home extends Component {
   render() {
     return (
@@ -10,9 +10,7 @@ export default class Home extends Component {
         <h2>Helping you to make your shop more ethical</h2>
       </div>
       <div className="main-2">
-        <form>
-      <input placeholder='Search for brands' className="pt-input"/>
-        </form>
+      <Autocomplete/>
         <button className="brands">Brands</button>
       </div>
       <div className="result">
