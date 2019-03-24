@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/FACK1/wellSpent#readme",
   "dependencies": {
+    "@blueprintjs/core": "^3.14.1",
     "env2": "^2.2.2",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -31,10 +32,13 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "express": "^4.16.4",
-    "path": "^0.12.7"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "eslint": "^5.12.0",
     "nodemon": "^1.18.10"
   }
 }

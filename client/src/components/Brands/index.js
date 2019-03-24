@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./brands.css";
 import addis from "./addis.png";
+
 //
 // class Brands extends Component {
 //   state = {

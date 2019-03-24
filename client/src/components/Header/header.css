@@ -1,0 +1,42 @@
+
+.nav{
+  height: 60px;
+  max-width: 100%;
+  background-color: #1389A6;
+  padding-left: 5px;
+
+}
+
+.nav h3{
+  text-align: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.nav-1{
+float: left;
+margin-left: 20px;
+}
+
+.nav-2{
+float: right;
+display: inline-flex;
+margin-right: 20px;
+}
+
+.nav-2 h3{
+float: right;
+display: inline-flex;
+padding-right: 20px;
+}
+
+.nav-2 button{
+  background-color: #1389A6;
+  border-style: none;
+}
+
+.nav-1 span{
+  font-weight: bold;
+  font-size: 17pt;
+}
