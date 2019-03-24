@@ -10,16 +10,17 @@ const Header = () => {
         </h3>
       </div>
       <div className="nav-2">
-        <a href="#">
+        <Link to="/">
           <h3>Home</h3>
-        </a>
+        </Link>
+
         <Link to="/brands">
           <h3>Brands</h3>
         </Link>
 
-        <a href="#">
+        <Link to="/">
           <h3>About Us</h3>
-        </a>
+        </Link>
       </div>
     </div>
   );

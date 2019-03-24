@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   render() {
@@ -13,7 +14,9 @@ export default class Home extends Component {
           <form>
             <input placeholder="Search for brands" className="pt-input" />
           </form>
-          <button className="brands">Brands</button>
+          <Link to="/brands">
+            <button className="brands">Brands</button>
+          </Link>
         </div>
         <div className="result">
           <p>res1</p>
