@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import "./brands.css";
 import addis from "./addis.png";
 
-//
-// class Brands extends Component {
-//   state = {
-//     error: null
-//   };
+class Brands extends Component {
+  state = {
+    loading: false
+  };
 
-export default class Home extends Component {
   render() {
     return (
       <div>
@@ -59,3 +57,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Brands;
