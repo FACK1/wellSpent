@@ -28,16 +28,11 @@ function renderSuggestion(suggestion) {
   );
 }
 export default class Autosuggests extends Component {
-
-  constructor() {
-    super();
-
-    this.state = {
+  state = {
       value: '',
       suggestions: []
     };
-  }
-
+    
   onChange = (event, { newValue, method }) => {
     this.setState({
       value: newValue
