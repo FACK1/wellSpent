@@ -1,11 +1,12 @@
-exports.getBrand = (req, res) => {
-  const Brand = {
+exports.getBrands = (req, res) => {
+  const Brands = {
     name: 'Zara',
     overallscore: 95,
     enviormentscore: 70,
-    animalrightscore: 95,
-    discription: 'Adidas SA is a Spanish fast fashion retailer based in Arteixo in
-      Galicia' ,
+    labourscore: 95,
+    discription:
+      'Adidas SA is a Spanish fast fashion retailer based in Arteixo in Galicia.',
   };
-  res.json(Brand);
+
+  res.json(Brands);
 };

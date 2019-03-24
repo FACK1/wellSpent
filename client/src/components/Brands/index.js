@@ -1,14 +1,34 @@
 import React, { Component } from "react";
 import "./brands.css";
-// import axios from "axios";
+import axios from "axios";
 
 class Brands extends Component {
-  state = {
-    loading: false
-  };
+  state = {};
+  componentDidMount() {
+    axios
+      .get(`/brands`)
+      .then(({ data }) => {
+        this.setState({
+          name: data.name,
+          overallscore: data.overallscore,
+          enviormentscore: data.enviormentscore,
+          labourscore: data.labourscore,
+          discription: data.discription
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
   render() {
-    let Brands = this.state.brands;
+    const {
+      name,
+      overallscore,
+      labourscore,
+      enviormentscore,
+      discription
+    } = this.state;
     return (
       <div>
         <div className="div1">
@@ -28,29 +48,19 @@ class Brands extends Component {
         <div className="div-box">
           <div className="imge" />
           <div className="descrip">
-            <p className="name">ADDIS</p>
-            <p className="description">
-              {" "}
-              Adidas SA is a Spanish fast fashion retailer based in Arteixo in
-              Galicia.
-            </p>
+            <p className="name">{name}</p>
+            <p className="description">{discription}</p>
             <button className="view">view</button>
           </div>
           <div className="scrol">
             <div className="scrol1">
-              {" "}
-              95 <br />
-              Overall score
+              {overallscore} <br /> overallscore
             </div>
             <div className="scrol2">
-              {" "}
-              70 <br />
-              Labour score
+              {labourscore} <br /> labourscore
             </div>
             <div className="scrol3">
-              {" "}
-              95 <br />
-              Enviroment score
+              {enviormentscore} <br /> enviormentscore
             </div>
           </div>
         </div>
