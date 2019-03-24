@@ -1,0 +1,143 @@
+.div1 {
+  display: inline-flex;
+}
+.div10 {
+  display: inline-flex;
+  margin-left: 0px;
+  margin-right: 700px;
+}
+.div11 {
+  display: inline-flex;
+}
+
+.back {
+  background-image: url("image 10.png");
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+}
+.par {
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
+  font-size: 25pt;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.add {
+  background-image: url("image 9.1.png");
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  margin-top: 40px;
+}
+.par2 {
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
+  font-size: 15pt;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.diva {
+  background-color: #f4f4f4;
+  width: 95%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.par3 {
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
+  font-size: 15pt;
+  text-align: left;
+  margin-left: 30px;
+  color: #1389a6;
+  margin-top: 7px;
+}
+.div-box {
+  background-color: white;
+  border-color: #e5e5e5;
+  width: 80%;
+  height: 220px;
+  border-style: groove;
+  justify-content: center;
+  margin-left: 130px;
+  border-radius: 20px;
+  margin-top: 30px;
+  display: flex;
+}
+/* .img {
+  width: 30px;
+  height: 30px;
+  margin-right: 500px;
+  margin-top: 30px;
+} */
+.imge {
+  background-color: #f4f4f4;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+.name {
+  font-family: "Assistant", sans-serif;
+  color: #1389a6;
+  margin-right: 200px;
+  font-size: 30pt;
+  margin-top: -2px;
+}
+.descrip {
+  margin-right: 250px;
+}
+.description {
+  font-family: "Assistant", sans-serif;
+  margin-top: -8px;
+  margin-left: 20px;
+  width: 430px;
+}
+.view {
+  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: #1389a6;
+  color: white;
+  font-family: "Assistant", sans-serif;
+  margin-top: 20px;
+}
+.scrol {
+  display: inline-block;
+}
+.scrol1 {
+  background-color: #4ea077;
+  width: 90px;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.scrol2 {
+  background-color: #c5920e;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 10pt;
+  text-align: center;
+}
+.scrol3 {
+  background-color: #4ea077;
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 8px;
+  font-size: 10pt;
+  text-align: center;
+}
