@@ -1,14 +1,8 @@
 import React, {Component} from 'react';
 import './Autosuggests.css';
 import Autosuggest from 'react-autosuggest';
-<<<<<<< HEAD
-
-const brands = [
-  'Andy','Zara','ADAM','Ball','AA','AB','AC','BA','BB'
-];
-=======
 import axios from "axios";
->>>>>>> e0b1c639bc6b9fb5d2d8bef105341793fe57505a
+import { Link } from "react-router-dom";
 
 let brands = [];
 function escapeRegexCharacters(str) {
@@ -27,7 +21,13 @@ function getSuggestionValue(suggestion) {
 }
 function renderSuggestion(suggestion) {
   return (
-    <span>{suggestion}</span>
+    <span>
+     <Link
+      to={`/brand/${suggestion}`}
+        className="button-link"  >
+        {suggestion}
+          </Link>
+</span>
   );
 }
 
