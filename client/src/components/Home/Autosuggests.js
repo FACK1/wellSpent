@@ -58,13 +58,11 @@ export default class Autosuggests extends Component {
       value: newValue
     });
   };
-
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
       suggestions: getSuggestions(value)
     });
   };
-
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: []

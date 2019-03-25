@@ -41,6 +41,14 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+<<<<<<< HEAD
+=======
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+>>>>>>> a1c74b505969f3798644cad0db81a5b5d9a7c454
     "nodemon": "^1.18.10"
   }
 }
