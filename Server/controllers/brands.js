@@ -1,13 +1,8 @@
 require('env2')('.env');
+var Airtable = require('airtable');
 
 exports.getBrands = (req, res) => {
-  let brands = [];
-  let brand={};
-
-
-  var Airtable = require('airtable');
   var base = new Airtable({apiKey:process.env.APIKEY}).base(process.env.DB_NAME);
-
   base('Brands').select({
     view: 'Grid view'
 }).eachPage(function page(records, fetchNextPage) {
