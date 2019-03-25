@@ -1,9 +1,12 @@
-const Brand = {
-  name: "Zara",
-  OverallScore: 100,
-  EnviormentScore: 90,
-  AnimalRightScore: 70,
-  Cost: 10,
-  ProductType: "Socided Anonima",
-  Explanation: "its got a ranking of A+ for transparency"
+exports.getBrand = (req, res) => {
+  const Brand = {
+    name: 'Zara',
+    overallscore: 100,
+    enviormentscore: 90,
+    animalrightscore: 70,
+    cost: 10,
+    producttype: 'Socided Anonima',
+    explanation: 'its got a ranking of A+ for transparency',
+  };
+  res.json(Brand);
 };
