@@ -48,7 +48,6 @@ class Brand extends React.Component {
           <div className="container">
             <img className="back" src={imageback} alt="img" />
             <p className="pargraph"> Brand Details </p>
-
           </div>
           <div className="image">
             <img className="images" src={image} alt="img" />
