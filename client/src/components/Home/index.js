@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
-import './home.css';
-import Autosuggests from './Autosuggests'
+import React, { Component } from "react";
+import "./home.css";
+import { Link } from "react-router-dom";
+import "./home.css";
+import Autosuggests from "./Autosuggests";
 
 export default class Home extends Component {
   render() {
@@ -13,10 +15,6 @@ export default class Home extends Component {
       <div className="main-2">
       <Autosuggests />
         <button className="brands">Brands</button>
-      </div>
-      <div className="result">
-        <p>res1</p>
-        <p>res2</p>
       </div>
       <br/>
       <div className="tabout">
@@ -37,9 +35,14 @@ export default class Home extends Component {
       </div>
       </div>
 
-      <div className='ext'>
-        <h1> Don’t have our Chrome Extension yet? Find out more information <a href="#">Here</a> </h1>
+        <div className="ext">
+          <h1>
+            {" "}
+            Don’t have our Chrome Extension yet? Find out more information{" "}
+            <a href="#">Here</a>{" "}
+          </h1>
+        </div>
       </div>
-      </div>
-    )
-  }}
+    );
+  }
+}
