@@ -56,3 +56,7 @@
 .react-autosuggest__suggestion--highlighted {
   background-color: #ddd;
 }
+.button-link{
+  text-decoration: none;
+  color: black;
+}
