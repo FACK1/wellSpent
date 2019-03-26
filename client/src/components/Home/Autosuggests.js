@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Autosuggests.css';
 import Autosuggest from 'react-autosuggest';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 let brands = [];
 function escapeRegexCharacters(str) {
@@ -20,7 +21,13 @@ function getSuggestionValue(suggestion) {
 }
 function renderSuggestion(suggestion) {
   return (
-    <span>{suggestion}</span>
+    <span>
+     <Link
+      to={`/brand/${suggestion}`}
+        className="button-link"  >
+        {suggestion}
+          </Link>
+</span>
   );
 }
 
@@ -28,25 +35,15 @@ export default class Autosuggests extends Component {
   state = {
       value: '',
       suggestions: [],
-      loading: false,
-      brandss:[]
     };
     componentDidMount() {
        axios
          .get("/brands")
          .then(({ data }) => {
-            this.brandss = data.slice();
-            brands = data.map(brand => {
-             return {
-               id: brand.id,
-               name: brand.name
-             };
+        const result= data.map(brand => {
+             return (brand.name)
            });
-           this.setState({
-             brandss:brands,
-             loading: true
-           });
-           brands=this.brandss.slice();
+          brands= result;
          })
 
          .catch(() => {
