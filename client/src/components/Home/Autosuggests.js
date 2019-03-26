@@ -44,16 +44,13 @@ export default class Autosuggests extends Component {
          .then(({ data }) => {
             this.brandss = data.slice();
             brands = data.map(brand => {
-             return {
-               id: brand.id,
-               name: brand.name
-             };
+              brands.push(brand.name);
+             return (brand.name)
            });
            this.setState({
              brandss:brands,
              loading: true
            });
-           brands=this.brandss.slice();
          })
 
          .catch(() => {

@@ -2,18 +2,6 @@ require('env2')('.env');
 const Airtable = require('airtable');
 
 exports.getBrands = (req, res) => {
-<<<<<<< HEAD
-  const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
-  base('Brands').select({
-    view: 'Grid view',
-  }).eachPage((records, fetchNextPage) => {
-    const result = records.map(record => record.get('Name'));
-    fetchNextPage();
-    res.json(result);
-  }, (err) => {
-    if (err) { console.error(err); }
-  });
-=======
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(
     process.env.DB_NAME,
   );
@@ -44,5 +32,4 @@ exports.getBrands = (req, res) => {
         }
       },
     );
->>>>>>> 6d6c549a195f3bb080188c6111f9e3e240414222
 };

@@ -8,30 +8,6 @@ export default class Home extends Component {
       loading: false,
       info:[]
     };
-<<<<<<< HEAD
-
-  componentDidMount() {
-   axios
-     .get("/aboutus")
-     .then(({ data }) => {
-        data = data.map(brand => {
-         return {
-           what_is_it: data.what_is_it,
-           why: data.why,
-           our_principle : data.our_principle
-         };
-       });
-       this.setState({
-         info:data,
-         loading: true
-       });
-     })
-     .catch(() => {
-      console.log("Error");
-     });
-  }
-
-=======
     componentDidMount() {
        axios
          .get("/aboutus")
@@ -53,8 +29,7 @@ export default class Home extends Component {
           console.log("Error");
          });
      }
-     
->>>>>>> 18aa698b1c350dcaca7718be66ef431ee796c10d
+
   render() {
     return (
       <div className='main'>
