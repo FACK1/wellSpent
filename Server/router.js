@@ -3,5 +3,6 @@ const { getBrand } = require('./controllers/brand.js');
 
 const router = express.Router();
 
-router.get('/brand/:id', getBrand);
+router.get('/brand/:name', getBrand);
+
 module.exports = router;
