@@ -5,7 +5,6 @@ import axios from "axios";
 
 export default class Home extends Component {
   state = {
-      loading: false,
       info:[]
     };
     componentDidMount() {
@@ -13,9 +12,8 @@ export default class Home extends Component {
          .get("/aboutus")
          .then(({ data }) => {
            this.setState({
-             info:data[0],
-             loading: true
-           });
+             info:data[0]
+                      });
          })
          .catch(() => {
           console.log("Error");
