@@ -12,15 +12,8 @@ export default class Home extends Component {
        axios
          .get("/aboutus")
          .then(({ data }) => {
-          const  result = data.map(d => {
-             return {
-               what_is_it: d.what_is_it,
-               why: d.why,
-               our_principle:d.our_principle
-             };
-           });
            this.setState({
-             info:result[0],
+             info:data[0],
              loading: true
            });
          })
@@ -30,6 +23,7 @@ export default class Home extends Component {
      }
 
   render() {
+    const {info} = this.state;
     return (
       <div className='main'>
       <div>
@@ -46,15 +40,15 @@ export default class Home extends Component {
       <div className="aboutus">
         <div className='a1'>
         <p>01</p>
-          <h4 className='bd'>{this.state.info.what_is_it}</h4>
+          <h4 className='bd'>{info.what_is_it}</h4>
          </div>
         <div className='a1'>
           <p>02</p>
-          <h4 className='pd'>{this.state.info.why}</h4>
+          <h4 className='pd'>{info.why}</h4>
          </div>
         <div className='a1'>
           <p>03</p>
-          <h4 className='pd'>{this.state.info.our_principle}</h4>
+          <h4 className='pd'>{info.our_principle}</h4>
          </div>
       </div>
       </div>
