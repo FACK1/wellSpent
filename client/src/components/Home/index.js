@@ -1,10 +1,35 @@
 import React, { Component } from "react";
 import "./home.css";
-import { Link } from "react-router-dom";
-import "./home.css";
 import Autosuggests from "./Autosuggests";
+import axios from "axios";
 
 export default class Home extends Component {
+  state = {
+      loading: false,
+      info:[]
+    };
+
+  componentDidMount() {
+   axios
+     .get("/aboutus")
+     .then(({ data }) => {
+        data = data.map(brand => {
+         return {
+           what_is_it: data.what_is_it,
+           why: data.why,
+           our_principle : data.our_principle
+         };
+       });
+       this.setState({
+         info:data,
+         loading: true
+       });
+     })
+     .catch(() => {
+      console.log("Error");
+     });
+  }
+
   render() {
     return (
       <div className='main'>
