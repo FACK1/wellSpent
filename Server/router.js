@@ -4,7 +4,8 @@ const { getBrands } = require('./controllers/brands.js');
 const { getAboutus } = require('./controllers/aboutus.js');
 
 const router = express.Router();
-router.get('/brand/:id', getBrand);
+
+router.get('/brand/:name', getBrand);
 router.get('/brands', getBrands);
 router.get('/aboutus', getAboutus);
 

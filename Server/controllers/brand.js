@@ -1,12 +1,21 @@
+const Airtable = require('airtable');
+
 exports.getBrand = (req, res) => {
-  const Brand = {
-    name: 'Zara',
-    overallscore: 100,
-    enviormentscore: 90,
-    animalrightscore: 70,
-    cost: 10,
-    producttype: 'Socided Anonima',
-    explanation: 'its got a ranking of A+ for transparency',
-  };
-  res.json(Brand);
+  const { name } = req.params;
+  const base = new Airtable({ apiKey: 'keyYymTkZ8tlYgUmY' }).base('appNifWvpBhZkgaLk');
+  base('Brands')
+    .select({
+      view: 'API Response',
+      filterByFormula: `{Name}="${name}"`,
+    })
+    .eachPage(
+      (records, fetchNextPage) => {
+        const result = records.map(record => record.fields);
+        fetchNextPage();
+        res.json(result);
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
 };
