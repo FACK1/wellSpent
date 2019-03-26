@@ -12,8 +12,7 @@ export default class Home extends Component {
        axios
          .get("/aboutus")
          .then(({ data }) => {
-            this.info = data.slice();
-            data = data.map(d => {
+          const  result = data.map(d => {
              return {
                what_is_it: d.what_is_it,
                why: d.why,
@@ -21,7 +20,7 @@ export default class Home extends Component {
              };
            });
            this.setState({
-             info:data[0],
+             info:result[0],
              loading: true
            });
          })
@@ -29,7 +28,7 @@ export default class Home extends Component {
           console.log("Error");
          });
      }
-     
+
   render() {
     return (
       <div className='main'>
