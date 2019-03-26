@@ -7,15 +7,15 @@ exports.getBrand = (req, res) => {
 
   base('Brands')
     .select({
-      filterByFormula: `{Name}=${name}`,
+      view: 'API Response',
+      filterByFormula: `{Name}= "${name}"`,
     })
     .eachPage(
       (records, fetchNextPage) => {
-        records.forEach((record) => {
-          console.log('Retrieved', record);
-        });
-        console.log('shaima');
+        const result = records.map(record => record.fields);
+
         fetchNextPage();
+        res.json(result);
       },
       (error) => {
         console.log(error);
