@@ -1,11 +1,27 @@
 import React, { Component } from "react";
 import "./home.css";
-import { Link } from "react-router-dom";
-import "./home.css";
 import Autosuggests from "./Autosuggests";
+import axios from "axios";
 
 export default class Home extends Component {
+  state = {
+      info:[]
+    };
+    componentDidMount() {
+       axios
+         .get("/aboutus")
+         .then(({ data }) => {
+           this.setState({
+             info:data[0]
+                      });
+         })
+         .catch(() => {
+          console.log("Error");
+         });
+     }
+
   render() {
+    const {info} = this.state;
     return (
       <div className='main'>
       <div>
@@ -22,15 +38,15 @@ export default class Home extends Component {
       <div className="aboutus">
         <div className='a1'>
         <p>01</p>
-          <h4 className='bd'>We are creating a movement to empower customers to make social change, by allowing them to vote with their wallets and put pressure on companies to change by impacting upon their bottom line</h4>
+          <h4 className='bd'>{info.what_is_it}</h4>
          </div>
         <div className='a1'>
           <p>02</p>
-          <h4 className='pd'>We score brands based on their environmental and labour practices</h4>
+          <h4 className='pd'>{info.why}</h4>
          </div>
         <div className='a1'>
           <p>03</p>
-          <h4 className='pd'>We use information from a range of sources, and encourage our community to share their own knowledge</h4>
+          <h4 className='pd'>{info.our_principle}</h4>
          </div>
       </div>
       </div>
