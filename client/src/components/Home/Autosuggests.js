@@ -36,19 +36,19 @@ export default class Autosuggests extends Component {
       value: '',
       suggestions: [],
       loading: false,
-      brandss:[]
+      statebrands:[]
     };
     componentDidMount() {
        axios
          .get("/brands")
          .then(({ data }) => {
-            // brandss = data
+            this.statebrands = data;
             brands = data.map(brand => {
               brands.push(brand.name);
              return (brand.name)
            });
            this.setState({
-             brandss:brands,
+             statebrands:brands,
              loading: true
            });
          })
