@@ -3,10 +3,9 @@ const Airtable = require('airtable');
 
 exports.getAboutus = (req, res) => {
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
-  console.log('lllllllllllll');
   base('aboutus')
     .select({
-      view: 'API Response',
+      view: 'Grid view',
     })
     .eachPage(
       (records, fetchNextPage) => {
