@@ -8,5 +8,4 @@ const router = express.Router();
 router.get('/brand/:name', getBrand);
 router.get('/brands', getBrands);
 router.get('/aboutus', getAboutus);
-
 module.exports = router;
