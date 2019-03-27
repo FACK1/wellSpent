@@ -102,13 +102,12 @@
   color: white;
   font-family: "Roboto", sans-serif;
   margin-top: 20px;
-  float: right;
-  margin-right: 90px;
 }
 .scrol {
   display: inline-block;
   max-width: 10%;
   padding-left: 170px;
+  border-bottom: 7px;
 }
 .scrol1 {
   max-width: 125px;
