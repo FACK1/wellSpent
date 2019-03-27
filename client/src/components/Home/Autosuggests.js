@@ -40,10 +40,10 @@ export default class Autosuggests extends Component {
        axios
          .get("/brands")
          .then(({ data }) => {
-        const result= data.map(brand => {
-             return (brand.name)
+         brands= data.map(brand => {
+             return (brand.Name)
            });
-          brands= result;
+
          })
 
          .catch(() => {
