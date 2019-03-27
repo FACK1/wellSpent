@@ -14,7 +14,6 @@ class Brands extends Component {
           brands: data,
           loading: true
         });
-        console.log("state", this.state);
       })
       .catch(err => {
         console.log(err);
@@ -23,7 +22,7 @@ class Brands extends Component {
 
   render() {
     const { loading, brands } = this.state;
-    if (loading === true) {
+    if (loading) {
       return (
         <div>
           <div className="div1">
@@ -41,7 +40,6 @@ class Brands extends Component {
           </div>
           {brands.length !== 0 ? (
             brands.map(brand => {
-              // console.log("score", brand.OverallScoreColour[0]);
               return (
                 <div className="div-box">
                   <div className="imge">
