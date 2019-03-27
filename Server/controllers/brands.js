@@ -2,9 +2,7 @@ require('env2')('.env');
 const Airtable = require('airtable');
 
 exports.getBrands = (req, res) => {
-  const base = new Airtable({ apiKey: process.env.APIKEY }).base(
-    process.env.DB_NAME,
-  );
+  const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
 
   base('Brands')
     .select({
