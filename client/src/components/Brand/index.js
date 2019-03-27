@@ -1,25 +1,39 @@
 import React from "react";
-import imageback from "./image.png";
+import back from "./back.png";
 import "./brand.css";
-import image from "./Rectangle.png";
 import axios from "axios";
 
 class Brand extends React.Component {
-  state = {};
+  state = {
+    info: [],
+    image: "",
+    name: "",
+    overallscore: "",
+    enviormentscore: "",
+    labourscore: "",
+    animalrightscore: "",
+    cost: "",
+    producttype: "",
+    explanation: ""
+  };
   componentDidMount() {
-    const id = 1;
+    const name = "Chanel";
     axios
-      .get(`/brand/${id}`)
+      .get(`brand/${name}`)
       .then(({ data }) => {
+        this.state.info = data[0];
         this.setState({
-          name: data.name,
-          overallscore: data.overallscore,
-          enviormentscore: data.enviormentscore,
-          labourscore: data.labourscore,
-          animalrightscore: data.animalrightscore,
-          cost: data.cost,
-          producttype: data.producttype,
-          explanation: data.explanation
+          image: data[0].Image[0].url,
+          name: data[0].Name,
+          overallscore: data[0].OverallScore,
+          enviormentscore: data[0].EnvironmentScore,
+          labourscore: data[0].LaborScore,
+          animalrightscore: data[0].AnimalRightsScore,
+          cost: data[0].Cost,
+          producttype: data[0].CategoryName,
+          explanation: data[0].Explanation,
+          info: data[0],
+          environmentScoreColour: data[0].EnvironmentScoreColour
         });
       })
       .catch(err => {
@@ -29,6 +43,7 @@ class Brand extends React.Component {
 
   render() {
     const {
+      image,
       name,
       overallscore,
       labourscore,
@@ -42,7 +57,7 @@ class Brand extends React.Component {
     return (
       <div className="root">
         <div className="container">
-          <img className="back" src={imageback} alt="img" />
+          <img className="backimages" src={back} alt="img" />
           <p className="pargraph"> Brand Details </p>
         </div>
         <div className="image">
@@ -62,26 +77,26 @@ class Brand extends React.Component {
           <div className="labour">
             <div className="score1">
               <h3>LabourScore</h3>
-              <h3>{labourscore}</h3>
+              <h3>{this.state.labourscore}</h3>
             </div>
           </div>
           <div className="enviorment">
-            <div className="score2">
+            <div className="score2" style={{"background-color":`${EnvironmentScoreColour}`}>
               <h3>EnviormentScore</h3>
-              <h3>{enviormentscore}</h3>
+              <h3>{this.state.enviormentscore}</h3>
             </div>
           </div>
           <div className="animal">
             <div className="score3">
               <h3>AnimalRightScore</h3>
-              <h3>{animalrightscore}</h3>
+              <h3>{this.state.animalrightscore}</h3>
             </div>
           </div>
         </div>
         <div className="more">
-          <h3> Cost:{cost}</h3>
-          <h3> ProductType:{producttype}</h3>
-          <h3>Explanation :{explanation}</h3>
+          <h3> Cost:{this.state.cost}</h3>
+          <h3> ProductType:{this.state.producttype}</h3>
+          <h3>Explanation :{this.state.explanation}</h3>
         </div>
       </div>
     );
