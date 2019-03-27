@@ -27,7 +27,9 @@ class Brands extends Component {
         <div>
           <div className="div1">
             <div className="div10">
-              <div className="back" />
+              <Link to="/">
+                <div className="back" />
+              </Link>
               <div className="par">Ethical Brands</div>
             </div>
             <div className="div11">
