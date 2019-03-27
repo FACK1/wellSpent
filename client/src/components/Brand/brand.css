@@ -1,8 +1,9 @@
-.back{
-  width:30px;
-  height:30px;
+.backimages{
+  width: 30px;
+  height: 40px;
   padding-top: 10px;
-  padding-right: 12px;
+  padding-right: 40px;
+
 }
 .pargraph{
   font-size: 16pt;
@@ -10,21 +11,24 @@
   font-family: 'Roboto', sans-serif;
 }
 .images{
-  width:250px;
-  height:250px;
-  padding-right: 800px;
+  width: 280px;
+  height: 250px;
+  margin-right: 65%;
+  border: 5px groove;
+  border-radius: 10px;
+  max-width: 50%;
 }
  .name{
    font-size: 16pt;
    font-weight: bold;
    font-family: 'Roboto', sans-serif;
    color: black;
-   padding-right: 800px;
+   text-align: left !important;
+   padding-left: 15%;
  }
 .score{
  width: 150px;
  padding:0.5px;
- background-color:#4EA077;
  text-align: center;
  height:150px;
  border-radius: 5px;
@@ -34,21 +38,18 @@
 .score1{
   width: 170px;
   padding:0.5px;
-  background-color:#4EA077;
   text-align: center;
   border-radius: 5px;
 }
 .score2{
   width: 170px;
   padding:0.5px;
-  background-color:red;
   text-align: center;
   border-radius: 5px;
 }
 .score3{
   width: 170px;
   padding:0.5px;
-  background-color:yellow;
   text-align: center;
   border-radius: 5px;
 }
@@ -60,12 +61,11 @@
   margin-top: -320px;
  }
  .more{
-   font-size: 14px;
-   font-family: 'Roboto', sans-serif;
-   text-align: left;
-   margin-left: 402px;
-
+   padding-right: 150px;
+   margin-left: 37%;
+   text-align: left !important;
  }
+
  .labour {
    padding-left: 700px;
    padding-right: 0.2px;
@@ -87,13 +87,22 @@
      margin-top: -150px;
      margin-left: -80px;
 }
+.details{
+margin-bottom: 70px;
+}
 
  .root{
-   margin-left: 110px;
-   padding-top: 50px;
+   padding: 30px;
+   padding-left: 12%;
  }
 
-.container{
-  display: inline-flex;
-  margin-right:1000px;
-}
+ .container{
+   display: inline-flex;
+   float: left;
+   margin-bottom: 5%;
+   max-width: 30%;
+ }
+
+ .os{
+       font-size: 30pt !important;
+ }
