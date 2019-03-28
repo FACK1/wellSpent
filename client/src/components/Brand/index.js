@@ -5,20 +5,7 @@ import axios from "axios";
 
 class Brand extends React.Component {
   state = {
-    info: [],
-    image: "",
-    name: "",
-    overallscore: "",
-    enviormentscore: "",
-    labourscore: "",
-    animalrightscore: "",
-    cost: "",
-    producttype: "",
-    explanation: "",
-    AnimalRightshexa: "",
-    EnvironmentScorehexa: "",
-    LabourScorehexa: "",
-    OverallScorehexa: ""
+    info: []
   };
   componentDidMount() {
     const { Name } = this.props.match.params;
