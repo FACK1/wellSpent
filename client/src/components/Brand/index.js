@@ -14,26 +14,32 @@ class Brand extends React.Component {
     animalrightscore: "",
     cost: "",
     producttype: "",
-    explanation: ""
+    explanation: "",
+    AnimalRightshexa: "",
+    EnvironmentScorehexa: "",
+    LabourScorehexa: "",
+    OverallScorehexa: ""
   };
   componentDidMount() {
-    const name = "Chanel";
+    const { Name } = this.props.match.params;
     axios
-      .get(`brand/${name}`)
+      .get(`/brand/${Name}`)
       .then(({ data }) => {
-        this.state.info = data[0];
+        const info = data[0];
         this.setState({
-          image: data[0].Image[0].url,
-          name: data[0].Name,
-          overallscore: data[0].OverallScore,
-          enviormentscore: data[0].EnvironmentScore,
-          labourscore: data[0].LaborScore,
-          animalrightscore: data[0].AnimalRightsScore,
-          cost: data[0].Cost,
-          producttype: data[0].CategoryName,
-          explanation: data[0].Explanation,
-          info: data[0],
-          environmentScoreColour: data[0].EnvironmentScoreColour
+          image: info.Image[0].url,
+          name: info["Name"],
+          overallscore: info["OverallScore"],
+          enviormentscore: info["EnvironmentScore"],
+          labourscore: info["LaborScore"],
+          animalrightscore: info["Animal Rights Score"],
+          cost: info["Cost"],
+          producttype: info["Category Name"],
+          explanation: info["Explanation"],
+          AnimalRightshexa: info["Animal Rights hexa"],
+          EnvironmentScorehexa: info["Environment Score hexa"],
+          LabourScorehexa: info["Labour Score hexa"],
+          OverallScorehexa: info["Overall Score hexa"]
         });
       })
       .catch(err => {
@@ -51,7 +57,11 @@ class Brand extends React.Component {
       animalrightscore,
       cost,
       producttype,
-      explanation
+      explanation,
+      AnimalRightshexa,
+      EnvironmentScorehexa,
+      LabourScorehexa,
+      OverallScorehexa
     } = this.state;
 
     return (
@@ -68,35 +78,47 @@ class Brand extends React.Component {
         </div>
         <div className="details" />
         <div className="overall">
-          <div className="score">
+          <div
+            className="score"
+            style={{ "background-color": `${OverallScorehexa}` }}
+          >
             <h3>OverallScore</h3>
-            <h3>{overallscore} </h3>
+            <h3 className="os">{overallscore} </h3>
           </div>
         </div>
         <div className="detail">
           <div className="labour">
-            <div className="score1">
+            <div
+              className="score1"
+              style={{ "background-color": `${LabourScorehexa}` }}
+            >
               <h3>LabourScore</h3>
-              <h3>{this.state.labourscore}</h3>
+              <h3>{labourscore}</h3>
             </div>
           </div>
           <div className="enviorment">
-            <div className="score2" style={{"background-color":`${EnvironmentScoreColour}`}>
+            <div
+              className="score2"
+              style={{ "background-color": `${EnvironmentScorehexa}` }}
+            >
               <h3>EnviormentScore</h3>
-              <h3>{this.state.enviormentscore}</h3>
+              <h3>{enviormentscore}</h3>
             </div>
           </div>
           <div className="animal">
-            <div className="score3">
+            <div
+              className="score3"
+              style={{ "background-color": `${AnimalRightshexa}` }}
+            >
               <h3>AnimalRightScore</h3>
-              <h3>{this.state.animalrightscore}</h3>
+              <h3>{animalrightscore}</h3>
             </div>
           </div>
         </div>
         <div className="more">
-          <h3> Cost:{this.state.cost}</h3>
-          <h3> ProductType:{this.state.producttype}</h3>
-          <h3>Explanation :{this.state.explanation}</h3>
+          <h3> Cost:{cost}</h3>
+          <h3> ProductType:{producttype}</h3>
+          <h3>Explanation :{explanation}</h3>
         </div>
       </div>
     );
