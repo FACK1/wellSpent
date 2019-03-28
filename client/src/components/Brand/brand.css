@@ -41,18 +41,31 @@
   text-align: center;
   border-radius: 5px;
 }
+
+.score1 h3{
+  display: inline-block;
+}
 .score2{
   width: 170px;
   padding:0.5px;
   text-align: center;
   border-radius: 5px;
 }
+
+.score2 h3{
+  display: inline-block;
+}
+
 .score3{
   width: 170px;
   padding:0.5px;
   text-align: center;
   border-radius: 5px;
 }
+.score3 h3{
+  display: inline-block;
+}
+
  .overall{
   color:black;
   font-size: 12pt;
