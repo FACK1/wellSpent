@@ -43,10 +43,10 @@
 }
 .diva {
   background-color: #f4f4f4;
-  width: 95%;
+  width: 85%;
   height: 30px;
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 80px;
 }
 .par3 {
   font-family: "Roboto", sans-serif;
@@ -74,6 +74,7 @@
   height: 170px;
   border-radius: 10px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .name {
   font-family: "Alegreya Sans SC", sans-serif;
@@ -101,16 +102,17 @@
   background-color: #1389a6;
   color: white;
   font-family: "Roboto", sans-serif;
-  margin-top: 20px;
+  margin-top: 130px;
+  margin-right: 100px;
 }
 .scrol {
   display: inline-block;
   max-width: 10%;
-  padding-left: 170px;
+  padding-left: 140px;
   border-bottom: 7px;
 }
 .scrol1 {
-  max-width: 125px;
+  max-width: 140px;
   height: 50px;
   border-radius: 10px;
   margin-top: 10px;
@@ -139,6 +141,7 @@
 .img-get {
   width: 180px;
   height: 150px;
+  padding: 10px;
 }
 .close {
   float: right;
