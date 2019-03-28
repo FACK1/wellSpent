@@ -11,12 +11,12 @@ exports.getBrands = (req, res) => {
     .eachPage(
       (records, fetchNextPage) => {
         const result = records.map(record => ({
-          name: record.get('Name'),
+          Name: record.get('Name'),
           Explanation: record.get('Explanation'),
           Image: record.get('Image'),
-          LaborScore: record.get('Labor Score'),
-          EnvironmentScore: record.get('Environment Score'),
-          OverallScore: record.get('Overall Score'),
+          LaborScore: record.get('LaborScore'),
+          EnvironmentScore: record.get('EnvironmentScore'),
+          OverallScore: record.get('OverallScore'),
           LabourScoreColour: record.get('Labour Score hexa'),
           EnvironmentScoreColour: record.get('Environment Score hexa'),
           OverallScoreColour: record.get('Overall Score hexa'),
