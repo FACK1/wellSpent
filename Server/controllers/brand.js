@@ -2,7 +2,6 @@ const Airtable = require('airtable');
 
 exports.getBrand = (req, res) => {
   const { name } = req.params;
-  console.log('name', name);
   const base = new Airtable({ apiKey: 'keyYymTkZ8tlYgUmY' }).base('appNifWvpBhZkgaLk');
   base('Brands')
     .select({
@@ -13,7 +12,6 @@ exports.getBrand = (req, res) => {
       (records, fetchNextPage) => {
         const result = records.map(record => record.fields);
         fetchNextPage();
-        console.log('result', result);
         res.json(result);
       },
       (error) => {
