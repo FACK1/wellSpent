@@ -44,6 +44,7 @@
 
 .score1 h3{
   display: inline-block;
+  padding:7px;
 }
 .score2{
   width: 170px;
@@ -54,6 +55,7 @@
 
 .score2 h3{
   display: inline-block;
+  padding:4px;
 }
 
 .score3{
@@ -61,9 +63,11 @@
   padding:0.5px;
   text-align: center;
   border-radius: 5px;
+
 }
 .score3 h3{
   display: inline-block;
+  padding:4px;
 }
 
  .overall{

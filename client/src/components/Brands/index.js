@@ -24,18 +24,40 @@ class Brands extends Component {
     const { loading, brands } = this.state;
     console.log('brands',brands);
     if (loading) {
-      const sortedArray = brands.sort(function (a, b) {
-            if (a < b) return -1;
-            else if (a > b) return 1;
-            return 0;
-          });
-          console.log('sortedArray',sortedArray);
-          const letters = ['A','B','C','D','Z'];
+      const letters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ];
       return (
         <div>
           <div className="div1">
             <div className="div10">
-              <div className="back" />
+              <Link to="/">
+                <div className="back" />
+              </Link>
               <div className="par">Ethical Brands</div>
             </div>
             <div className="div11">
@@ -48,59 +70,65 @@ class Brands extends Component {
             brands.map(brand => {
               return (
                 <div>
-                { letters.length !== 0 ? (
-                  letters.map(letter =>{
-                     if (letter === brand.Name.charAt(0)){
-                    return  ( <div className="diva">
-                         <div className="par3">{letter}</div>
-                       </div>)
-                     }
-                  })) : <div> </div>
-                 }
-
-                <div className="div-box">
-                  <div className="imge">
-                    <img
-                      className="img-get"
-                      src={brand.Image[0].thumbnails.large.url}
-                      alt=""
-                    />
-                  </div>
-                  <div className="descrip">
-                    <p className="name">{brand.Name}</p>
-                    <p className="description">{brand.Explanation}</p>
-                    <Link to={`/Brand/${brand.Name}`} className="button-link">
-                      <button className="view">view</button>
-                    </Link>
-                  </div>
-                  <div className="scrol">
-                    <div
-                      className="scrol1"
-                      style={{
-                        "background-color": `${brand.OverallScoreColour[0]}`
-                      }}
-                    >
-                      {brand.OverallScore} <br /> overall score
+                  {letters.length !== 0 ? (
+                    letters.map(letter => {
+                      if (letter === brand.Name.charAt(0)) {
+                        return (
+                          <div className="diva">
+                            <div className="par3">{letter}</div>
+                          </div>
+                        );
+                      }
+                    })
+                  ) : (
+                    <div> </div>
+                  )}
+                  <div className="div-box">
+                    <div className="imge">
+                      <img
+                        className="img-get"
+                        src={brand.Image[0].thumbnails.large.url}
+                        alt=""
+                      />
                     </div>
-                    <div
-                      className="scrol2"
-                      style={{
-                        "background-color": `${brand.LabourScoreColour[0]}`
-                      }}
-                    >
-                      {brand.LaborScore} <br /> labour score
+                    <div className="descrip">
+                      <p className="name">{brand.Name}</p>
+                      <p className="description">{brand.Explanation}</p>
+                      <Link to={`/Brand/${brand.Name}`} className="button-link">
+                        <button className="view">view</button>
+                      </Link>
                     </div>
-                    <div
-                      className="scrol3"
-                      style={{
-                        "background-color": `${brand.EnvironmentScoreColour[0]}`
-                      }}
-                    >
-                      {brand.EnvironmentScore} <br /> enviorment score
+                    <div className="scrol">
+                      <div
+                        className="scrol1"
+                        style={{
+                          "background-color": `${brand.OverallScoreColour[0]}`
+                        }}
+                      >
+                        {brand.OverallScore} <br /> overall score
+                      </div>
+                      <div
+                        className="scrol2"
+                        style={{
+                          "background-color": `${brand.LabourScoreColour[0]}`
+                        }}
+                      >
+                        {brand.LaborScore} <br /> labour score
+                      </div>
+                      <div
+                        className="scrol3"
+                        style={{
+                          "background-color": `${
+                            brand.EnvironmentScoreColour[0]
+                          }`
+                        }}
+                      >
+                        {brand.EnvironmentScore} <br /> enviorment score
+                      </div>
                     </div>
                   </div>
                 </div>
-                </div>
+              
               );
             })
           ) : (
