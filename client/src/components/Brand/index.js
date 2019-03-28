@@ -1,25 +1,32 @@
 import React from "react";
-import imageback from "./image.png";
+import back from "./back.png";
 import "./brand.css";
-import image from "./Rectangle.png";
 import axios from "axios";
 
 class Brand extends React.Component {
-  state = {};
+  state = {
+    info: []
+  };
   componentDidMount() {
-    const id = 1;
+    const { Name } = this.props.match.params;
     axios
-      .get(`/brand/${id}`)
+      .get(`/brand/${Name}`)
       .then(({ data }) => {
+        const info = data[0];
         this.setState({
-          name: data.name,
-          overallscore: data.overallscore,
-          enviormentscore: data.enviormentscore,
-          labourscore: data.labourscore,
-          animalrightscore: data.animalrightscore,
-          cost: data.cost,
-          producttype: data.producttype,
-          explanation: data.explanation
+          image: info.Image[0].url,
+          name: info["Name"],
+          overallscore: info["OverallScore"],
+          enviormentscore: info["EnvironmentScore"],
+          labourscore: info["LaborScore"],
+          animalrightscore: info["Animal Rights Score"],
+          cost: info["Cost"],
+          producttype: info["Category Name"],
+          explanation: info["Explanation"],
+          AnimalRightshexa: info["Animal Rights hexa"],
+          EnvironmentScorehexa: info["Environment Score hexa"],
+          LabourScorehexa: info["Labour Score hexa"],
+          OverallScorehexa: info["Overall Score hexa"]
         });
       })
       .catch(err => {
@@ -29,6 +36,7 @@ class Brand extends React.Component {
 
   render() {
     const {
+      image,
       name,
       overallscore,
       labourscore,
@@ -36,13 +44,17 @@ class Brand extends React.Component {
       animalrightscore,
       cost,
       producttype,
-      explanation
+      explanation,
+      AnimalRightshexa,
+      EnvironmentScorehexa,
+      LabourScorehexa,
+      OverallScorehexa
     } = this.state;
 
     return (
       <div className="root">
         <div className="container">
-          <img className="back" src={imageback} alt="img" />
+          <img className="backimages" src={back} alt="img" />
           <p className="pargraph"> Brand Details </p>
         </div>
         <div className="image">
@@ -53,28 +65,40 @@ class Brand extends React.Component {
         </div>
         <div className="details" />
         <div className="overall">
-          <div className="score">
+          <div
+            className="score"
+            style={{ "background-color": `${OverallScorehexa}` }}
+          >
             <h3>OverallScore</h3>
-            <h3>{overallscore} </h3>
+            <h3 className="os">{overallscore} </h3>
           </div>
         </div>
         <div className="detail">
           <div className="labour">
-            <div className="score1">
-              <h3>LabourScore</h3>
-              <h3>{labourscore}</h3>
+            <div
+              className="score1"
+              style={{ "background-color": `${LabourScorehexa}` }}
+            >
+              <h3> {labourscore}</h3>
+              <h3>Labour Score </h3>
             </div>
           </div>
           <div className="enviorment">
-            <div className="score2">
-              <h3>EnviormentScore</h3>
-              <h3>{enviormentscore}</h3>
+            <div
+              className="score2"
+              style={{ "background-color": `${EnvironmentScorehexa}` }}
+            >
+              <h3> {enviormentscore}</h3>
+              <h3>Enviorment Score</h3>
             </div>
           </div>
           <div className="animal">
-            <div className="score3">
-              <h3>AnimalRightScore</h3>
-              <h3>{animalrightscore}</h3>
+            <div
+              className="score3"
+              style={{ "background-color": `${AnimalRightshexa}` }}
+            >
+              <h3> {animalrightscore}</h3>
+              <h3>Animal Right Score </h3>
             </div>
           </div>
         </div>

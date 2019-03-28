@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Brands from "./components/Brands";
+import Brand from "./components/Brand";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/brands" component={Brands} />
+          <Route exact path="/brand/:Name" component={Brand} />
         </div>
       </Router>
     );

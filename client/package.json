@@ -7,9 +7,11 @@
     "babel-eslint": "^9.0.0",
     "create-react-context": "^0.2.3",
     "react": "^16.8.4",
+    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-spinners": "^0.5.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -25,9 +25,7 @@
   "dependencies": {
     "@blueprintjs/core": "^3.14.1",
     "airtable": "^0.5.9",
-    "axios": "^0.18.0",
-    "env2": "^2.2.2",
-    "react": "^16.8.5"
+    "env2": "^2.2.2"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
