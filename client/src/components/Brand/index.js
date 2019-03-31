@@ -2,6 +2,7 @@ import React from "react";
 import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
+import Feedback from "../Feedback";
 
 class Brand extends React.Component {
   state = {
@@ -131,6 +132,7 @@ class Brand extends React.Component {
           </div>
           <p>The last six epsoides of catastrople are not unlike.</p>
         </div>
+        <Feedback />
       </div>
     );
   }
