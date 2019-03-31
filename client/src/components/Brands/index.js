@@ -5,7 +5,11 @@ import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 class Brands extends Component {
-  state = { loading: false };
+  state = {
+    loading: false,
+    user: {},
+    error: null
+  };
 
   componentDidMount() {
     axios
@@ -20,7 +24,29 @@ class Brands extends Component {
         console.log(err);
       });
   }
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ user: { ...this.state.user, [name]: value } });
+  };
 
+  handleClick = () => {
+    const { namebrand } = this.state.user;
+    const { history } = this.props;
+    axios
+      .post("/namebrand", { namebrand })
+      .then(({ data }) => {
+        if (data.success) {
+          history.push("/brands");
+        } else {
+          this.setState({ error: data.error });
+        }
+      })
+      .catch(error => {
+        this.setState({ error: error.response.data.error });
+      });
+  };
+  handleSubmitForm = event => {
+    event.preventDefault();
+  };
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -85,7 +111,7 @@ class Brands extends Component {
                     <a className="close" onClick={this.closeModal}>
                       &times;
                     </a>
-                    <form className="form">
+                    <form className="form" onSubmit={this.handleSubmitForm}>
                       <h3> Suggest a brand</h3>
                       <div className="div-label">
                         <label className="label" for="pop">
@@ -95,10 +121,14 @@ class Brands extends Component {
                           className="login-input"
                           type="text"
                           name="name"
+                          value={this.state.namebrand}
+                          onChange={this.handleChange}
                         />
                       </div>
                       <br />
-                      <button className="btn1">add</button>
+                      <button className="btn1" onClick={this.handleClick}>
+                        add
+                      </button>
                     </form>
                   </div>
                 </Popup>
