@@ -124,7 +124,7 @@ margin-bottom: 70px;
  .os{
        font-size: 30pt !important;
  }
- .part2{
+ .MoreDetails{
    float:left;
    width:40%;
    padding-top: 12%;
@@ -149,7 +149,7 @@ margin-bottom: 70px;
  .score22 h3{
    text-align: center;
  }
- .part2 p{
+ .MoreDetails p{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
