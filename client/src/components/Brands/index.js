@@ -3,6 +3,7 @@ import "./brands.css";
 import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import Popup from "reactjs-popup";
 class Brands extends Component {
   state = { loading: false };
 
@@ -18,6 +19,19 @@ class Brands extends Component {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+  openModal() {
+    this.setState({ open: true });
+  }
+  closeModal() {
+    this.setState({ open: false });
   }
 
   render() {
@@ -61,7 +75,36 @@ class Brands extends Component {
               <div className="par">Ethical Brands</div>
             </div>
             <div className="div11">
-              <div className="add" />
+              <div className="div-pop">
+                <div className="add" onClick={this.openModal} />
+                <Popup
+                  open={this.state.open}
+                  closeOnDocumentClick
+                  onClose={this.closeModal}
+                >
+                  <div className="modal">
+                    <a className="close" onClick={this.closeModal}>
+                      &times;
+                    </a>
+                    <form className="form">
+                      <h3> Suggest a brand</h3>
+                      <div className="div-label">
+                        <label className="label" for="pop">
+                          brand name
+                        </label>
+                        <input
+                          className="login-input"
+                          type="text"
+                          name="name"
+                        />
+                      </div>
+                      <br />
+                      <button className="btn1">add</button>
+                    </form>
+                  </div>
+                </Popup>
+              </div>
+
               <div className="par2"> Suggest a brand </div>
             </div>
           </div>
