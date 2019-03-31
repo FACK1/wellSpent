@@ -108,7 +108,7 @@ class Brand extends React.Component {
           <h3> ProductType:{producttype}</h3>
           <h3>Explanation :{explanation}</h3>
         </div>
-        <div className="part2">
+        <div className="MoreDetails">
           <div className="labour2">
             <div
               className="score22"
