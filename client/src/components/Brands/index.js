@@ -7,7 +7,8 @@ import Popup from "reactjs-popup";
 class Brands extends Component {
   state = {
     loading: false,
-    error: null
+    error: null,
+    value: ""
   };
   constructor(props) {
     super(props);
@@ -30,19 +31,18 @@ class Brands extends Component {
       });
   }
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ user: { ...this.state.user, [name]: value } });
+    this.setState({ [name]: value });
   };
 
   handleClick = () => {
-    const { Name } = this.state.user;
-    const { history } = this.props;
+    const { Name } = this.state;
     axios
       .post("/brand", { Name })
-      .then(({ data }) => {
-        if (data.success) {
-          history.push("/brands");
+      .then(({ data: { success } }) => {
+        if (success) {
+          window.location.reload();
         } else {
-          this.setState({ error: data.error });
+          console.log("error");
         }
       })
       .catch(error => {
@@ -119,8 +119,8 @@ class Brands extends Component {
                         <input
                           className="login-input"
                           type="text"
-                          name="name"
-                          value={this.state.namebrand}
+                          name="Name"
+                          value={this.state.value}
                           onChange={this.handleChange}
                         />
                       </div>

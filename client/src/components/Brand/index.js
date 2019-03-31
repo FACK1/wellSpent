@@ -2,6 +2,7 @@ import React from "react";
 import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
+import Feedback from "../Feedback";
 
 class Brand extends React.Component {
   state = {
@@ -107,6 +108,31 @@ class Brand extends React.Component {
           <h3> ProductType:{producttype}</h3>
           <h3>Explanation :{explanation}</h3>
         </div>
+        <div className="MoreDetails">
+          <div className="labour2">
+            <div
+              className="score22"
+              style={{ "background-color": `${LabourScorehexa}` }}
+            >
+              <h3> {labourscore}</h3>
+            </div>
+            <h3 className="name2">LabourScore </h3>
+          </div>
+          <p>
+            They are as they are , and their merceills candorwill be missed.
+          </p>
+          <div className="labour2">
+            <div
+              className="score22"
+              style={{ "background-color": `${EnvironmentScorehexa}` }}
+            >
+              <h3> {enviormentscore}</h3>
+            </div>
+            <h3 className="name2">EnvironmentScore </h3>
+          </div>
+          <p>The last six epsoides of catastrople are not unlike.</p>
+        </div>
+        <Feedback />
       </div>
     );
   }
