@@ -1,9 +1,5 @@
 .mainf{
-  width: 60%;
-  float: right;
-  margin-top: 12%;
-  display: inline-flex;
-  text-align: left;
+
 }
 
 .result img{
@@ -83,3 +79,9 @@
     background-color: Transparent;
     border: none;
   }
+.maina{
+  width: 60%;
+  margin-top: 12%;
+  display: inline-flex;
+  text-align: left;
+}

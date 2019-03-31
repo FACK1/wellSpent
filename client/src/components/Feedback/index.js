@@ -6,7 +6,7 @@ import like from "./assets/like.png"
 import dislike from "./assets/dislike.png"
 import axios from "axios";
 import { RingLoader } from "react-spinners";
-
+import AddFeedback from "./add.js";
 
 export default class Feedback extends Component {
   state = {
@@ -79,6 +79,7 @@ export default class Feedback extends Component {
           </div>
           </div>
           </div>
+            <AddFeedback />
           </div>
 
     );
