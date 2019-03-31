@@ -74,6 +74,7 @@
   color:black;
   font-size: 12pt;
   font-family: 'Roboto', sans-serif;
+  padding-left: 1%;
   padding-left: 400px;
   margin-top: -320px;
  }
@@ -98,7 +99,7 @@
  .animal{
   padding-left: 700px;
   font-size: 12px;
-   padding-top: 12px;
+  padding-top: 12px;
  }
  .detail{
      margin-top: -150px;
@@ -122,4 +123,41 @@ margin-bottom: 70px;
 
  .os{
        font-size: 30pt !important;
+ }
+ .part2{
+   float:left;
+   width:30%;
+   padding-top: 10%;
+   margin-right: 50%;
+   text-align: left !important;
+
+ }
+ .score22{
+    width: 70px;
+    padding:2px;
+    text-align: center;
+    height:70px;
+    border-radius: 5px;
+
+}
+ .name2{
+   font-size: 12pt;
+   font-family: 'Roboto', sans-serif;
+   padding:5%;
+   font-weight: bold;
+
+ }
+ .score22 h3{
+   text-align: center;
+ }
+ .part2 p{
+   font-size: 12pt;
+   font-family: 'Roboto', sans-serif;
+   text-align: left !important;
+   margin-left: 2%;
+
+ }
+ .labour2{
+   display: inline-flex;
+   text-align: left !important;
  }
