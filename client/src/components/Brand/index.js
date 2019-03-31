@@ -2,6 +2,8 @@ import React from "react";
 import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
+import Feedback from "../Feedback";
+
 
 class Brand extends React.Component {
   state = {
@@ -107,6 +109,7 @@ class Brand extends React.Component {
           <h3> ProductType:{producttype}</h3>
           <h3>Explanation :{explanation}</h3>
         </div>
+        <Feedback/>
       </div>
     );
   }
