@@ -7,7 +7,7 @@ import Popup from "reactjs-popup";
 class Brands extends Component {
   state = {
     loading: false,
-    user: {},
+    value:'',
     error: null
   };
 
@@ -25,14 +25,14 @@ class Brands extends Component {
       });
   }
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ user: { ...this.state.user, [name]: value } });
+    this.setState({ [name]:value });
   };
 
   handleClick = () => {
-    const { namebrand } = this.state.user;
+    const { value } = this.state;
     const { history } = this.props;
     axios
-      .post("/namebrand", { namebrand })
+      .post("/namebrand", { value })
       .then(({ data }) => {
         if (data.success) {
           history.push("/brands");
@@ -64,6 +64,7 @@ class Brands extends Component {
     const { loading, brands } = this.state;
     console.log('brands',brands);
     if (loading) {
+      let repeats=[];
       const letters = [
         "A",
         "B",
@@ -138,23 +139,21 @@ class Brands extends Component {
               <div className="par2"> Suggest a brand </div>
             </div>
           </div>
-          {letters.length !== 0 ? (
-            letters.map((letter,index) => {
-              if(letter)
-              return(
+
                 <div>
-                  <div className="diva">
-                    <div className="par3">{letter}</div>
-                  </div>
 
                 { brands.length !== 0 ? (
                   brands.map((brand, i) => {
-                    if (letter === brand.Name.charAt(0) ) {
+                     repeats.push(brand.Name.charAt(0));
                     return (
                       <div>
-
+     { repeats.filter((char)=> char===brand.Name.charAt(0)).length===1  &&
+                  (<div className="diva">
+                        <div className="par3">{brand.Name.charAt(0)}</div>
+                      </div>)
+}
                         <div className="div-box">
-                          <div className="imge">
+                         <div className="imge">
                             <img
                               className="img-get"
                               src={brand.Image[0].thumbnails.large.url}
@@ -200,7 +199,8 @@ class Brands extends Component {
                       </div>
 
                     );
-                  }
+
+                  //
                   })
                 ) : (
 
@@ -208,13 +208,10 @@ class Brands extends Component {
                 )}
                 </div>
 
-)
-            })
-          ) : (
-            <div> </div>
-          )}
+
 
         </div>
+
       );
     } else {
       return (
