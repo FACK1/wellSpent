@@ -7,9 +7,14 @@ import Popup from "reactjs-popup";
 class Brands extends Component {
   state = {
     loading: false,
-    user: {},
     error: null
   };
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
 
   componentDidMount() {
     axios
@@ -29,10 +34,10 @@ class Brands extends Component {
   };
 
   handleClick = () => {
-    const { namebrand } = this.state.user;
+    const { Name } = this.state.user;
     const { history } = this.props;
     axios
-      .post("/namebrand", { namebrand })
+      .post("/brand", { Name })
       .then(({ data }) => {
         if (data.success) {
           history.push("/brands");
@@ -47,12 +52,6 @@ class Brands extends Component {
   handleSubmitForm = event => {
     event.preventDefault();
   };
-  constructor(props) {
-    super(props);
-    this.state = { open: false };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
   openModal() {
     this.setState({ open: true });
   }
