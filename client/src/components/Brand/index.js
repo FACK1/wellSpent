@@ -7,7 +7,6 @@ import Feedback from "../Feedback";
 class Brand extends React.Component {
   state = {
     info: [],
-    bname:'',
     loading:false
   };
   componentDidMount() {
@@ -30,7 +29,6 @@ class Brand extends React.Component {
           EnvironmentScorehexa: info["Environment Score hexa"],
           LabourScorehexa: info["Labour Score hexa"],
           OverallScorehexa: info["Overall Score hexa"],
-          bname:info["Name"],
           loading:true
         });
       })
