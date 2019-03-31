@@ -9,8 +9,8 @@ import AddFeedback from "./add.js";
 export default class Feedback extends Component {
   render() {
     return (
-      <div className="maina">
-        <div className="mainf">
+      <div>
+        <div className="maina">
           <div className="feedback">
             <div className="header">
               <img src={lamba} alt="lamba" />
