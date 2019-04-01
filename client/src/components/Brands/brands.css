@@ -1,8 +1,7 @@
 .div1 {
   display: inline-flex;
 }
-.all {
-}
+
 .div10 {
   display: inline-flex;
   margin-left: 0px;
@@ -107,6 +106,13 @@
   margin-left: 20px;
   width: 430px;
   float: left;
+}
+.div-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
 }
 .view {
   border-radius: 20px;
