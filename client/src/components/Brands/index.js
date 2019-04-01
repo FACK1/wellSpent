@@ -63,7 +63,7 @@ class Brands extends Component {
     if (loading) {
       const letters = [];
       return (
-        <div>
+        <div className="all">
           <div className="div1">
             <div className="div10">
               <Link to="/">
@@ -114,7 +114,7 @@ class Brands extends Component {
             brands.map(brand => {
               letters.push(brand.Name.charAt(0));
               return (
-                <div>
+                <div className="big-box">
                   {letters.filter(char => char === brand.Name.charAt(0))
                     .length === 1 && (
                     <div className="diva">
@@ -132,9 +132,14 @@ class Brands extends Component {
                     <div className="descrip">
                       <p className="name">{brand.Name}</p>
                       <p className="description">{brand.Explanation}</p>
-                      <Link to={`/Brand/${brand.Name}`} className="button-link">
-                        <button className="view">view</button>
-                      </Link>
+                      <div className="div-button">
+                        <Link
+                          to={`/Brand/${brand.Name}`}
+                          className="button-link"
+                        >
+                          <button className="view">view</button>
+                        </Link>
+                      </div>
                     </div>
                     <div className="scrol">
                       <div
