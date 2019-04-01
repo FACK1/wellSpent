@@ -3,6 +3,8 @@ import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
+import { RingLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 class Brand extends React.Component {
   state = {
@@ -58,7 +60,9 @@ class Brand extends React.Component {
       return (
         <div className="root">
           <div className="container">
-            <img className="backimages" src={back} alt="img" />
+            <Link to="/brands">
+              <img className="backimages" src={back} alt="img" />
+            </Link>
             <p className="pargraph"> Brand Details </p>
           </div>
           <div className="image">
@@ -140,7 +144,15 @@ class Brand extends React.Component {
         </div>
       );
     } else {
-      return <div> loading </div>;
+      return (
+        <div>
+          <RingLoader
+            color={"#1389A6"}
+            align-items={"center"}
+            text-align={"center"}
+          />
+        </div>
+      );
     }
   }
 }

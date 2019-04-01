@@ -34,7 +34,7 @@ export default class Feedback extends Component {
           <div className="feedback">
             <div className="header">
               <img src={lamba} alt="lamba" />
-              <h3>What does the community think about Zara </h3>
+              <h3>What does the community think about {this.props.name} </h3>
             </div>
             <div className="mainorg">
               <div className="line" />
@@ -73,13 +73,13 @@ export default class Feedback extends Component {
                     );
                   })
                 ) : (
-                  <RingLoader color={"#ff8094"} loading={this.state.loading} />
+                  <RingLoader color={"#1389A6"} loading={this.state.loading} />
                 )}
               </div>
             </div>
           </div>
         </div>
-        <AddFeedback />
+        <AddFeedback name={this.props.name} />
       </div>
     );
   }

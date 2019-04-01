@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
-import './Autosuggests.css';
-import Autosuggest from 'react-autosuggest';
+import React, { Component } from "react";
+import "./Autosuggests.css";
+import Autosuggest from "react-autosuggest";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 let brands = [];
 function escapeRegexCharacters(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 function getSuggestions(value) {
   const escapedValue = escapeRegexCharacters(value.trim());
-  if (escapedValue === '') {
+  if (escapedValue === "") {
     return [];
   }
-  const regex = new RegExp('^' + escapedValue, 'i');
+  const regex = new RegExp("^" + escapedValue, "i");
   return brands.filter(brand => regex.test(brand));
 }
 function getSuggestionValue(suggestion) {
@@ -21,35 +21,32 @@ function getSuggestionValue(suggestion) {
 }
 function renderSuggestion(suggestion) {
   return (
-    <span>
-     <Link
-      to={`/brand/${suggestion}`}
-        className="button-link"  >
-        {suggestion}
-          </Link>
-</span>
+    <Link to={`/brand/${suggestion}`} className="button-link">
+      <div>
+        <span>{suggestion}</span>
+      </div>
+    </Link>
   );
 }
 
 export default class Autosuggests extends Component {
   state = {
-      value: '',
-      suggestions: [],
-    };
-    componentDidMount() {
-       axios
-         .get("/brands")
-         .then(({ data }) => {
-         brands= data.map(brand => {
-             return (brand.Name)
-           });
+    value: "",
+    suggestions: []
+  };
+  componentDidMount() {
+    axios
+      .get("/brands")
+      .then(({ data }) => {
+        brands = data.map(brand => {
+          return brand.Name;
+        });
+      })
 
-         })
-
-         .catch(() => {
-          console.log("Error");
-         });
-     }
+      .catch(() => {
+        console.log("Error");
+      });
+  }
   onChange = (event, { newValue, method }) => {
     this.setState({
       value: newValue
@@ -83,6 +80,7 @@ export default class Autosuggests extends Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
         className="pt-input"
-        />
-    )
-  }}
+      />
+    );
+  }
+}
