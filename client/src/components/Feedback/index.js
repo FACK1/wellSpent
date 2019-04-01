@@ -73,13 +73,13 @@ export default class Feedback extends Component {
                     );
                   })
                 ) : (
-                  <RingLoader color={"#ff8094"} loading={this.state.loading} />
+                  <RingLoader color={"#1389A6"} loading={this.state.loading} />
                 )}
               </div>
             </div>
           </div>
         </div>
-        <AddFeedback />
+        <AddFeedback name={this.props.name} />
       </div>
     );
   }

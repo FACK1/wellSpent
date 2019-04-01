@@ -3,6 +3,17 @@
   max-width:100%;
   margin-right: 15%;
 }
+
+.inputborder{
+margin-left: 10%;
+border-bottom: solid !important;
+border-style: none;
+width:85%;
+margin-bottom: 2%;
+padding-left: 2%;
+
+}
+
 .name2 h3{
   font-size: 16pt;
   font-weight: bold;
@@ -11,14 +22,17 @@
 }
 .namedetails{
   display: flex;
+  text-align: center;
 
 }
 .namedetails h3{
   font-size: 16pt;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  text-align: left !important;
   margin-bottom: 1%;
+  margin-left: 1%;
+  width: 15%;
+
 
 }
 .button{
@@ -33,5 +47,4 @@
   border-radius: 10px;
   width: 20%;
   height: 20%;
-  margin-right: 6%;
 }

@@ -3,6 +3,7 @@ import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
+import { RingLoader } from "react-spinners";
 
 class Brand extends React.Component {
   state = {
@@ -140,7 +141,15 @@ class Brand extends React.Component {
         </div>
       );
     } else {
-      return <div> loading </div>;
+      return (
+        <div>
+          <RingLoader
+            color={"#1389A6"}
+            align-items={"center"}
+            text-align={"center"}
+          />
+        </div>
+      );
     }
   }
 }
