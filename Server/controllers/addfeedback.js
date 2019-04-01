@@ -4,11 +4,13 @@ const Airtable = require('airtable');
 exports.addfeedback = (req, res) => {
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
 
-  const { Name, Feedback } = req.body;
+  const { feedback, Brands, Name } = req.body;
+  console.log('Body', req.body);
   base('Feedback').create(
     {
+      feedback,
+      Brands,
       Name,
-      Feedback,
     },
 
     (error) => {
