@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 const router = require('./router');
-
 require('env2')('.env');
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
