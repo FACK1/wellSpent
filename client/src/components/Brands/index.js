@@ -63,31 +63,6 @@ class Brands extends Component {
     if (loading) {
       let repeats=[];
       const letters = [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L",
-        "M",
-        "N",
-        "O",
-        "P",
-        "Q",
-        "R",
-        "S",
-        "T",
-        "V",
-        "W",
-        "X",
-        "Y",
-        "Z"
       ];
       return (
         <div className="all">
@@ -156,6 +131,7 @@ class Brands extends Component {
                               src={brand.Image[0].thumbnails.large.url}
                               alt=""
                             />
+
                           </div>
                           <div className="descrip">
                             <p className="name">{brand.Name}</p>
