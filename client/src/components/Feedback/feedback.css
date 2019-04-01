@@ -1,10 +1,7 @@
 .mainf{
-  width: 60%;
-  float: right;
-  margin-top: 12%;
-  display: inline-flex;
-  text-align: left;
+  margin-top: 10%;
 }
+
 
 .result img{
   width: 100px;
@@ -49,11 +46,10 @@
 
 .votes{
   display: inline-flex;
-  margin-left: 45%;
 }
 .line{
   border-left:1px solid #000;
-  height:250px;
+  height:415px;
 }
 
 .line2{
@@ -69,16 +65,18 @@
   text-align: center;
 }
 
-.cards{
-  margin-left: 10%;
-}
+
 .mainorg{
   display: inline-flex;
+      width: 60%;
 }
 
 .allcards{
   display: inline-block;
 }
+
+
+
 .like button {
     background-color: Transparent;
     border: none;
