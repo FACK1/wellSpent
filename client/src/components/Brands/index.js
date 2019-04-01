@@ -7,9 +7,14 @@ import Popup from "reactjs-popup";
 class Brands extends Component {
   state = {
     loading: false,
-    value:'',
-    error: null
+    error: null,
+    value: "",
+    open: false
   };
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
 
   componentDidMount() {
     axios
@@ -25,19 +30,18 @@ class Brands extends Component {
       });
   }
   handleChange = ({ target: { name, value } }) => {
-    this.setState({ [name]:value });
+    this.setState({ [name]: value });
   };
 
   handleClick = () => {
-    const { value } = this.state;
-    const { history } = this.props;
+    const { Name } = this.state;
     axios
-      .post("/namebrand", { value })
-      .then(({ data }) => {
-        if (data.success) {
-          history.push("/brands");
+      .post("/brand", { Name })
+      .then(({ data: { success } }) => {
+        if (success) {
+          window.location.reload();
         } else {
-          this.setState({ error: data.error });
+          console.log("error");
         }
       })
       .catch(error => {
@@ -47,18 +51,12 @@ class Brands extends Component {
   handleSubmitForm = event => {
     event.preventDefault();
   };
-  constructor(props) {
-    super(props);
-    this.state = { open: false };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-  openModal() {
+  openModal = () => {
     this.setState({ open: true });
-  }
-  closeModal() {
+  };
+  closeModal = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     const { loading, brands } = this.state;
@@ -122,8 +120,8 @@ class Brands extends Component {
                         <input
                           className="login-input"
                           type="text"
-                          name="name"
-                          value={this.state.namebrand}
+                          name="Name"
+                          value={this.state.value}
                           onChange={this.handleChange}
                         />
                       </div>
