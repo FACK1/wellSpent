@@ -90,7 +90,7 @@ class Brands extends Component {
         "Z"
       ];
       return (
-        <div>
+        <div className="all">
           <div className="div1">
             <div className="div10">
               <Link to="/">
