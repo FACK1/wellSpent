@@ -74,7 +74,9 @@
 .allcards{
   display: inline-block;
 }
-
+.cards{
+  padding-left: 5%;
+}
 
 
 .like button {
