@@ -1,0 +1,37 @@
+.root1{
+  margin-top: 5%;
+  max-width:100%;
+  margin-right: 15%;
+}
+.name2 h3{
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+.namedetails{
+  display: flex;
+
+}
+.namedetails h3{
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: left !important;
+  margin-bottom: 1%;
+
+}
+.button{
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+  background-color: #1389A6;
+  margin-top: 5%;
+  border: 5px ;
+  border-radius: 10px;
+  width: 20%;
+  height: 20%;
+  margin-right: 6%;
+}
