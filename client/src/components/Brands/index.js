@@ -61,33 +61,7 @@ class Brands extends Component {
   render() {
     const { loading, brands } = this.state;
     if (loading) {
-      const letters = [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L",
-        "M",
-        "N",
-        "O",
-        "P",
-        "Q",
-        "R",
-        "S",
-        "T",
-        "V",
-        "W",
-        "X",
-        "Y",
-        "Z"
-      ];
+      const letters = [];
       return (
         <div>
           <div className="div1">
@@ -138,20 +112,14 @@ class Brands extends Component {
 
           {brands.length !== 0 ? (
             brands.map(brand => {
+              letters.push(brand.Name.charAt(0));
               return (
                 <div>
-                  {letters.length !== 0 ? (
-                    letters.map(letter => {
-                      if (letter === brand.Name.charAt(0)) {
-                        return (
-                          <div className="diva">
-                            <div className="par3">{letter}</div>
-                          </div>
-                        );
-                      }
-                    })
-                  ) : (
-                    <div> </div>
+                  {letters.filter(char => char === brand.Name.charAt(0))
+                    .length === 1 && (
+                    <div className="diva">
+                      <div className="par3">{brand.Name.charAt(0)}</div>
+                    </div>
                   )}
                   <div className="div-box">
                     <div className="imge">
