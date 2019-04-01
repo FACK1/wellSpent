@@ -8,13 +8,12 @@ class Brands extends Component {
   state = {
     loading: false,
     error: null,
-    value: ""
+    value: "",
+    open: false
   };
   constructor(props) {
     super(props);
     this.state = { open: false };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
@@ -52,12 +51,12 @@ class Brands extends Component {
   handleSubmitForm = event => {
     event.preventDefault();
   };
-  openModal() {
+  openModal = () => {
     this.setState({ open: true });
-  }
-  closeModal() {
+  };
+  closeModal = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     const { loading, brands } = this.state;
