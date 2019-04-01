@@ -6,6 +6,7 @@ exports.getfeedback = (req, res) => {
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
   base('Feedback')
     .select({
+      maxRecords: 3,
       view: 'Grid view',
       filterByFormula: `{Brands}="${name}"`,
     })
