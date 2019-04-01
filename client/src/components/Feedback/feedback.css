@@ -46,11 +46,10 @@
 
 .votes{
   display: inline-flex;
-  margin-left: 45%;
 }
 .line{
   border-left:1px solid #000;
-  height:460px;
+  height:415px;
 }
 
 .line2{

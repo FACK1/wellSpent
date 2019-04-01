@@ -55,17 +55,18 @@ export default class Feedback extends Component {
                               <h4>Feedback</h4>
                               <h5>{i.feedback}</h5>
                             </div>
-                          </div>
-                          <div className="votes">
-                            <div className="like">
-                              <img src={like} alt="like" />
-                              <p>{i.like}</p>
+                            <div className="votes">
+                              <div className="like">
+                                <img src={like} alt="like" />
+                                <p>{i.like}</p>
+                              </div>
+                              <div className="dislike">
+                                <img src={dislike} alt="dislike" />
+                                <p>{i.dislike}</p>
+                              </div>
                             </div>
-                            <div className="dislike">
-                              <img src={dislike} alt="dislike" />
-                              <p>{i.dislike}</p>
-                            </div>
                           </div>
+
                           <div className="line2" />
                         </div>
                       </div>
