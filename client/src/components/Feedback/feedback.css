@@ -1,6 +1,11 @@
 .mainf{
-
+  margin-top: 10%;
 }
+
+/* .maina{
+  max-width: 100%;
+  display: inline-block;
+} */
 
 .result img{
   width: 100px;
@@ -49,7 +54,7 @@
 }
 .line{
   border-left:1px solid #000;
-  height:250px;
+  height:460px;
 }
 
 .line2{
@@ -65,11 +70,10 @@
   text-align: center;
 }
 
-.cards{
-  margin-left: 10%;
-}
+
 .mainorg{
   display: inline-flex;
+      width: 60%;
 }
 
 .allcards{
@@ -79,6 +83,7 @@
     background-color: Transparent;
     border: none;
   }
+
 .maina{
   width: 60%;
   margin-top: 12%;
