@@ -30,6 +30,31 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
  - Amazon s3: https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html
  - Saas: https://sass-lang.com/
  
+ # How to run our app on your local machine?
+ Follow these instruction in order:
+
+1- Open your terminal.
+
+2- Clone this repository.
+
+  > Using HTTP: https://github.com/FACK1/wellSpent.git
+  
+  > Using SSH: git@github.com:FACK1/wellSpent.git
+
+3- Make a new file in the root directory wellSpent, and call it .env
+
+   Copy paste the following in your .env file:
+   
+   PORT = 5000
+   APIKEY=API KEY your account in Airtable
+   DB_NAME=Database Name in your Airtable
+     
+5- Install dependencies and dev dependencies; by typing in the terminal ```npm i``` && ``` npm install-client```.
+
+7- Run on your termial npm run dev
+
+8- Open the app by write in your browser `http://localhost:3000/`
+ 
 
 
 # Figma Link
