@@ -25,11 +25,9 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
  # Key Technologies   
  - Express JS : https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
  - React.js : https://reactjs.org/docs/getting-started.html
- - Sequalize : http://docs.sequelizejs.com/
+ - Airtable:https://airtable.com/
  - Axios : https://www.npmjs.com/package/axios
- - Amazon s3: https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html
- - Saas: https://sass-lang.com/
- 
+
  # How to run our app on your local machine?
  Follow these instruction in order:
 
