@@ -1,28 +1,28 @@
 import React, { Component } from "react";
 import "./home.css";
-import { Link } from "react-router-dom";
 import Autosuggests from './Autosuggests'
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   state = {
-      info:[]
-    };
-    componentDidMount() {
-       axios
-         .get("/aboutus")
-         .then(({ data }) => {
-           this.setState({
-             info:data[0]
-                      });
-         })
-         .catch(() => {
-          console.log("Error");
-         });
-     }
+    info: []
+  };
+  componentDidMount() {
+    axios
+      .get("/aboutus")
+      .then(({ data }) => {
+        this.setState({
+          info: data[0]
+        });
+      })
+      .catch(() => {
+        console.log("Error");
+      });
+  }
 
   render() {
-    const {info} = this.state;
+    const { info } = this.state;
     return (
       <div className='main'>
       <div>

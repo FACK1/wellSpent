@@ -74,6 +74,11 @@
 .allcards{
   display: inline-block;
 }
+.cards{
+  padding-left: 5%;
+}
+
+
 .like button {
     background-color: Transparent;
     border: none;

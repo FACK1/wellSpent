@@ -5,7 +5,6 @@ exports.addfeedback = (req, res) => {
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
 
   const { feedback, Brands, Name } = req.body;
-  console.log('Body', req.body);
   base('Feedback').create(
     {
       feedback,

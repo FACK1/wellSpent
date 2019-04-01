@@ -34,7 +34,7 @@ export default class Feedback extends Component {
           <div className="feedback">
             <div className="header">
               <img src={lamba} alt="lamba" />
-              <h3>What does the community think about Zara </h3>
+              <h3>What does the community think about {this.props.name} </h3>
             </div>
             <div className="mainorg">
               <div className="line" />

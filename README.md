@@ -60,7 +60,7 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
 
 
 # Figma Link
- - A User:https://www.figma.com/proto/Zq6EyOSjYBBgDiRwsc0TFSfU/WellSpent?node-id=0%3A1&scaling=min-zoom
+ - A User:https://www.figma.com/proto/Zq6EyOSjYBBgDiRwsc0TFSfU/WellSpent?node-id=857%3A116&scaling=min-zoom
  - An Admin:https://www.figma.com/proto/Zq6EyOSjYBBgDiRwsc0TFSfU/WellSpent?node-id=42%3A367&scaling=min-zoom
 
 # DataBase Structure 
