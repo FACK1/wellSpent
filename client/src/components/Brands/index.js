@@ -113,7 +113,7 @@ class Brands extends Component {
              brands.map(brand => {
                letters.push(brand.Name.charAt(0));
                return (
-                 <div>
+                 <div className="big-box">
                    {letters.filter(char => char === brand.Name.charAt(0))
                      .length === 1 && (
                      <div className="diva">
