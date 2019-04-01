@@ -8,8 +8,7 @@ class Brands extends Component {
   state = {
     loading: false,
     error: null,
-    value: "",
-    open: false
+    value: ""
   };
   constructor(props) {
     super(props);
