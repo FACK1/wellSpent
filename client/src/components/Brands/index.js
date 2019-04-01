@@ -5,7 +5,16 @@ import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 class Brands extends Component {
-  state = { loading: false };
+  state = {
+    loading: false,
+    error: null,
+    value: "",
+    open: false
+  };
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
 
   componentDidMount() {
     axios
@@ -20,19 +29,34 @@ class Brands extends Component {
         console.log(err);
       });
   }
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = { open: false };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-  openModal() {
+  handleClick = () => {
+    const { Name } = this.state;
+    axios
+      .post("/brand", { Name })
+      .then(({ data: { success } }) => {
+        if (success) {
+          window.location.reload();
+        } else {
+          console.log("error");
+        }
+      })
+      .catch(error => {
+        this.setState({ error: error.response.data.error });
+      });
+  };
+  handleSubmitForm = event => {
+    event.preventDefault();
+  };
+  openModal = () => {
     this.setState({ open: true });
-  }
-  closeModal() {
+  };
+  closeModal = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     const { loading, brands } = this.state;
@@ -85,7 +109,7 @@ class Brands extends Component {
                     <a className="close" onClick={this.closeModal}>
                       &times;
                     </a>
-                    <form className="form">
+                    <form className="form" onSubmit={this.handleSubmitForm}>
                       <h3> Suggest a brand</h3>
                       <div className="div-label">
                         <label className="label" for="pop">
@@ -94,11 +118,15 @@ class Brands extends Component {
                         <input
                           className="login-input"
                           type="text"
-                          name="name"
+                          name="Name"
+                          value={this.state.value}
+                          onChange={this.handleChange}
                         />
                       </div>
                       <br />
-                      <button className="btn1">add</button>
+                      <button className="btn1" onClick={this.handleClick}>
+                        add
+                      </button>
                     </form>
                   </div>
                 </Popup>
