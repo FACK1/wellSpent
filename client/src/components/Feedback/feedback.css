@@ -62,10 +62,11 @@
 .votes p{
   border: 1px solid #000;
   border-radius: 50%;
+  text-align: center;
 }
 
 .cards{
-  text-align: center;
+  margin-left: 10%;
 }
 .mainorg{
   display: inline-flex;
@@ -75,9 +76,15 @@
   display: inline-block;
 }
 
+
 .maina{
   width: 60%;
   margin-top: 12%;
   display: inline-flex;
   text-align: left;
 }
+
+.like button {
+    background-color: Transparent;
+    border: none;
+  }

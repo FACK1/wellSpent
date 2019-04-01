@@ -1,13 +1,13 @@
 const Airtable = require('airtable');
 require('env2')('.env');
 
-exports.getBrand = (req, res) => {
+exports.getfeedback = (req, res) => {
   const { name } = req.params;
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
-  base('Brands')
+  base('Feedback')
     .select({
-      view: 'API Response',
-      filterByFormula: `{Name}="${name}"`,
+      view: 'Grid view',
+      filterByFormula: `{Brands}="${name}"`,
     })
     .eachPage(
       (records, fetchNextPage) => {
