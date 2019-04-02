@@ -28,6 +28,7 @@
     "@blueprintjs/core": "^3.14.1",
     "airtable": "^0.5.9",
     "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
     "env2": "^2.2.2",
     "express": "^4.16.4"
   },
