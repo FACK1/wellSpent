@@ -39,9 +39,9 @@ export default class Feedback extends Component {
   }
 
   like=(id,like)=> {
-    const idf=this.state.ids[id];
+    const idfeedback=this.state.ids[id];
     axios
-      .get(`/like/${idf}/${like}`)
+      .get(`/like/${idfeedback}/${like}`)
       .then(({ data: { success } }) => {
         if (success) {
           window.location.reload();
@@ -56,10 +56,9 @@ export default class Feedback extends Component {
 
 
   dislike=(id,dislike)=> {
-    const idf=this.state.ids[id];
-    console.log("id",id,"dislike",dislike);
+    const idfeedback=this.state.ids[id];
     axios
-      .get(`/dislike/${idf}/${dislike}`)
+      .get(`/dislike/${idfeedback}/${dislike}`)
       .then(({ data: { success } }) => {
         if (success) {
           window.location.reload();
