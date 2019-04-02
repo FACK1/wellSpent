@@ -117,3 +117,24 @@
 .bd{
   margin-top: 51px;
 }
+
+@media only screen and (max-width: 600px){
+  .a1 p{
+    font-size: 15pt;
+}
+.a1{
+  width: 25%;
+}
+
+.ext h1{
+  font-size: 15pt;
+  width: 70%;
+  margin-left: 10%;
+}
+.main h2{
+  font-size:15pt;
+}
+.brands{
+  font-size: 15pt;
+}
+}

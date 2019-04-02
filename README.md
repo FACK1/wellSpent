@@ -25,11 +25,9 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
  # Key Technologies   
  - Express JS : https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
  - React.js : https://reactjs.org/docs/getting-started.html
- - Sequalize : http://docs.sequelizejs.com/
+ - Airtable:https://airtable.com/
  - Axios : https://www.npmjs.com/package/axios
- - Amazon s3: https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html
- - Saas: https://sass-lang.com/
- 
+
  # How to run our app on your local machine?
  Follow these instruction in order:
 
@@ -43,13 +41,13 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
 
 3- Make a new file in the root directory wellSpent, and call it .env
 
-   Copy paste the following in your .env file:
+   Identify below variables inside .env file:
    
-   > PORT = 5000 
+   > PORT=5000 
    
-   > APIKEY = API KEY your account in Airtable
+   > APIKEY= "API KEY that you got from your account on Airtable"
    
-   > DB_NAME = Database Name in your Airtable
+   > DB_NAME ="Database Name on Airtable"
      
 5- Install dependencies and dev dependencies; by typing in the terminal ```npm i``` && ``` npm install-client```.
 
@@ -62,7 +60,8 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
 # Figma Link
  - A User:https://www.figma.com/proto/Zq6EyOSjYBBgDiRwsc0TFSfU/WellSpent?node-id=857%3A116&scaling=min-zoom
  - An Admin:https://www.figma.com/proto/Zq6EyOSjYBBgDiRwsc0TFSfU/WellSpent?node-id=42%3A367&scaling=min-zoom
-
+# heroku Link
+ -https://wellspentethecal.herokuapp.com/
 # DataBase Structure 
 ![111](https://user-images.githubusercontent.com/35188117/54487653-44a35480-48a1-11e9-9857-45ec9e62c430.png)
 

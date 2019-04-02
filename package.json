@@ -11,6 +11,7 @@
     "start" :"node Server/server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server \" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "node Server/server.js",
     "eslint": "./node_modules/.bin/eslint ./src",
     "eslint:fix": "./node_modules/.bin/eslint --fix ./src"
   },
@@ -28,8 +29,8 @@
     "@blueprintjs/core": "^3.14.1",
     "airtable": "^0.5.9",
     "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
     "env2": "^2.2.2",
-    "eslint-plugin-react": "^7.12.4",
     "express": "^4.16.4"
   },
   "devDependencies": {
@@ -38,6 +39,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
     "nodemon": "^1.18.10"
   }
 }

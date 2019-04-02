@@ -60,3 +60,15 @@
   text-decoration: none;
   color: black;
 }
+@media only screen and (max-width: 600px) {
+  .react-autosuggest__input {
+    height: 40px;
+    width: 300px;
+    padding-left: 0px;
+  }
+
+  .aboutus{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
