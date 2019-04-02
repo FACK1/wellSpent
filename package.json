@@ -10,6 +10,7 @@
     "server": "nodemon Server/server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server \" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "node ./server/server.js",
     "eslint": "./node_modules/.bin/eslint ./src",
     "eslint:fix": "./node_modules/.bin/eslint --fix ./src"
   },
