@@ -11,22 +11,66 @@ import { RingLoader } from "react-spinners";
 export default class Feedback extends Component {
   state = {
     info: [],
-    loading: false
+    loading: false,
+    ids:[]
   };
   componentDidMount() {
     const { name } = this.props;
     axios
       .get(`/getfeedback/${name}`)
       .then(({ data }) => {
-        this.setState({
-          info: data,
-          loading: true
-        });
+        if(data.length === 3){
+          this.state.ids.push(Object.keys(data[0])[0],Object.keys(data[1])[0],Object.keys(data[2])[0]);
+          this.state.info.push(Object.values(data[0]),Object.values(data[1]),Object.values(data[2]));
+          this.setState({
+            loading: true,
+          });
+        }
+        else {
+          console.log("Data Not eno");
+          return(
+            <div> No feedback for this Brand</div>
+          );
+        }
       })
       .catch(err => {
         console.log(err);
       });
   }
+
+  like=(id,like)=> {
+    const idfeedback=this.state.ids[id];
+    axios
+      .get(`/like/${idfeedback}/${like}`)
+      .then(({ data: { success } }) => {
+        if (success) {
+          window.location.reload();
+        } else {
+          console.log("error");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+};
+
+
+  dislike=(id,dislike)=> {
+    const idfeedback=this.state.ids[id];
+    axios
+      .get(`/dislike/${idfeedback}/${dislike}`)
+      .then(({ data: { success } }) => {
+        if (success) {
+          window.location.reload();
+        } else {
+          console.log("error");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+};
+
   render() {
     return (
       <div className="maina">
@@ -41,7 +85,7 @@ export default class Feedback extends Component {
               <div className="cards">
                 <h3>Feedback</h3>
                 {this.state.info.length !== 0 ? (
-                  this.state.info.map(i => {
+                  this.state.info.map((i ,id)=> {
                     return (
                       <div className="allcards">
                         <div className="carduser">
@@ -49,20 +93,24 @@ export default class Feedback extends Component {
                             <img src={user} alt="user" />
                             <div className="nameuser">
                               <h4>Name</h4>
-                              <h5>{i.Name}</h5>
+                              <h5>{i[0].Name}</h5>
                             </div>
                             <div className="feedback">
                               <h4>Feedback</h4>
-                              <h5>{i.feedback}</h5>
+                              <h5>{i[0].feedback}</h5>
                             </div>
                             <div className="votes">
                               <div className="like">
+                              <button onClick= {()=>this.like(id,i[0].like)}>
                                 <img src={like} alt="like" />
-                                <p>{i.like}</p>
+                                <p>{i[0].like}</p>
+                              </button>
                               </div>
                               <div className="dislike">
-                                <img src={dislike} alt="dislike" />
-                                <p>{i.dislike}</p>
+                                <button onClick= {()=>this.dislike(id,i[0].dislike)}>
+                                  <img src={dislike} alt="dislike" />
+                                  <p>{i[0].dislike}</p>
+                                </button>
                               </div>
                             </div>
                           </div>
