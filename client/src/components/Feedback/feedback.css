@@ -175,5 +175,10 @@
 
     }
 
-
+    .sweet-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1389a6;
+    }
   }
