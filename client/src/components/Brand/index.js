@@ -58,7 +58,6 @@ class Brand extends React.Component {
       loading
     } = this.state;
     if (loading) {
-      console.log("iiii", image);
       return (
         <div className="root">
           <div className="container">

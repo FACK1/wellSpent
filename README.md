@@ -59,7 +59,7 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
 
 
 # heroku Link
- -https://wellspentethecal.herokuapp.com/
+ https://wellspentethecal.herokuapp.com/
 # DataBase Structure 
 ![111](https://user-images.githubusercontent.com/35188117/54487653-44a35480-48a1-11e9-9857-45ec9e62c430.png)
 
