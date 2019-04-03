@@ -83,10 +83,11 @@
     background-color: Transparent;
     border: none;
   }
-  .dislike button {
+.dislike button {
       background-color: Transparent;
       border: none;
     }
+
   @media only screen and (max-width: 600px) {
     .header{
       display: flex;
