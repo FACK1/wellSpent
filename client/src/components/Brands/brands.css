@@ -197,6 +197,10 @@
   border-bottom: 2px solid black;
   margin-left: 20px;
 }
+.div-final {
+  background-color: white;
+  height: 90px;
+}
 
 .btn1 {
   margin-top: 20px;
