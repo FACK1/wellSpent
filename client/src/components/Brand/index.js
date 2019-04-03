@@ -13,9 +13,9 @@ class Brand extends React.Component {
     loading: false
   };
   componentDidMount() {
-    const { Name } = this.props.match.params;
+    const { name } = this.props.match.params;
     axios
-      .get(`/brand/${Name}`)
+      .get(`/api/brand/${name}`)
       .then(({ data }) => {
         const info = data[0];
         this.setState({
@@ -62,7 +62,7 @@ class Brand extends React.Component {
       return (
         <div className="root">
           <div className="container">
-            <Link to="/brands">
+            <Link to="/Brands">
               <img className="backimages" src={back} alt="img" />
             </Link>
             <p className="pargraph"> Brand Details </p>
