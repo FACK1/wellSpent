@@ -5,6 +5,7 @@ import axios from "axios";
 import Feedback from "../Feedback";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import defaultimage from "./x.jpg";
 
 class Brand extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class Brand extends React.Component {
       .then(({ data }) => {
         const info = data[0];
         this.setState({
-          image: info.Image[0].url,
+          image: info.Image,
           name: info["Name"],
           overallscore: info["OverallScore"],
           enviormentscore: info["EnvironmentScore"],
@@ -57,6 +58,7 @@ class Brand extends React.Component {
       loading
     } = this.state;
     if (loading) {
+      console.log("iiii", image);
       return (
         <div className="root">
           <div className="container">
@@ -65,7 +67,12 @@ class Brand extends React.Component {
             </Link>
             <p className="pargraph"> Brand Details </p>
           </div>
-          <img className="images" src={image} alt="img" />
+          {image !== undefined ? (
+            <img className="images" src={image[0].url} alt="" />
+          ) : (
+            <img className="images" src={defaultimage} alt="" />
+          )}
+
           <h3 className="brandname">{name}</h3>
 
           <div className="ALLdetails">
