@@ -10,6 +10,8 @@ exports.addfeedback = (req, res) => {
       feedback,
       Brands,
       Name,
+      like: 0,
+      dislike: 0,
     },
 
     (error) => {
