@@ -113,13 +113,16 @@ class Brands extends Component {
 
           {brands.length !== 0 ? (
             brands.map(brand => {
-              letters.push(brand.Name.charAt(0));
+              const nameCapitalized =
+                brand.Name.charAt(0).toUpperCase() + brand.Name.slice(1);
+              letters.push(nameCapitalized.charAt(0));
+
               return (
                 <div className="big-box">
-                  {letters.filter(char => char === brand.Name.charAt(0))
+                  {letters.filter(char => char === nameCapitalized.charAt(0))
                     .length === 1 && (
                     <div className="diva">
-                      <div className="par3">{brand.Name.charAt(0)}</div>
+                      <div className="par3">{nameCapitalized.charAt(0)}</div>
                     </div>
                   )}
                   <div className="div-box">
@@ -131,7 +134,7 @@ class Brands extends Component {
                       />
                     </div>
                     <div className="descrip">
-                      <p className="name">{brand.Name}</p>
+                      <p className="name">{nameCapitalized}</p>
                       <p className="description">{brand.Explanation}</p>
                       <div className="div-button">
                         <Link
@@ -149,7 +152,7 @@ class Brands extends Component {
                           "background-color": `${brand.OverallScoreColour[0]}`
                         }}
                       >
-                        {brand.OverallScore} <br /> overall score
+                        {brand.OverallScore} <br /> Overall score
                       </div>
                       <div
                         className="scrol2"
@@ -157,7 +160,7 @@ class Brands extends Component {
                           "background-color": `${brand.LabourScoreColour[0]}`
                         }}
                       >
-                        {brand.LaborScore} <br /> labour score
+                        {brand.LaborScore} <br /> Labour score
                       </div>
                       <div
                         className="scrol3"
@@ -167,7 +170,7 @@ class Brands extends Component {
                           }`
                         }}
                       >
-                        {brand.EnvironmentScore} <br /> enviorment score
+                        {brand.EnvironmentScore} <br /> Enviorment score
                       </div>
                     </div>
                   </div>
