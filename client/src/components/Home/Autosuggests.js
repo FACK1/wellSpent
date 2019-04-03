@@ -20,7 +20,7 @@ function getSuggestionValue(suggestion) {
   return suggestion;
 }
 function renderSuggestion(suggestion) {
-  if(suggestion !== "No Brand with this Name"){
+  if(suggestion !== "Not Found"){
   return (
     <Link to={`/brand/${suggestion}`} className="button-link">
       <div>
@@ -31,7 +31,7 @@ function renderSuggestion(suggestion) {
   else {
     return (
         <div>
-          <span>No Brand With This Name</span>
+          <span>Not Found</span>
         </div>
     );
   }
@@ -41,7 +41,6 @@ export default class Autosuggests extends Component {
   state = {
     value: "",
     suggestions: [],
-    suggestion:"No Data Found"
   };
   componentDidMount() {
     axios
@@ -64,7 +63,7 @@ export default class Autosuggests extends Component {
   onSuggestionsFetchRequested = ({ value }) => {
   if(getSuggestions(value).length===0){
     this.setState({
-      suggestions:["No Brand with this Name"]
+      suggestions:["Not Found"]
     });
   }
   else {
