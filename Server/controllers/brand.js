@@ -3,7 +3,9 @@ require('env2')('.env');
 
 exports.getBrand = (req, res) => {
   const { name } = req.params;
-  const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
+  const base = new Airtable({ apiKey: process.env.APIKEY }).base(
+    process.env.DB_NAME,
+  );
   base('Brands')
     .select({
       view: 'API Response',
