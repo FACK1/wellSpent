@@ -136,7 +136,9 @@ export default class Feedback extends Component {
                     );
                   })
                 ) : (
-                  <RingLoader color={"#1389A6"} loading={this.state.loading} />
+                  <div className="sweet-loading">
+                    <RingLoader color={"#1389A6"} loading={this.state.loading} />
+                  </div>
                 )}
               </div>
             </div>

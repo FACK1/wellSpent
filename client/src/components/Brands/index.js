@@ -39,7 +39,7 @@ class Brands extends Component {
       .post("/brand", { Name })
       .then(({ data: { success } }) => {
         if (success) {
-          alert("Your Suggest add, Thanks !!");
+          alert("Your suggestion added successfully, Thanks!");
           window.location.reload();
         } else {
           console.log("error");
@@ -91,7 +91,7 @@ class Brands extends Component {
                           brand name
                         </label>
                         <input
-                          className="login-input"
+                          className="name-input"
                           type="text"
                           name="Name"
                           value={this.state.value}
@@ -182,7 +182,7 @@ class Brands extends Component {
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader color={"#ff8094"} loading={loading} />
+          <RingLoader color={"#1389a6"} loading={loading} />
         </div>
       );
     }

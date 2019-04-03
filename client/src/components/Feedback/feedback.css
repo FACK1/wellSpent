@@ -87,7 +87,14 @@
       background-color: Transparent;
       border: none;
     }
-    
+
+.sweet-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1389a6;
+}
+
   @media only screen and (max-width: 600px) {
     .header{
       display: flex;
@@ -175,5 +182,10 @@
 
     }
 
-
+    .sweet-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1389a6;
+    }
   }

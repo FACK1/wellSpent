@@ -1,3 +1,10 @@
+.sweet-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1389a6;
+}
+
 .backimages{
   width: 30px;
   height: 40px;

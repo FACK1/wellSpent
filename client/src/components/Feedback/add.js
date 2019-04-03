@@ -20,7 +20,7 @@ class AddFeedback extends React.Component {
       .post("/addfeedback", { feedback, Brands, Name })
       .then(({ data: { success } }) => {
         if (success) {
-          alert("Your Feedback Access us, Thanks !!");
+          alert("Thank You For Your Feedback !!");
           window.location.reload();
         } else {
           console.log("error");

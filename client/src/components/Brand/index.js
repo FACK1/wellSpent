@@ -142,7 +142,7 @@ class Brand extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className="sweet-loading">
           <RingLoader
             color={"#1389A6"}
             align-items={"center"}
