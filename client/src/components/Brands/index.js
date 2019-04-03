@@ -181,7 +181,7 @@ class Brands extends Component {
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader color={"#ff8094"} loading={loading} />
+          <RingLoader color={"#1389a6"} loading={loading} />
         </div>
       );
     }
