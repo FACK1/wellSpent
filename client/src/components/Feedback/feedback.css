@@ -46,6 +46,7 @@
 
 .votes{
   display: inline-flex;
+  margin-left: 15%;
 }
 .line{
   border-left:1px solid #000;
