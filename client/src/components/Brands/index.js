@@ -114,7 +114,6 @@ class Brands extends Component {
 
           {brands.length !== 0 ? (
             brands.map(brand => {
-              console.log("image", brand.Image);
               const nameCapitalized =
                 brand.Name.charAt(0).toUpperCase() + brand.Name.slice(1);
               letters.push(nameCapitalized.charAt(0));
