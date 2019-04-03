@@ -188,7 +188,7 @@
   border-radius: 10px;
 }
 
-.login-input {
+.name-input {
   color: black;
   text-align: center;
   text-decoration: none;
@@ -349,5 +349,38 @@
     color: white;
     font-family: "Roboto", sans-serif;
     margin-bottom: 10px;
+  }
+  .modal {
+    height: 150px;
+    border-radius: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn1 {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 77px;
+    height: 23px;
+    color: white;
+    background-color: #1389a6;
+  }
+  .div-label {
+    display: block;
+    justify-content: center;
+    width: 151px;
+  }
+  .name-input {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    border: none;
+    border-bottom: 2px solid black;
   }
 }
