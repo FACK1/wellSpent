@@ -90,7 +90,7 @@ class Brands extends Component {
                           brand name
                         </label>
                         <input
-                          className="login-input"
+                          className="name-input"
                           type="text"
                           name="Name"
                           value={this.state.value}
