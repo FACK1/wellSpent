@@ -65,57 +65,54 @@ class Brand extends React.Component {
             </Link>
             <p className="pargraph"> Brand Details </p>
           </div>
-          <div className="image">
-            <img className="images" src={image} alt="img" />
-          </div>
-          <div className="name">
-            <h3>{name}</h3>
-          </div>
-          <div className="details" />
-          <div className="overall">
-            <div
-              className="score"
-              style={{ "background-color": `${OverallScorehexa}` }}
-            >
-              <h3>OverallScore</h3>
-              <h3 className="os">{overallscore} </h3>
-            </div>
-          </div>
-          <div className="detail">
-            <div className="labour">
-              <div
-                className="score1"
-                style={{ "background-color": `${LabourScorehexa}` }}
-              >
-                <h3> {labourscore}</h3>
-                <h3>Labour Score </h3>
-              </div>
-            </div>
-            <div className="enviorment">
-              <div
-                className="score2"
-                style={{ "background-color": `${EnvironmentScorehexa}` }}
-              >
-                <h3> {enviormentscore}</h3>
-                <h3>Enviorment Score</h3>
-              </div>
-            </div>
-            <div className="animal">
-              <div
-                className="score3"
-                style={{ "background-color": `${AnimalRightshexa}` }}
-              >
-                <h3> {animalrightscore}</h3>
-                <h3>Animal Right Score </h3>
-              </div>
-            </div>
-          </div>
-          <div className="more">
-            <h3> Cost:{cost}</h3>
-            <h3> ProductType:{producttype}</h3>
-            <h3>Explanation :{explanation}</h3>
-          </div>
+          <img className="images" src={image} alt="img" />
+          <h3 className="brandname">{name}</h3>
 
+          <div className="ALLdetails">
+            <div className="overall">
+              <div
+                className="score"
+                style={{ "background-color": `${OverallScorehexa}` }}
+              >
+                <h3>OverallScore</h3>
+                <h3 className="os">{overallscore} </h3>
+              </div>
+            </div>
+            <div className="detail">
+              <div className="labour">
+                <div
+                  className="score1"
+                  style={{ "background-color": `${LabourScorehexa}` }}
+                >
+                  <h3> {labourscore}</h3>
+                  <h3>Labour Score </h3>
+                </div>
+              </div>
+              <div className="enviorment">
+                <div
+                  className="score2"
+                  style={{ "background-color": `${EnvironmentScorehexa}` }}
+                >
+                  <h3> {enviormentscore}</h3>
+                  <h3>Enviorment Score</h3>
+                </div>
+              </div>
+              <div className="animal">
+                <div
+                  className="score3"
+                  style={{ "background-color": `${AnimalRightshexa}` }}
+                >
+                  <h3> {animalrightscore}</h3>
+                  <h3>Animal Right Score </h3>
+                </div>
+              </div>
+            </div>
+            <div className="more">
+              <p> Cost:{cost}</p>
+              <p> ProductType:{producttype}</p>
+              <p>Explanation :{explanation}</p>
+            </div>
+          </div>
           <div className="MoreDetails">
             <div className="labour2">
               <div
