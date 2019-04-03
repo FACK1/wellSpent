@@ -31,7 +31,7 @@ export default class Home extends Component {
         </div>
         <div className="main-2">
           <Autosuggests />
-          <Link to="/brands">
+          <Link to="/Brands">
             <button className="brands">Brands</button>
           </Link>
         </div>

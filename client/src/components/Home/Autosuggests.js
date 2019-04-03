@@ -21,7 +21,7 @@ function getSuggestionValue(suggestion) {
 }
 function renderSuggestion(suggestion) {
   return (
-    <Link to={`/brand/${suggestion}`} className="button-link">
+    <Link to={`/Brand/${suggestion}`} className="button-link">
       <div>
         <span>{suggestion}</span>
       </div>
