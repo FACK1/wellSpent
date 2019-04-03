@@ -4,6 +4,7 @@ import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
+import x from "../Brand/x.jpg";
 class Brands extends Component {
   state = {
     loading: false,
@@ -113,6 +114,7 @@ class Brands extends Component {
           {brands.length !== 0 ? (
             brands.map(brand => {
               letters.push(brand.Name.charAt(0));
+              console.log("image", brand.Image);
               return (
                 <div className="big-box">
                   {letters.filter(char => char === brand.Name.charAt(0))
@@ -122,13 +124,20 @@ class Brands extends Component {
                     </div>
                   )}
                   <div className="div-box">
-                    <div className="imge">
-                      <img
-                        className="img-get"
-                        src={brand.Image[0].thumbnails.large.url}
-                        alt=""
-                      />
-                    </div>
+                    {brand.Image !== undefined ? (
+                      <div className="imge">
+                        <img
+                          className="img-get"
+                          src={brand.Image[0].thumbnails.large.url}
+                          alt=""
+                        />
+                      </div>
+                    ) : (
+                      <div className="imge">
+                        <img className="img-get" src={x} alt="" />
+                      </div>
+                    )}
+
                     <div className="descrip">
                       <p className="name">{brand.Name}</p>
                       <p className="description">{brand.Explanation}</p>
