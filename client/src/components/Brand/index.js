@@ -5,7 +5,7 @@ import axios from "axios";
 import Feedback from "../Feedback";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
-import x from "./x.jpg";
+import defaultimage from "./x.jpg";
 
 class Brand extends React.Component {
   state = {
@@ -70,7 +70,7 @@ class Brand extends React.Component {
           {image !== undefined ? (
             <img className="images" src={image[0].url} alt="" />
           ) : (
-            <img className="images" src={x} alt="" />
+            <img className="images" src={defaultimage} alt="" />
           )}
 
           <h3 className="brandname">{name}</h3>
