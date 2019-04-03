@@ -5,7 +5,6 @@
   padding-right: 40px;
 
 }
-
 .pargraph{
   font-size: 16pt;
   font-weight: bold;
@@ -19,14 +18,6 @@
   border-radius: 10px;
   max-width: 50%;
 }
- .name{
-   font-size: 16pt;
-   font-weight: bold;
-   font-family: 'Roboto', sans-serif;
-   color: black;
-   text-align: left !important;
-   padding-left: 15%;
- }
 .score{
  width: 150px;
  padding:0.5px;
@@ -160,4 +151,172 @@ margin-bottom: 70px;
  .labour2{
    display: inline-flex;
    text-align: left !important;
+ }
+
+ .brandname{
+   text-align: left;
+   margin-left: 15%;
+   font-family: 'Roboto', sans-serif;
+ }
+ @media only screen and (max-width: 600px) {
+   .pargraph{
+      font-size: 10pt;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      margin-right: 27%
+   }
+   .backimages {
+     width: 30px;
+     height: 40px;
+     padding-right: 16px;
+     padding-top: 1%;
+}
+.images{
+  width: 118px;
+  height: 136px;
+  margin-right: 83%;
+  border: 5px groove;
+  border-radius: 10px;
+  max-width: 50%;
+}
+  .score{
+    width: 67px;
+  padding: 0.5px;
+  text-align: center;
+  height: 83px;
+  border-radius: 5px
+
+  }
+.score1{
+  width: 133px;
+  padding:0.5px;
+  text-align: center;
+  border-radius: 5px;
+}
+.scoe1 h3{
+  display: inline-block;
+  padding:7px;
+  font-size: 10px;
+}
+.score2{
+  width: 133px;
+  padding:0.5px;
+  text-align: center;
+  border-radius: 5px;
+}
+.score2 h3{
+  display: inline-block;
+  padding:4px;
+  font-size: 10px;
+}
+.score3{
+width: 133px;
+  padding:0.5px;
+  text-align: center;
+  border-radius: 5px;
+}
+.score3 h3{
+  display: inline-block;
+  padding:4px;
+  font-size: 10px;
+}
+ .overall{
+   color: black;
+   font-size: 12pt;
+   font-family: 'Roboto', sans-serif;
+   padding-left: 1%;
+   padding-left: 136px;
+   margin-top: -204px;
+ }
+ .more {
+   padding-right: 150px;
+   margin-left: 28%;
+   font-size: 8pt;
+   text-align: left !important;
+ }
+ .labour {
+   padding-left: 700px;
+   padding-right: 0.2px;
+   font-size: 12px;
+ }
+ .enviorment{
+  padding-left: 700px;
+  font-size: 12px;
+   padding-top: 12px;
+
+ }
+ .animal{
+  padding-left: 700px;
+  font-size: 12px;
+  padding-top: 12px;
+ }
+ .detail{
+   margin-top: -83px;
+  margin-left: -482px;
+}
+.details{
+margin-bottom: 70px;
+}
+ .root{
+   padding: 30px;
+   padding-left: 12%;
+ }
+ .container{
+   display: inline-flex;
+   float: left;
+   margin-bottom: 5%;
+   max-width: 30%;
+ }
+
+ .os{
+   font-size: 15pt !important;
+
+ }
+ .score h3{
+   font-size: 8pt;
+ }
+ .MoreDetails{
+   float:left;
+   width:40%;
+   padding-top: 20%;
+   text-align: left !important;
+
+ }
+ .score22{
+    width: 70px;
+    padding:2px;
+    text-align: center;
+    height:70px;
+    border-radius: 5px;
+
+}
+ .name2{
+   font-size: 10pt;
+   font-family: 'Roboto', sans-serif;
+   padding:5%;
+   font-weight: bold;
+
+ }
+ .score22 h3{
+   text-align: center;
+   font-size: 10px;
+
+ }
+ .MoreDetails p{
+   font-size: 9pt;
+   font-family: 'Roboto', sans-serif;
+   text-align: left !important;
+   margin-left: 2%;
+
+ }
+ .labour2{
+   display: inline-flex;
+   text-align: left !important;
+ }
+ .brandname{
+   text-align: left;
+   margin-left: 10%;
+   font-family: 'Roboto', sans-serif;
+ }
+
  }
