@@ -12,7 +12,8 @@ export default class Feedback extends Component {
   state = {
     info: [],
     loading: false,
-    ids:[]
+    ids:[],
+    NoData:''
   };
   componentDidMount() {
     const { name } = this.props;
@@ -26,11 +27,24 @@ export default class Feedback extends Component {
             loading: true,
           });
         }
+        else if (data.length === 2) {
+          this.state.ids.push(Object.keys(data[0])[0],Object.keys(data[1])[0]);
+          this.state.info.push(Object.values(data[0]),Object.values(data[1]));
+          this.setState({
+            loading: true,
+          });
+        }
+        else if (data.length === 1) {
+          this.state.ids.push(Object.keys(data[0])[0]);
+          this.state.info.push(Object.values(data[0]));
+          this.setState({
+            loading: true,
+          });
+        }
         else {
-          console.log("Data Not eno");
-          return(
-            <div> No feedback for this Brand</div>
-          );
+          this.setState({
+            NoData:"No Feedback For this Brand"
+          })
         }
       })
       .catch(err => {
@@ -84,6 +98,7 @@ export default class Feedback extends Component {
               <div className="line" />
               <div className="cards">
                 <h3>Feedback</h3>
+                <h3>{this.state.NoData}</h3>
                 {this.state.info.length !== 0 ? (
                   this.state.info.map((i ,id)=> {
                     return (
