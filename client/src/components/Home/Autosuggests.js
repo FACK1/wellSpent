@@ -20,19 +20,27 @@ function getSuggestionValue(suggestion) {
   return suggestion;
 }
 function renderSuggestion(suggestion) {
+  if(suggestion !== "Not Found"){
   return (
     <Link to={`/brand/${suggestion}`} className="button-link">
       <div>
         <span>{suggestion}</span>
       </div>
     </Link>
-  );
+  );}
+  else {
+    return (
+        <div>
+          <span>Not Found</span>
+        </div>
+    );
+  }
 }
 
 export default class Autosuggests extends Component {
   state = {
     value: "",
-    suggestions: []
+    suggestions: [],
   };
   componentDidMount() {
     axios
@@ -53,9 +61,16 @@ export default class Autosuggests extends Component {
     });
   };
   onSuggestionsFetchRequested = ({ value }) => {
+  if(getSuggestions(value).length===0){
+    this.setState({
+      suggestions:["Not Found"]
+    });
+  }
+  else {
     this.setState({
       suggestions: getSuggestions(value)
     });
+  }
   };
   onSuggestionsClearRequested = () => {
     this.setState({
