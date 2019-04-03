@@ -12,7 +12,10 @@ exports.getfeedback = (req, res) => {
     })
     .eachPage(
       (records, fetchNextPage) => {
-        const result = records.map(record => record.fields);
+        const keys = records.map(record => record.fields);
+        const values = records.map(record => (record.id));
+        const result = values.map((i, k) => ({ [i]: keys[k] }));
+
         fetchNextPage();
         res.json(result);
       },
