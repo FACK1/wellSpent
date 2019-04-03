@@ -20,7 +20,6 @@ function getSuggestionValue(suggestion) {
   return suggestion;
 }
 function renderSuggestion(suggestion) {
-  console.log("ssss",suggestion);
   if(suggestion !== "No Brand with this Name"){
   return (
     <Link to={`/brand/${suggestion}`} className="button-link">
