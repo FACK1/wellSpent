@@ -39,6 +39,7 @@ class Brands extends Component {
       .post("/brand", { Name })
       .then(({ data: { success } }) => {
         if (success) {
+          alert("Your Suggest add, Thanks !!");
           window.location.reload();
         } else {
           console.log("error");
