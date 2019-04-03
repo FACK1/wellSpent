@@ -36,7 +36,7 @@ export default class Autosuggests extends Component {
   };
   componentDidMount() {
     axios
-      .get("/brands")
+      .get("/api/brands")
       .then(({ data }) => {
         brands = data.map(brand => {
           return brand.Name;

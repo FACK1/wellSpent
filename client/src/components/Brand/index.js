@@ -15,7 +15,7 @@ class Brand extends React.Component {
   componentDidMount() {
     const { name } = this.props.match.params;
     axios
-      .get(`/brand/${name}`)
+      .get(`/api/brand/${name}`)
       .then(({ data }) => {
         const info = data[0];
         this.setState({

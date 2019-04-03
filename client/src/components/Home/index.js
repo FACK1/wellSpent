@@ -10,7 +10,7 @@ export default class Home extends Component {
   };
   componentDidMount() {
     axios
-      .get("/aboutus")
+      .get("/api/aboutus")
       .then(({ data }) => {
         this.setState({
           info: data[0]
