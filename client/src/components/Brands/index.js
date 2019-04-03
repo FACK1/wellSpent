@@ -4,6 +4,7 @@ import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
+import defaultimage from "../Brand/x.jpg";
 class Brands extends Component {
   state = {
     loading: false,
@@ -125,13 +126,20 @@ class Brands extends Component {
                     </div>
                   )}
                   <div className="div-box">
-                    <div className="imge">
-                      <img
-                        className="img-get"
-                        src={brand.Image[0].thumbnails.large.url}
-                        alt=""
-                      />
-                    </div>
+                    {brand.Image !== undefined ? (
+                      <div className="imge">
+                        <img
+                          className="img-get"
+                          src={brand.Image[0].thumbnails.large.url}
+                          alt=""
+                        />
+                      </div>
+                    ) : (
+                      <div className="imge">
+                        <img className="img-get" src={defaultimage} alt="" />
+                      </div>
+                    )}
+
                     <div className="descrip">
                       <p className="name">{nameCapitalized}</p>
                       <p className="description">{brand.Explanation}</p>
