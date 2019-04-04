@@ -8,17 +8,15 @@ const { addfeedback } = require('./controllers/addfeedback.js');
 const { like } = require('./controllers/like.js');
 const { dislike } = require('./controllers/dislike.js');
 
-
 const router = express.Router();
 
-router.get('/brand/:name', getBrand);
-router.get('/brands', getBrands);
-router.get('/aboutus', getAboutus);
-router.post('/brand', addBrand);
-router.get('/getfeedback/:name', getfeedback);
-router.post('/addfeedback', addfeedback);
-router.get('/like/:id/:like', like);
-router.get('/dislike/:id/:dislike', dislike);
-
+router.get('/api/brand/:name', getBrand);
+router.get('/api/brands', getBrands);
+router.get('/api/aboutus', getAboutus);
+router.post('/api/brand', addBrand);
+router.get('/api/getfeedback/:name', getfeedback);
+router.post('/api/addfeedback', addfeedback);
+router.get('/api/like/:id/:like', like);
+router.get('/api/dislike/:id/:dislike', dislike);
 
 module.exports = router;
