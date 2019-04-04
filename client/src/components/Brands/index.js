@@ -178,7 +178,7 @@ class Brands extends Component {
                           }`
                         }}
                       >
-                        {brand.EnvironmentScore} <br /> Enviorment score
+                        {brand.EnvironmentScore} <br /> Environment score
                       </div>
                     </div>
                   </div>
