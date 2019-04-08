@@ -5,6 +5,9 @@ import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import defaultimage from "../Brand/x.jpg";
+
+import BrandItem from "./BrandItem";
+
 class Brands extends Component {
   state = {
     loading: false,
@@ -118,6 +121,27 @@ class Brands extends Component {
                 brand.Name.charAt(0).toUpperCase() + brand.Name.slice(1);
               letters.push(nameCapitalized.charAt(0));
 
+              const brandDetails = {
+                nameCapitalized,
+                name: brand.Name,
+                image: brand.Image
+                  ? brand.Image[0].thumbnails.large.url
+                  : defaultimage,
+                explanation: brand.Explanation || "Not available",
+                overallScore: brand.OverallScore || "-",
+                overallScoreColour: brand.OverallScoreColour
+                  ? brand.OverallScoreColour[0]
+                  : "#D3D3D3",
+                labourScore: brand.LaborScore || "-",
+                labourScoreColour: brand.LabourScoreColour
+                  ? brand.LabourScoreColour[0]
+                  : "#D3D3D3",
+                environmentScore: brand.EnvironmentScore || "-",
+                environmentScoreColour: brand.EnvironmentScoreColour
+                  ? brand.EnvironmentScoreColour[0]
+                  : "#D3D3D3"
+              };
+
               return (
                 <div className="big-box">
                   {letters.filter(char => char === nameCapitalized.charAt(0))
@@ -126,62 +150,7 @@ class Brands extends Component {
                       <div className="par3">{nameCapitalized.charAt(0)}</div>
                     </div>
                   )}
-                  <div className="div-box">
-                    {brand.Image !== undefined ? (
-                      <div className="imge">
-                        <img
-                          className="img-get"
-                          src={brand.Image[0].thumbnails.large.url}
-                          alt=""
-                        />
-                      </div>
-                    ) : (
-                      <div className="imge">
-                        <img className="img-get" src={defaultimage} alt="" />
-                      </div>
-                    )}
-
-                    <div className="descrip">
-                      <p className="name">{nameCapitalized}</p>
-                      <p className="description">{brand.Explanation}</p>
-                      <div className="div-button">
-                        <Link
-                          to={`/Brand/${brand.Name}`}
-                          className="button-link"
-                        >
-                          <button className="view">view</button>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="scrol">
-                      <div
-                        className="scrol1"
-                        style={{
-                          "background-color": `${brand.OverallScoreColour[0]}`
-                        }}
-                      >
-                        {brand.OverallScore} <br /> Overall score
-                      </div>
-                      <div
-                        className="scrol2"
-                        style={{
-                          "background-color": `${brand.LabourScoreColour[0]}`
-                        }}
-                      >
-                        {brand.LaborScore} <br /> Labour score
-                      </div>
-                      <div
-                        className="scrol3"
-                        style={{
-                          "background-color": `${
-                            brand.EnvironmentScoreColour[0]
-                          }`
-                        }}
-                      >
-                        {brand.EnvironmentScore} <br /> Environment score
-                      </div>
-                    </div>
-                  </div>
+                  <BrandItem {...brandDetails} />
                 </div>
               );
             })
