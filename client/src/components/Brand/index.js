@@ -5,6 +5,7 @@ import axios from "axios";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
+import Feedback from "../Feedback/add.js";
 
 class Brand extends React.Component {
   state = {
@@ -145,6 +146,7 @@ class Brand extends React.Component {
               </p>
             </div>
           </div>
+          <Feedback name={name} />
         </div>
       );
     } else {
