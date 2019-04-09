@@ -1,0 +1,15 @@
+.all {
+  font-size: 25pt;
+  color: #c5c4b9;
+  font-weight: bold;
+}
+.par1 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 240px;
+}
+.big-big {
+  padding-top: 40px;
+}
