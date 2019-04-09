@@ -138,7 +138,6 @@ margin-bottom: 70px;
     text-align: center;
     height:70px;
     border-radius: 5px;
-
 }
 .score222{
    width: 70px;
@@ -146,15 +145,12 @@ margin-bottom: 70px;
    text-align: center;
    height:70px;
    border-radius: 5px;
-
 }
-
  .name2{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
-   padding:5%;
+   padding:2%;
    font-weight: bold;
-
  }
  .score22 h3{
    text-align: center;
@@ -162,31 +158,29 @@ margin-bottom: 70px;
  .score222 h3{
    text-align: center;
  }
- .MoreDetails p1{
+ .labour2 p1{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
-   margin-left: -13% !important;
-   margin-top: 14% !important;
+   margin-top: 13%;
+   background-color: pink;
+   display: flex;
+   justify-content: center;
  }
-
-
-
  .MoreDetails p2{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
-   margin-left: -13%;
-   margin-top: 14%;
-
+   background-color: pink;
  }
  .labour2{
-   display: inline-flex;
-   text-align: left !important;
+text-align: left !important;
+display: flex;
+justify-content: center;
  }
  .enviorment22{
-   display: inline-flex;
-   text-align: left !important;
+   display: flex;
+   justify-content: center;
  }
  .brandname{
    text-align: left;
