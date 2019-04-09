@@ -10,7 +10,7 @@ export default class Home extends Component {
   };
   componentDidMount() {
     axios
-      .get("/aboutus")
+      .get("/api/aboutus")
       .then(({ data }) => {
         this.setState({
           info: data[0]
@@ -31,7 +31,7 @@ export default class Home extends Component {
         </div>
         <div className="main-2">
           <Autosuggests />
-          <Link to="/brands">
+          <Link to="/Brands">
             <button className="brands">Brands</button>
           </Link>
         </div>

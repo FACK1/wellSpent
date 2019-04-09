@@ -12,39 +12,44 @@ export default class Feedback extends Component {
   state = {
     info: [],
     loading: false,
-    ids:[],
-    NoData:''
+    ids: [],
+    NoData: ""
   };
   componentDidMount() {
     const { name } = this.props;
     axios
-      .get(`/getfeedback/${name}`)
+      .get(`/api/getfeedback/${name}`)
       .then(({ data }) => {
-        if(data.length === 3){
-          this.state.ids.push(Object.keys(data[0])[0],Object.keys(data[1])[0],Object.keys(data[2])[0]);
-          this.state.info.push(Object.values(data[0]),Object.values(data[1]),Object.values(data[2]));
+        if (data.length === 3) {
+          this.state.ids.push(
+            Object.keys(data[0])[0],
+            Object.keys(data[1])[0],
+            Object.keys(data[2])[0]
+          );
+          this.state.info.push(
+            Object.values(data[0]),
+            Object.values(data[1]),
+            Object.values(data[2])
+          );
           this.setState({
-            loading: true,
+            loading: true
           });
-        }
-        else if (data.length === 2) {
-          this.state.ids.push(Object.keys(data[0])[0],Object.keys(data[1])[0]);
-          this.state.info.push(Object.values(data[0]),Object.values(data[1]));
+        } else if (data.length === 2) {
+          this.state.ids.push(Object.keys(data[0])[0], Object.keys(data[1])[0]);
+          this.state.info.push(Object.values(data[0]), Object.values(data[1]));
           this.setState({
-            loading: true,
+            loading: true
           });
-        }
-        else if (data.length === 1) {
+        } else if (data.length === 1) {
           this.state.ids.push(Object.keys(data[0])[0]);
           this.state.info.push(Object.values(data[0]));
           this.setState({
-            loading: true,
+            loading: true
           });
-        }
-        else {
+        } else {
           this.setState({
-            NoData:"No Feedback For this Brand"
-          })
+            NoData: "No Feedback For this Brand"
+          });
         }
       })
       .catch(err => {
@@ -52,10 +57,10 @@ export default class Feedback extends Component {
       });
   }
 
-  like=(id,like)=> {
-    const idfeedback=this.state.ids[id];
+  like = (id, like) => {
+    const idfeedback = this.state.ids[id];
     axios
-      .get(`/like/${idfeedback}/${like}`)
+      .get(`/api/like/${idfeedback}/${like}`)
       .then(({ data: { success } }) => {
         if (success) {
           window.location.reload();
@@ -66,13 +71,12 @@ export default class Feedback extends Component {
       .catch(err => {
         console.log(err);
       });
-};
+  };
 
-
-  dislike=(id,dislike)=> {
-    const idfeedback=this.state.ids[id];
+  dislike = (id, dislike) => {
+    const idfeedback = this.state.ids[id];
     axios
-      .get(`/dislike/${idfeedback}/${dislike}`)
+      .get(`/api/dislike/${idfeedback}/${dislike}`)
       .then(({ data: { success } }) => {
         if (success) {
           window.location.reload();
@@ -83,7 +87,7 @@ export default class Feedback extends Component {
       .catch(err => {
         console.log(err);
       });
-};
+  };
 
   render() {
     return (
@@ -100,7 +104,7 @@ export default class Feedback extends Component {
                 <h3>Feedback</h3>
                 <h3>{this.state.NoData}</h3>
                 {this.state.info.length !== 0 ? (
-                  this.state.info.map((i ,id)=> {
+                  this.state.info.map((i, id) => {
                     return (
                       <div className="allcards">
                         <div className="carduser">
@@ -116,13 +120,17 @@ export default class Feedback extends Component {
                             </div>
                             <div className="votes">
                               <div className="like">
-                              <button onClick= {()=>this.like(id,i[0].like)}>
-                                <img src={like} alt="like" />
-                                <p>{i[0].like}</p>
-                              </button>
+                                <button
+                                  onClick={() => this.like(id, i[0].like)}
+                                >
+                                  <img src={like} alt="like" />
+                                  <p>{i[0].like}</p>
+                                </button>
                               </div>
                               <div className="dislike">
-                                <button onClick= {()=>this.dislike(id,i[0].dislike)}>
+                                <button
+                                  onClick={() => this.dislike(id, i[0].dislike)}
+                                >
                                   <img src={dislike} alt="dislike" />
                                   <p>{i[0].dislike}</p>
                                 </button>
@@ -137,7 +145,10 @@ export default class Feedback extends Component {
                   })
                 ) : (
                   <div className="sweet-loading">
-                    <RingLoader color={"#1389A6"} loading={this.state.loading} />
+                    <RingLoader
+                      color={"#1389A6"}
+                      loading={this.state.loading}
+                    />
                   </div>
                 )}
               </div>

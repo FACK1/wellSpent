@@ -13,17 +13,16 @@ class Brand extends React.Component {
     loading: false
   };
   componentDidMount() {
-    console.log("this.props.match.params", this.props.match.params);
-    const { Name } = this.props.match.params;
+    const { name } = this.props.match.params;
     axios
-      .get(`/brand/${Name}`)
+      .get(`/api/brand/${name}`)
       .then(({ data }) => {
         const info = data[0];
         this.setState({
           image: info.Image,
           name: info["BrandName"],
           overallscore: info["OverallScore"],
-          enviormentscore: info["EnvironmentScore"],
+          environmentscore: info["EnvironmentScore"],
           labourscore: info["LaborScore"],
           animalrightscore: info["Animal Rights Score"],
           cost: info["Cost"],
@@ -47,7 +46,7 @@ class Brand extends React.Component {
       name,
       overallscore,
       labourscore,
-      enviormentscore,
+      environmentscore,
       animalrightscore,
       cost,
       producttype,
@@ -59,11 +58,10 @@ class Brand extends React.Component {
       loading
     } = this.state;
     if (loading) {
-      console.log("iiii", image);
       return (
         <div className="root">
           <div className="container">
-            <Link to="/brands">
+            <Link to="/Brands">
               <img className="backimages" src={back} alt="img" />
             </Link>
             <p className="pargraph"> Brand Details </p>
@@ -101,7 +99,7 @@ class Brand extends React.Component {
                   className="score2"
                   style={{ "background-color": `${EnvironmentScorehexa}` }}
                 >
-                  <h3> {enviormentscore}</h3>
+                  <h3> {environmentscore}</h3>
                   <h3>Enviorment Score</h3>
                 </div>
               </div>
@@ -139,7 +137,7 @@ class Brand extends React.Component {
                 className="score22"
                 style={{ "background-color": `${EnvironmentScorehexa}` }}
               >
-                <h3> {enviormentscore}</h3>
+                <h3> {environmentscore}</h3>
               </div>
               <h3 className="name2">EnvironmentScore </h3>
             </div>

@@ -17,7 +17,7 @@ class AddFeedback extends React.Component {
   handleClick = () => {
     const { Brands, Name, feedback } = this.state;
     axios
-      .post("/addfeedback", { feedback, Brands, Name })
+      .post("/api/addfeedback", { feedback, Brands, Name })
       .then(({ data: { success } }) => {
         if (success) {
           alert("Thank You For Your Feedback !!");

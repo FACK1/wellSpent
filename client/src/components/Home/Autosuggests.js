@@ -22,7 +22,7 @@ function getSuggestionValue(suggestion) {
 function renderSuggestion(suggestion) {
   if (suggestion !== "Not Found") {
     return (
-      <Link to={`/brand/${suggestion}`} className="button-link">
+      <Link to={`/Brand/${suggestion}`} className="button-link">
         <div>
           <span>{suggestion}</span>
         </div>
@@ -44,7 +44,7 @@ export default class Autosuggests extends Component {
   };
   componentDidMount() {
     axios
-      .get("/brands")
+      .get("/api/brands")
       .then(({ data }) => {
         brands = data.map(brand => {
           return brand.BrandName;

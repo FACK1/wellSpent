@@ -19,7 +19,7 @@ class Brands extends Component {
 
   componentDidMount() {
     axios
-      .get(`/brands`)
+      .get(`/api/brands`)
       .then(({ data }) => {
         this.setState({
           brands: data,
@@ -37,7 +37,7 @@ class Brands extends Component {
   handleClick = () => {
     const { BrandName } = this.state;
     axios
-      .post("/brand", { BrandName })
+      .post("/api/brand", { BrandName })
       .then(({ data: { success } }) => {
         if (success) {
           alert("Your suggestion added successfully, Thanks!");
@@ -179,7 +179,7 @@ class Brands extends Component {
                           }`
                         }}
                       >
-                        {brand.EnvironmentScore} <br /> Enviorment score
+                        {brand.EnvironmentScore} <br /> Environment score
                       </div>
                     </div>
                   </div>
