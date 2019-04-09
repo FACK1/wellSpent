@@ -155,13 +155,16 @@ class Brands extends Component {
                       </div>
                     </div>
                     <div className="scrol">
-                      <div
-                        className="scrol1"
-                        style={{
-                          "background-color": `${brand.OverallScoreColour[0]}`
-                        }}
-                      >
-                        {brand.OverallScore} <br /> Overall score
+                      <div className="Overall-score">
+                        <div
+                          className="scrol1"
+                          style={{
+                            "background-color": `${brand.OverallScoreColour[0]}`
+                          }}
+                        >
+                          {brand.OverallScore} <br />
+                        </div>
+                        <p> Overall score</p>
                       </div>
                       <div
                         className="scrol2"
