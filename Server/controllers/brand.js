@@ -9,7 +9,7 @@ exports.getBrand = (req, res) => {
   base('Brands')
     .select({
       view: 'API Response',
-      filterByFormula: `{Name}="${name}"`,
+      filterByFormula: `{BrandName}="${name}"`,
     })
     .eachPage(
       (records, fetchNextPage) => {

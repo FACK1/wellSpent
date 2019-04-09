@@ -20,7 +20,7 @@ class Brand extends React.Component {
         const info = data[0];
         this.setState({
           image: info.Image,
-          name: info["Name"],
+          name: info["BrandName"],
           overallscore: info["OverallScore"],
           environmentscore: info["EnvironmentScore"],
           labourscore: info["LaborScore"],
