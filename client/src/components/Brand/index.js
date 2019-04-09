@@ -13,6 +13,7 @@ class Brand extends React.Component {
     loading: false
   };
   componentDidMount() {
+    console.log("this.props.match.params", this.props.match.params);
     const { Name } = this.props.match.params;
     axios
       .get(`/brand/${Name}`)
@@ -20,7 +21,7 @@ class Brand extends React.Component {
         const info = data[0];
         this.setState({
           image: info.Image,
-          name: info["Name"],
+          name: info["BrandName"],
           overallscore: info["OverallScore"],
           enviormentscore: info["EnvironmentScore"],
           labourscore: info["LaborScore"],

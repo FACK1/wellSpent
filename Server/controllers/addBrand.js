@@ -6,10 +6,10 @@ exports.addBrand = (req, res) => {
     process.env.DB_NAME,
   );
 
-  const { Name } = req.body;
+  const { BrandName } = req.body;
   base('New Brands').create(
     {
-      Name,
+      BrandName,
     },
 
     (error) => {
