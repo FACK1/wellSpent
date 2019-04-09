@@ -125,11 +125,13 @@ margin-bottom: 70px;
  }
  .MoreDetails{
    float:left;
-   padding-top: 18%;
    text-align: left !important;
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-top: 9%;
+   margin-right: 20%;
+   padding: 10px;
 
  }
  .score22{
@@ -149,8 +151,9 @@ margin-bottom: 70px;
  .name2{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
-   padding:2%;
+   padding:5%;
    font-weight: bold;
+   margin-top: -1%
  }
  .score22 h3{
    text-align: center;
@@ -181,6 +184,7 @@ justify-content: center;
  .enviorment22{
    display: flex;
    justify-content: center;
+   margin-top: -0.1%;
  }
  .brandname{
    text-align: left;
@@ -188,6 +192,16 @@ justify-content: center;
    font-family: 'Roboto', sans-serif;
  }
 
+.pargraf  {
+  margin-left: -25%;
+  margin-top: 13%;
+  width:40%;
+}
+ .pargraf2{
+   margin-left: -36%;
+   margin-top: 15%;
+   width:40%;
+}
  @media only screen and (max-width: 600px) {
    .pargraph{
       font-size: 10pt;

@@ -140,7 +140,7 @@ class Brand extends React.Component {
                 <h3> {environmentscore}</h3>
               </div>
               <h3 className="name2">EnvironmentScore </h3>
-              <p className="p2">
+              <p className="pargraf2">
                 The last six epsoides of catastrople are not unlike.
               </p>
             </div>
