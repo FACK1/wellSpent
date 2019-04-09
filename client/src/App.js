@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Brands from "./components/Brands";
 import Brand from "./components/Brand";
-
+import Methodology from "./components/Methodology";
 class App extends Component {
   render() {
     return (
@@ -15,6 +15,7 @@ class App extends Component {
             <Header />
             <Route exact path="/" component={Home} />
             <Route exact path="/Brands" component={Brands} />
+            <Route exact path="/Methodology" component={Methodology} />
             <Route exact path="/Brand/:name" component={Brand} />
           </div>
         </Switch>
