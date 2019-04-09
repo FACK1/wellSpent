@@ -20,9 +20,9 @@ class Brand extends React.Component {
         const info = data[0];
         this.setState({
           image: info.Image,
-          name: info["Name"],
+          name: info["BrandName"],
           overallscore: info["OverallScore"],
-          enviormentscore: info["EnvironmentScore"],
+          environmentscore: info["EnvironmentScore"],
           labourscore: info["LaborScore"],
           animalrightscore: info["Animal Rights Score"],
           cost: info["Cost"],
@@ -46,7 +46,7 @@ class Brand extends React.Component {
       name,
       overallscore,
       labourscore,
-      enviormentscore,
+      environmentscore,
       animalrightscore,
       cost,
       producttype,
@@ -99,7 +99,7 @@ class Brand extends React.Component {
                   className="score2"
                   style={{ "background-color": `${EnvironmentScorehexa}` }}
                 >
-                  <h3> {enviormentscore}</h3>
+                  <h3> {environmentscore}</h3>
                   <h3>Enviorment Score</h3>
                 </div>
               </div>
@@ -137,7 +137,7 @@ class Brand extends React.Component {
                 className="score22"
                 style={{ "background-color": `${EnvironmentScorehexa}` }}
               >
-                <h3> {enviormentscore}</h3>
+                <h3> {environmentscore}</h3>
               </div>
               <h3 className="name2">EnvironmentScore </h3>
             </div>
