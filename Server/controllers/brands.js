@@ -2,7 +2,9 @@ require('env2')('.env');
 const Airtable = require('airtable');
 
 exports.getBrands = (req, res) => {
-  const base = new Airtable({ apiKey: process.env.APIKEY }).base(process.env.DB_NAME);
+  const base = new Airtable({ apiKey: process.env.APIKEY }).base(
+    process.env.DB_NAME,
+  );
 
   base('Brands')
     .select({
@@ -11,7 +13,7 @@ exports.getBrands = (req, res) => {
     .eachPage(
       (records, fetchNextPage) => {
         const result = records.map(record => ({
-          Name: record.get('Name'),
+          BrandName: record.get('BrandName'),
           Explanation: record.get('Explanation'),
           Image: record.get('Image'),
           LaborScore: record.get('LaborScore'),

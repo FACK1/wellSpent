@@ -34,9 +34,9 @@ class Brands extends Component {
   };
 
   handleClick = () => {
-    const { Name } = this.state;
+    const { BrandName } = this.state;
     axios
-      .post("/api/brand", { Name })
+      .post("/api/brand", { BrandName })
       .then(({ data: { success } }) => {
         if (success) {
           alert("Your suggestion added successfully, Thanks!");
@@ -114,7 +114,8 @@ class Brands extends Component {
           {brands.length !== 0 ? (
             brands.map(brand => {
               const nameCapitalized =
-                brand.Name.charAt(0).toUpperCase() + brand.Name.slice(1);
+                brand.BrandName.charAt(0).toUpperCase() +
+                brand.BrandName.slice(1);
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -145,7 +146,7 @@ class Brands extends Component {
                       <p className="description">{brand.Explanation}</p>
                       <div className="div-button">
                         <Link
-                          to={`/Brand/${brand.Name}`}
+                          to={`/Brand/${brand.BrandName}`}
                           className="button-link"
                         >
                           <button className="view">view</button>
