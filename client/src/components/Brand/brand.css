@@ -125,9 +125,11 @@ margin-bottom: 70px;
  }
  .MoreDetails{
    float:left;
-   width:40%;
-   padding-top: 20%;
+   padding-top: 18%;
    text-align: left !important;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
  }
  .score22{
@@ -138,6 +140,15 @@ margin-bottom: 70px;
     border-radius: 5px;
 
 }
+.score222{
+   width: 70px;
+   padding:2px;
+   text-align: center;
+   height:70px;
+   border-radius: 5px;
+
+}
+
  .name2{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
@@ -148,23 +159,41 @@ margin-bottom: 70px;
  .score22 h3{
    text-align: center;
  }
- .MoreDetails p{
+ .score222 h3{
+   text-align: center;
+ }
+ .MoreDetails p1{
    font-size: 12pt;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
-   margin-left: 2%;
+   margin-left: -13% !important;
+   margin-top: 14% !important;
+ }
+
+
+
+ .MoreDetails p2{
+   font-size: 12pt;
+   font-family: 'Roboto', sans-serif;
+   text-align: left !important;
+   margin-left: -13%;
+   margin-top: 14%;
 
  }
  .labour2{
    display: inline-flex;
    text-align: left !important;
  }
-
+ .enviorment22{
+   display: inline-flex;
+   text-align: left !important;
+ }
  .brandname{
    text-align: left;
-   margin-left: 15%;
+   margin-left: 9%;
    font-family: 'Roboto', sans-serif;
  }
+
  @media only screen and (max-width: 600px) {
    .pargraph{
       font-size: 10pt;

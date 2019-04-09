@@ -2,7 +2,6 @@ import React from "react";
 import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
-import Feedback from "../Feedback";
 import { RingLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
@@ -129,21 +128,23 @@ class Brand extends React.Component {
               </div>
               <h3 className="name2">LabourScore </h3>
             </div>
-            <p>
+            <p className="p1">
               They are as they are , and their merceills candorwill be missed.
             </p>
-            <div className="labour2">
+            <div className="enviorment22">
               <div
-                className="score22"
+                className="score222"
                 style={{ "background-color": `${EnvironmentScorehexa}` }}
               >
                 <h3> {environmentscore}</h3>
               </div>
               <h3 className="name2">EnvironmentScore </h3>
+              <br />
             </div>
-            <p>The last six epsoides of catastrople are not unlike.</p>
+            <p className="p2">
+              The last six epsoides of catastrople are not unlike.
+            </p>
           </div>
-          <Feedback name={name} />
         </div>
       );
     } else {
