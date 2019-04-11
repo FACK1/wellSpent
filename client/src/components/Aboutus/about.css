@@ -1,0 +1,15 @@
+.number {
+  font-size: 25pt;
+  color: #c5c4b9;
+  font-weight: bold;
+}
+.pargrah-1 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 240px;
+}
+.big-tit {
+  padding-top: 40px;
+}
