@@ -184,9 +184,10 @@ display: flex;
 justify-content: center;
  }
  .enviorment22{
-   display: flex;
-   justify-content: center;
-   margin-top: -0.1%;
+ display: flex;
+ justify-content: center;
+ margin-top: 1.1%;
+ margin-left: 6%;
  }
  .brandname{
    text-align: left;
@@ -195,12 +196,12 @@ justify-content: center;
  }
 
 .pargraf  {
-  margin-left: -26%;
+  margin-left: -27%;
   margin-top: 13%;
   width:40%;
 }
  .pargraf2{
-   margin-left: -36%;
+  margin-left: -37%;
    margin-top: 15%;
    width:40%;
 }

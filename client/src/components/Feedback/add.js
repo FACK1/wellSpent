@@ -37,8 +37,8 @@ class AddFeedback extends React.Component {
   render() {
     return (
       <div className="root1">
-        <div className="name3">
-          <h3>Give Feedback</h3>
+        <div className="GiveFeedback">
+          <h2>Give Feedback</h2>
         </div>
         <form className="form" onSubmit={this.handleSubmitForm}>
           <div className="details">

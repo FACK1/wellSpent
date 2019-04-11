@@ -3,32 +3,30 @@ root1{
   max-width:100%;
   margin-right: 15%;
 }
-
 .inputborder{
-margin-left: 10%;
-border-bottom: solid !important;
-border-style: none;
-width:85%;
-margin-bottom: 2%;
-padding-left: 2%;
-font-size: 16pt;
-
+  margin-left: 6%;
+  border-bottom: solid !important;
+  border-style: none;
+  width: 75%;
+  margin-bottom: 2%;
+  padding-left: 0%;
+  font-size: 16pt;
 }
-
-
-.name3 {
+.GiveFeedback{
   font-size: 16pt;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  margin-top: 10%;
-  margin-right: 10%;
-
+  margin-top: 30%;
+  margin-right: 19%;
+}
+.root1{
+    margin-left: 3%;
 }
 .namedetails{
   display: flex;
   text-align: center;
-
+  margin-right: 10%;
 }
 .namedetails h3{
   font-size: 16pt;
@@ -36,9 +34,7 @@ font-size: 16pt;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1%;
   margin-left: 1%;
-  width: 15%;
-
-
+  width: 12%;
 }
 .button{
   font-size: 14pt;
@@ -47,11 +43,12 @@ font-size: 16pt;
   text-align: center;
   color: white;
   background-color: #1389A6;
-  margin-top: 5%;
+  margin-top: 2%;
   border: 5px ;
   border-radius: 10px;
-  width: 20%;
+  width: 15%;
   height: 20%;
+  margin-right: 19%;
 }
 @media only screen and (max-width: 600px) {
   .inputborder{
@@ -62,7 +59,6 @@ font-size: 16pt;
     margin-bottom: 2%;
     padding-left: 2%;
     font-size: 10pt;
-
   }
   .button{
     font-size: 14pt;
@@ -78,5 +74,4 @@ font-size: 16pt;
     height: 20%;
     margin-left: 35%;
   }
-
 }
