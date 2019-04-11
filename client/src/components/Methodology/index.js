@@ -3,10 +3,10 @@ import "./methodology.css";
 const Methodology = () => {
   return (
     <div className="div-father">
-      <div className="titel">
+      <div className="page-titel">
         <h3>Overall Score</h3>
       </div>
-      <div className="description">
+      <div className="description-final">
         Candidates receive band score from 1 to 9 on each of the 4 modules:
         Listening, Reading, Writing and Speaking. Overall Band Score is the
         result of the average of these 4 scores which has been rounded to the
