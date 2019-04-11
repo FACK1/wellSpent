@@ -22,7 +22,8 @@ class Brands extends Component {
       .get(`/api/brands`)
       .then(({ data }) => {
         this.setState({
-          brands: data,
+          brands: data.result,
+          colourMap: data.colourMap,
           loading: true
         });
       })
@@ -61,7 +62,7 @@ class Brands extends Component {
   };
 
   render() {
-    const { loading, brands } = this.state;
+    const { loading, brands, colourMap } = this.state;
     if (loading) {
       const letters = [];
       return (
@@ -158,7 +159,7 @@ class Brands extends Component {
                       <div
                         className="scrol1"
                         style={{
-                          "background-color": `${brand.OverallScoreColour[0]}`
+                          "background-color": `${colourMap[brand.OverallScore]}`
                         }}
                       >
                         {brand.OverallScore} <br /> Overall score
@@ -166,7 +167,7 @@ class Brands extends Component {
                       <div
                         className="scrol2"
                         style={{
-                          "background-color": `${brand.LabourScoreColour[0]}`
+                          "background-color": `${colourMap[brand.LaborScore]}`
                         }}
                       >
                         {brand.LaborScore} <br /> Labour score
@@ -175,7 +176,7 @@ class Brands extends Component {
                         className="scrol3"
                         style={{
                           "background-color": `${
-                            brand.EnvironmentScoreColour[0]
+                            colourMap[brand.EnvironmentScore]
                           }`
                         }}
                       >
