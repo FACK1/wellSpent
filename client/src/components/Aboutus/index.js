@@ -27,15 +27,15 @@ export default class Aboutus extends Component {
           <h3>About US</h3>
           <div>
             <div>
-              <p className="number-about">01</p>
+              <p className="Number">01</p>
               <h4 className="pargrah-about">{info.what_is_it}</h4>
             </div>
             <div>
-              <p className="number">02</p>
+              <p className="Number">02</p>
               <h4>{info.why}</h4>
             </div>
             <div>
-              <p className="number">03</p>
+              <p className="Number">03</p>
               <h4>{info.our_principle}</h4>
             </div>
           </div>
