@@ -20,26 +20,31 @@ exports.getBrands = (req, res) => {
           EnvironmentScore: record.get('EnvironmentScore'),
           OverallScore: record.get('OverallScore'),
         }));
+        const colourMap = {};
         base('Score Colour')
           .select({
             view: 'Grid view',
           })
           .eachPage(
             (colourRecords, colourFetchNextPage) => {
-              const colourResult = colourRecords.map(record => ({
-                record: record.fields,
-              }));
-              colourFetchNextPage();
-              const finalResult = result.map((data) => {
-                const colorResult = colourResult.filter((color) => {
-                  return data.LaborScore === color.record.Name || parseInt(data.EnvironmentScore) === color.record.Name || data.OverallScore === color.record.Name
-                });
-                return { data, colorResult };
+              const colourResult = colourRecords.map(record => {
+                const score = record.fields.Name
+                console.log({record})
+                colourMap[score] = record.fields["Colour Hex"][0]
+                return
               });
-              Promise.all(finalResult)
-                .then((brandsResult) => {
-                  res.json(brandsResult);
-                });
+              colourFetchNextPage();
+              res.json({result, colourMap})
+              // const finalResult = result.map((data) => {
+              //   const colorResult = colourResult.filter((color) => {
+              //     return data.LaborScore === color.record.Name || parseInt(data.EnvironmentScore) === color.record.Name || data.OverallScore === color.record.Name
+              //   });
+              //   return { data, colorResult };
+              // });
+              // Promise.all(finalResult)
+              //   .then((brandsResult) => {
+              //     res.json(brandsResult);
+              //   });
             },
             (err) => {
               if (err) {
