@@ -117,6 +117,15 @@ class Brands extends Component {
               const nameCapitalized =
                 brand.BrandName.charAt(0).toUpperCase() +
                 brand.BrandName.slice(1);
+              const OverallScoreColour = brand.OverallScoreColour
+                ? brand.OverallScoreColour[0]
+                : "#808080";
+              const LabourScoreColour = brand.LabourScoreColour
+                ? brand.LabourScoreColour[0]
+                : "#808080";
+              const EnvironmentScoreColour = brand.EnvironmentScoreColour
+                ? brand.EnvironmentScoreColour[0]
+                : "#808080";
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -143,8 +152,10 @@ class Brands extends Component {
                     )}
 
                     <div className="descrip">
-                      <p className="name">{nameCapitalized}</p>
-                      <p className="description">{brand.Explanation}</p>
+                      <p className="name">{nameCapitalized || "-"}</p>
+                      <p className="description">
+                        {brand.Explanation || "No-Explanation "}
+                      </p>
                       <div className="div-button">
                         <Link
                           to={`/Brand/${brand.BrandName}`}
@@ -158,7 +169,7 @@ class Brands extends Component {
                       <div
                         className="scrol1"
                         style={{
-                          "background-color": `${brand.OverallScoreColour[0]}`
+                          "background-color": OverallScoreColour
                         }}
                       >
                         {brand.OverallScore} <br /> Overall score
@@ -166,7 +177,7 @@ class Brands extends Component {
                       <div
                         className="scrol2"
                         style={{
-                          "background-color": `${brand.LabourScoreColour[0]}`
+                          "background-color": LabourScoreColour
                         }}
                       >
                         {brand.LaborScore} <br /> Labour score
@@ -174,12 +185,10 @@ class Brands extends Component {
                       <div
                         className="scrol3"
                         style={{
-                          "background-color": `${
-                            brand.EnvironmentScoreColour[0]
-                          }`
+                          "background-color": EnvironmentScoreColour
                         }}
                       >
-                        {brand.EnvironmentScore} <br /> Environment score
+                        {brand.EnvironmentScore || "0"} <br /> Environment score
                       </div>
                     </div>
                   </div>

@@ -19,19 +19,25 @@ class Brand extends React.Component {
       .then(({ data }) => {
         const info = data[0];
         this.setState({
-          image: info.Image,
+          image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
           name: info["BrandName"],
           overallscore: info["OverallScore"],
           environmentscore: info["EnvironmentScore"],
-          labourscore: info["LaborScore"],
-          animalrightscore: info["Animal Rights Score"],
-          cost: info["Cost"],
-          producttype: info["Category Name"],
-          explanation: info["Explanation"],
+          labourscore: info["LaborScore"] || "-",
+          animalrightscore: info["Animal Rights Score"] || "-",
+          cost: info["Cost"] || "-",
+          producttype: info["Category Name"] || "-",
+          explanation: info["Explanation"] || "Not available",
           AnimalRightshexa: info["Animal Rights hexa"],
-          EnvironmentScorehexa: info["Environment Score hexa"],
-          LabourScorehexa: info["Labour Score hexa"],
-          OverallScorehexa: info["Overall Score hexa"],
+          EnvironmentScorehexa: info["Environment Score hexa"]
+            ? info.EnvironmentScorehexa[0]
+            : "#D3D3D3",
+          LabourScorehexa: info["Labour Score hexa"]
+            ? info.LabourScorehexa[0]
+            : "#D3D3D3",
+          OverallScorehexa: info["Overall Score hexa"]
+            ? info.OverallScorehexa[0]
+            : "#D3D3D3",
           loading: true
         });
       })
@@ -57,6 +63,7 @@ class Brand extends React.Component {
       OverallScorehexa,
       loading
     } = this.state;
+
     if (loading) {
       return (
         <div className="root">
@@ -72,7 +79,7 @@ class Brand extends React.Component {
             <img className="images" src={defaultimage} alt="" />
           )}
 
-          <h3 className="brandname">{name}</h3>
+          <h3 className="brandname">{name || "-"}</h3>
 
           <div className="ALLdetails">
             <div className="overall">
@@ -81,7 +88,7 @@ class Brand extends React.Component {
                 style={{ "background-color": `${OverallScorehexa}` }}
               >
                 <h3>OverallScore</h3>
-                <h3 className="os">{overallscore} </h3>
+                <h3 className="os">{overallscore || "0"} </h3>
               </div>
             </div>
             <div className="detail">
@@ -99,7 +106,7 @@ class Brand extends React.Component {
                   className="score2"
                   style={{ "background-color": `${EnvironmentScorehexa}` }}
                 >
-                  <h3> {environmentscore}</h3>
+                  <h3> {environmentscore || "0"}</h3>
                   <h3>Enviorment Score</h3>
                 </div>
               </div>
@@ -108,15 +115,15 @@ class Brand extends React.Component {
                   className="score3"
                   style={{ "background-color": `${AnimalRightshexa}` }}
                 >
-                  <h3> {animalrightscore}</h3>
+                  <h3> {animalrightscore || "0"}</h3>
                   <h3>Animal Right Score </h3>
                 </div>
               </div>
             </div>
             <div className="more">
               <p> Cost:{cost}</p>
-              <p> ProductType:{producttype}</p>
-              <p>Explanation :{explanation}</p>
+              <p> ProductType:{producttype || "-"}</p>
+              <p>Explanation :{explanation || "no"}</p>
             </div>
           </div>
           <div className="MoreDetails">
@@ -125,7 +132,7 @@ class Brand extends React.Component {
                 className="score22"
                 style={{ "background-color": `${LabourScorehexa}` }}
               >
-                <h3> {labourscore}</h3>
+                <h3> {labourscore || "0"}</h3>
               </div>
               <h3 className="name2">LabourScore </h3>
             </div>
@@ -137,7 +144,7 @@ class Brand extends React.Component {
                 className="score22"
                 style={{ "background-color": `${EnvironmentScorehexa}` }}
               >
-                <h3> {environmentscore}</h3>
+                <h3> {environmentscore || "0"}</h3>
               </div>
               <h3 className="name2">EnvironmentScore </h3>
             </div>
