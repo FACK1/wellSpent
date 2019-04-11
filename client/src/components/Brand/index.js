@@ -30,13 +30,13 @@ class Brand extends React.Component {
           explanation: info["Explanation"] || "Not available",
           AnimalRightshexa: info["Animal Rights hexa"],
           EnvironmentScorehexa: info["Environment Score hexa"]
-            ? info.EnvironmentScorehexa[0]
+            ? info["Environment Score hexa"][0]
             : "#D3D3D3",
           LabourScorehexa: info["Labour Score hexa"]
-            ? info.LabourScorehexa[0]
+            ? info["Labour Score hexa"][0]
             : "#D3D3D3",
           OverallScorehexa: info["Overall Score hexa"]
-            ? info.OverallScorehexa[0]
+            ? info["Overall Score hexa"][0]
             : "#D3D3D3",
           loading: true
         });
