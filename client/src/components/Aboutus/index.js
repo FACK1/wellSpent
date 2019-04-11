@@ -22,13 +22,13 @@ export default class Aboutus extends Component {
   render() {
     const { info } = this.state;
     return (
-      <div className="big-tit">
+      <div className="about-title">
         <div>
           <h3>About US</h3>
           <div>
             <div>
-              <p className="number">01</p>
-              <h4 className="pargrah-1">{info.what_is_it}</h4>
+              <p className="number-about">01</p>
+              <h4 className="pargrah-about">{info.what_is_it}</h4>
             </div>
             <div>
               <p className="number">02</p>
