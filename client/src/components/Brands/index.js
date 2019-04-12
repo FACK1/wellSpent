@@ -111,6 +111,9 @@ class Brands extends Component {
               <div className="par2"> Suggest a brand </div>
             </div>
           </div>
+          <div className="a-z">
+            A B C D E F G H I J K L M N O P Q R S V W X Y Z
+          </div>
 
           {brands.length !== 0 ? (
             brands.map(brand => {
@@ -161,34 +164,44 @@ class Brands extends Component {
                           to={`/Brand/${brand.BrandName}`}
                           className="button-link"
                         >
-                          <button className="view">view</button>
+                          <button className="view">More details</button>
                         </Link>
                       </div>
                     </div>
                     <div className="scrol">
-                      <div
-                        className="scrol1"
-                        style={{
-                          "background-color": OverallScoreColour
-                        }}
-                      >
-                        {brand.OverallScore} <br /> Overall score
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol1"
+                          style={{
+                            "background-color": OverallScoreColour
+                          }}
+                        >
+                          {brand.OverallScore} <br />
+                        </div>
+
+                        <p className="ooo">Overall score</p>
                       </div>
-                      <div
-                        className="scrol2"
-                        style={{
-                          "background-color": LabourScoreColour
-                        }}
-                      >
-                        {brand.LaborScore} <br /> Labour score
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol2"
+                          style={{
+                            "background-color": LabourScoreColour
+                          }}
+                        >
+                          {brand.LaborScore} <br />
+                        </div>
+                        <p className="ooo">Labour score</p>
                       </div>
-                      <div
-                        className="scrol3"
-                        style={{
-                          "background-color": EnvironmentScoreColour
-                        }}
-                      >
-                        {brand.EnvironmentScore || "0"} <br /> Environment score
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": EnvironmentScoreColour
+                          }}
+                        >
+                          {brand.EnvironmentScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Environment score</p>
                       </div>
                     </div>
                   </div>

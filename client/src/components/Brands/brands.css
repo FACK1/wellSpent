@@ -55,10 +55,22 @@
   margin-left: 10px;
 }
 .diva {
-  background-color: #f4f4f4;
+  background-color: #080404;
   width: 85%;
   height: 30px;
   margin-top: 20px;
+  padding-top: 10px;
+}
+.a-z {
+  background-color: #f4f4f4;
+  width: 85%;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  padding-top: 10px;
+  margin-left: 95px;
+  margin-top: 10px;
 }
 .par3 {
   font-family: "Roboto", sans-serif;
@@ -66,28 +78,22 @@
   font-size: 15pt;
   text-align: left;
   margin-left: 30px;
-  color: black;
-  margin-top: 7px;
+  color: white;
 }
 .div-box {
   padding-left: 38px;
   background-color: white;
   border-color: #e5e5e5;
-  max-width: 80%;
+  max-width: 100%;
   border-style: groove;
-  border-radius: 20px;
   margin-top: 30px;
   display: flex;
   flex-direction: row;
 }
 
 .imge {
-  background-color: #f4f4f4;
   max-width: 30%;
-  height: 170px;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  height: 259px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -106,10 +112,13 @@
   display: flex;
   flex-direction: column;
 }
+.OverallScore-brands {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .description {
   font-family: "Roboto", sans-serif;
-  margin-top: -8px;
-  margin-left: 20px;
   width: 430px;
   float: left;
 }
@@ -121,10 +130,9 @@
   padding-top: 30px;
 }
 .view {
-  border-radius: 20px;
-  width: 150px;
+  width: 160px;
   height: 30px;
-  background-color: #1389a6;
+  background-color: black;
   color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -136,16 +144,16 @@
   align-items: center;
   padding-left: 124px;
   padding-bottom: 19px;
-  padding-top: 5px;
   padding-right: 20px;
 }
 .scrol1 {
-  max-width: 140px;
-  height: 50px;
-  border-radius: 10px;
+  max-width: 891px;
+  height: 31px;
   margin-top: 10px;
   text-align: center;
   padding: 7px;
+}
+.ooo {
 }
 .scrol2 {
   max-width: 105px;
