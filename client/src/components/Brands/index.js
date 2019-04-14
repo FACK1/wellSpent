@@ -36,12 +36,12 @@ class Brands extends Component {
   };
 
   handleClick = () => {
-    const { BrandName } = this.state;
+    const { BrandName, Email, MoreInformation } = this.state;
     axios
-      .post("/api/brand", { BrandName })
+      .post("/api/brand", { BrandName, Email, MoreInformation })
       .then(({ data: { success } }) => {
         if (success) {
-          alert("Your suggestion added successfully, Thanks!");
+          alert("Thank you for your suggestion");
           window.location.reload();
         } else {
           console.log("error");
@@ -72,7 +72,7 @@ class Brands extends Component {
               <Link to="/">
                 <div className="back" />
               </Link>
-              <div className="par">Ethical Brands</div>
+              <div className="par"> Brands</div>
             </div>
             <div className="div11">
               <div className="div-pop">
@@ -89,20 +89,57 @@ class Brands extends Component {
                     <form className="form" onSubmit={this.handleSubmitForm}>
                       <h3> Suggest a brand</h3>
                       <div className="div-label">
-                        <label className="label" for="pop">
-                          brand name
-                        </label>
-                        <input
-                          className="name-input"
-                          type="text"
-                          name="Name"
-                          value={this.state.value}
-                          onChange={this.handleChange}
-                        />
+                        <p className="if-we-are">
+                          if we are missing a brand that you want to see ,<br />
+                          lets us know, and we will try and add it as soon as we
+                          can.
+                        </p>
+                        <div className="label-div">
+                          <div className="label-input-brand-name">
+                            <label className="label-brand-name" for="pop">
+                              brand name
+                            </label>
+                            <input
+                              className="name-input"
+                              type="text"
+                              name="BrandName"
+                              value={this.state.value}
+                              onChange={this.handleChange}
+                            />
+                          </div>
+                          <br />
+                          <label className="label-brand-name" for="pop">
+                            your email(optinal)
+                          </label>
+                          <input
+                            className="name-input"
+                            type="text"
+                            name="Email"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                          />
+                          <br />
+                          <p className="so-we-can">
+                            (so we can let you know when we've added the brand
+                            you suggested)
+                          </p>
+                          <br />
+                          <label className="label-brand-name" for="pop">
+                            Any other information we should now
+                          </label>
+                          <br />
+                          <input
+                            className="informationinput"
+                            type="text"
+                            name="MoreInformation"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                          />
+                        </div>
                       </div>
                       <br />
                       <button className="btn1" onClick={this.handleClick}>
-                        add
+                        Submit
                       </button>
                     </form>
                   </div>
