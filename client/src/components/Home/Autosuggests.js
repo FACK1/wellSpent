@@ -46,7 +46,7 @@ export default class Autosuggests extends Component {
     axios
       .get("/api/brands")
       .then(({ data }) => {
-        brands = data.map(brand => {
+        brands = data.result.map(brand => {
           return brand.BrandName;
         });
       })
