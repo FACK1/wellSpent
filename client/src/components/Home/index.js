@@ -40,16 +40,16 @@ export default class Home extends Component {
           <h3>About US</h3>
           <div className="aboutus">
             <div className="a1">
-              <p>01</p>
-              <h4 className="bd">{info.what_is_it}</h4>
+              <p className="Number">{Object.keys(info)[1]}</p>
+              <h4 className="bd">{info["Who we are"]}</h4>
             </div>
             <div className="a1">
-              <p>02</p>
-              <h4 className="pd">{info.why}</h4>
+              <p className="name-care">{Object.keys(info)[0]}</p>
+              <h4 className="pd">{info["What we care about"]}</h4>
             </div>
             <div className="a1">
-              <p>03</p>
-              <h4 className="pd">{info.our_principle}</h4>
+              <p className="Number">{Object.keys(info)[2]}</p>
+              <h4 className="pd">{info["How we rate brands"]}</h4>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ export default class Aboutus extends Component {
     axios
       .get("/api/aboutus")
       .then(({ data }) => {
+        // console.log(data[0]);
         this.setState({
           info: data[0]
         });
@@ -21,22 +22,23 @@ export default class Aboutus extends Component {
 
   render() {
     const { info } = this.state;
+    console.log("info", info);
     return (
       <div className="about-title">
         <div>
           <h3>About US</h3>
           <div>
             <div>
-              <p className="Number">01</p>
-              <h4 className="pargrah-about">{info.what_is_it}</h4>
+              <p className="Number">{Object.keys(info)[1]}</p>
+              <h4 className="pargrah-about">{info["Who we are"]}</h4>
             </div>
-            <div>
-              <p className="Number">02</p>
-              <h4>{info.why}</h4>
+            <div className="Whatwecareabout">
+              <p className="Number">{Object.keys(info)[0]}</p>
+              <h4>{info["What we care about"]}</h4>
             </div>
-            <div>
-              <p className="Number">03</p>
-              <h4>{info.our_principle}</h4>
+            <div className="Whatwecareabout">
+              <p className="Number">{Object.keys(info)[2]}</p>
+              <h4>{info["How we rate brands"]}</h4>
             </div>
           </div>
         </div>

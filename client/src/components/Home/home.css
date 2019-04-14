@@ -1,140 +1,138 @@
-
-.main{
+.main {
   background-image: url(./assets/bg.jpeg);
   height: 360px;
   max-width: 100%;
 }
 
-.main h1{
+.main h1 {
   text-align: center;
   padding-top: 100px;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   margin-top: auto;
 }
 
-.main h2{
+.main h2 {
   text-align: center;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   margin-top: auto;
   font-size: 20pt;
 }
 
-.pt-input{
-  height:40px;
-  width:500px;
+.pt-input {
+  height: 40px;
+  width: 500px;
   border-radius: 20px;
   text-align: center;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: Gray;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 19px;
 }
 
-.brands{
-  background-color:#1389A6;
+.brands {
+  background-color: #1389a6;
   border-radius: 10px;
   height: 40px;
   font-size: 19pt;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 5px;
   border-style: none;
 }
-.main-2{
+.main-2 {
   display: inline-flex;
   margin-left: 5%;
 }
 
-.result{
-    margin-left: 33%;
-    width: 484px;
-    border-radius: 10px;
+.result {
+  margin-left: 33%;
+  width: 484px;
+  border-radius: 10px;
   margin-top: -17px;
   display: none;
-
 }
 
-.tabout{
+.tabout {
   margin-top: 105px;
 }
 
-.tabout h3{
+.tabout h3 {
   margin-top: 20px;
   text-align: center;
   padding-top: 20px;
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
   font-size: 20pt;
 }
-.aboutus{
+.aboutus {
   display: inline-flex;
   padding-left: 70px;
   padding-right: 70px;
   max-width: 100%;
 }
-.a1{
+.a1 {
   margin-left: 10px;
   width: 30%;
   padding-left: 30px;
   padding-right: 20px;
   text-align: center;
 }
-.a1 p{
-  font-size: 25pt;
+.a1 p {
   color: #c5c4b9;
+  font-size: 14pt;
   font-weight: bold;
-  text-align: left;
 }
 
-.ext{
-  background-color: #F9F9F9;
+.ext {
+  background-color: #f9f9f9;
   margin-bottom: 20px;
   margin-top: 30px;
 }
 
-.ext a{
-  color: #1389A6;
+.ext a {
+  color: #1389a6;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.ext h1{
-  font-family: 'Roboto', sans-serif;
+.ext h1 {
+  font-family: "Roboto", sans-serif;
   padding-top: 50px !important;
   padding-bottom: 50px;
   font-weight: lighter !important;
   margin-bottom: 40px;
 }
-.a1{
-  display: inline-flex;
+.a1 {
+  display: inline-block;
 }
 
-.pd{
+.pd {
   padding-top: 28px;
 }
-.bd{
+.bd {
   margin-top: 51px;
 }
 
-@media only screen and (max-width: 600px){
-  .a1 p{
+@media only screen and (max-width: 600px) {
+  .a1 p {
     font-size: 15pt;
-}
-.a1{
-  width: 25%;
-}
+  }
+  .a1 {
+    width: 25%;
+  }
 
-.ext h1{
-  font-size: 15pt;
-  width: 70%;
-  margin-left: 10%;
-}
-.main h2{
-  font-size:15pt;
-}
-.brands{
-  font-size: 15pt;
-}
+  .ext h1 {
+    font-size: 15pt;
+    width: 70%;
+    margin-left: 10%;
+  }
+  .main h2 {
+    font-size: 15pt;
+  }
+  .brands {
+    font-size: 15pt;
+  }
 }
