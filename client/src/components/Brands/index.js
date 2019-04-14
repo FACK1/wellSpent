@@ -149,6 +149,9 @@ class Brands extends Component {
               <div className="par2"> Suggest a brand </div>
             </div>
           </div>
+          <div className="a-z">
+            A B C D E F G H I J K L M N O P Q R S V W X Y Z
+          </div>
 
           {brands.length !== 0 ? (
             brands.map(brand => {
@@ -163,6 +166,9 @@ class Brands extends Component {
                 : "#CCCCCF";
               const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
                 ? colourMap[brand.EnvironmentScore]
+                : "#CCCCCF";
+              const AnimalRightsScore = colourMap[brand.AnimalRightsScore]
+                ? colourMap[brand.AnimalRightsScore]
                 : "#CCCCCF";
               const image = brand.Image
                 ? brand.Image[0].thumbnails.large.url
@@ -191,37 +197,60 @@ class Brands extends Component {
                           to={`/Brand/${brand.BrandName}`}
                           className="button-link"
                         >
-                          <button className="view">view</button>
+                          <button className="view">More details</button>
                         </Link>
                       </div>
                     </div>
                     <div className="scrol">
-                      <div
-                        className="scrol1"
-                        style={{
-                          "background-color": `${OverallScoreColour}`
-                        }}
-                      >
-                        {brand.OverallScore || "0"} <br /> Overall score
+                      <div className="OverallScore-brands-Overall">
+                        <div
+                          className="scrol1"
+                          style={{
+                            "background-color": `${OverallScoreColour}`
+                          }}
+                        >
+                          {brand.OverallScore || "0"} <br />
+                        </div>
+
+                        <p className="ooo">Overall score</p>
                       </div>
-                      <div
-                        className="scrol2"
-                        style={{
-                          "background-color": `${LabourScoreColour}`
-                        }}
-                      >
-                        {brand.LaborScore || "0"} <br /> Labour score
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol2"
+                          style={{
+                            "background-color": `${LabourScoreColour}`
+                          }}
+                        >
+                          {brand.LaborScore || "0"} <br />
+                        </div>
+                        <p className="ooo">Labour score</p>
                       </div>
-                      <div
-                        className="scrol3"
-                        style={{
-                          "background-color": `${EnvironmentScoreColour}`
-                        }}
-                      >
-                        {brand.EnvironmentScore || "0"} <br /> Environment score
+                      <div className="OverallScore-brands-Environment">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": `${EnvironmentScoreColour}`
+                          }}
+                        >
+                          {brand.EnvironmentScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Environment score</p>
+                      </div>
+
+                      <div className="brands-AnimalRigh">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": `${AnimalRightsScore}`
+                          }}
+                        >
+                          {brand.AnimalRightsScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Animal Rights</p>
                       </div>
                     </div>
                   </div>
+                  <div className="div-margin-bottm" />
                 </div>
               );
             })
