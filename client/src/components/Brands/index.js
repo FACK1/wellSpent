@@ -120,7 +120,7 @@ class Brands extends Component {
                           />
                           <br />
                           <p className="so-we-can">
-                            (so we can let you know when we've added the brand
+                            (so we can let you know when we have added the brand
                             you suggested)
                           </p>
                           <br />
