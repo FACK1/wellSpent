@@ -62,7 +62,7 @@ class Brand extends React.Component {
       environmentscore,
       animalrightscore,
       cost,
-      producttype,
+      category,
       explanation,
       loading
     } = this.state;
@@ -130,8 +130,8 @@ class Brand extends React.Component {
             </div>
             <div className="more">
               <p> Cost:{cost}</p>
-              <p> ProductType:{producttype}</p>
-              <p>Explanation :{explanation}</p>
+              <p> ProductType: {category}</p>
+              <p>Explanation: {explanation}</p>
             </div>
           </div>
           <div className="MoreDetails">
