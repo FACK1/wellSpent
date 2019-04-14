@@ -63,7 +63,6 @@ class Brands extends Component {
 
   render() {
     const { loading, brands, colourMap } = this.state;
-    console.log("brands", brands);
     if (loading) {
       const letters = [];
       return (

@@ -19,7 +19,6 @@ class Brand extends React.Component {
       .then(({ data }) => {
         const info = data.result[0];
         const { colourMap } = data;
-        console.log("colour", info);
         this.setState({
           image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
           name: info["BrandName"] || "-",
@@ -67,12 +66,7 @@ class Brand extends React.Component {
       explanation,
       loading
     } = this.state;
-    console.log(
-      OverallScorehexa,
-      LabourScorehexa,
-      EnvironmentScorehexa,
-      AnimalRightshexa
-    );
+
     if (!loading) {
       return (
         <div className="root">
