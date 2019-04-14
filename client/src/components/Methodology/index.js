@@ -1,19 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import "./methodology.css";
-const Methodology = () => {
-  return (
+import axios from "axios";
+
+export default class Methodology extends Component {
+    state = {
+      info: []
+    };
+    componentDidMount() {
+      axios
+        .get("/api/methodology")
+        .then(({ data }) => {
+          this.setState({
+            info: data[0]
+          });
+        })
+        .catch(() => {
+          console.log("Error");
+        });
+    }
+
+    render() {
+      const { info } = this.state;
+    return (
     <div className="div-father">
       <div className="page-titel">
-        <h3>Overall Score</h3>
+        <h3>{info.title}</h3>
       </div>
       <div className="description-final">
-        Candidates receive band score from 1 to 9 on each of the 4 modules:
-        Listening, Reading, Writing and Speaking. Overall Band Score is the
-        result of the average of these 4 scores which has been rounded to the
-        nearest whole or half band. This calculator is based on the new scoring
-        system put in place in July 2007, using half and whole band score.
+        {info.Description}
       </div>
     </div>
   );
-};
-export default Methodology;
+  }
+}

@@ -7,6 +7,8 @@ const { getfeedback } = require('./controllers/getfeedback.js');
 const { addfeedback } = require('./controllers/addfeedback.js');
 const { like } = require('./controllers/like.js');
 const { dislike } = require('./controllers/dislike.js');
+const { methodology } = require('./controllers/methodology.js');
+
 
 const router = express.Router();
 
@@ -18,5 +20,6 @@ router.get('/api/getfeedback/:name', getfeedback);
 router.post('/api/addfeedback', addfeedback);
 router.get('/api/like/:id/:like', like);
 router.get('/api/dislike/:id/:dislike', dislike);
+router.get('/api/methodology', methodology);
 
 module.exports = router;
