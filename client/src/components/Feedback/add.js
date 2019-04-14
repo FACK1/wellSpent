@@ -6,7 +6,8 @@ class AddFeedback extends React.Component {
   state = {
     value: "",
     Name: "",
-    feedback: "",
+    Feedback: "",
+    Email: "",
     Brands: this.props.name
   };
 
@@ -15,9 +16,9 @@ class AddFeedback extends React.Component {
   };
 
   handleClick = () => {
-    const { Brands, Name, feedback } = this.state;
+    const { Brands, Name, Feedback, Email } = this.state;
     axios
-      .post("/api/addfeedback", { feedback, Brands, Name })
+      .post("/api/addfeedback", { Brands, Name, Feedback, Email })
       .then(({ data: { success } }) => {
         if (success) {
           alert("Thank You For Your Feedback !!");
@@ -40,11 +41,15 @@ class AddFeedback extends React.Component {
         <div className="name2">
           <h3>Give Feedback</h3>
         </div>
-        <p>We are always looking to improve our brand ratings, so if there is anything we have missed, anything you think we should know, or just any other feedback about brand rankings, please submit here! </p>
+        <p>
+          We are always looking to improve our brand ratings, so if there is
+          anything we have missed, anything you think we should know, or just
+          any other feedback about brand rankings, please submit here!{" "}
+        </p>
         <form className="form" onSubmit={this.handleSubmitForm}>
           <div className="details">
             <div className="namedetails">
-              <h3>Name</h3>
+              <h3>Your Name</h3>
               <input
                 className="inputborder"
                 placeholder="Enter Your Name Here"
@@ -55,13 +60,24 @@ class AddFeedback extends React.Component {
               />
             </div>
             <div className="namedetails">
-              <h3>Comment</h3>
+              <h3>Your Email</h3>
+              <input
+                className="inputborder"
+                placeholder="Enter Your Email Here"
+                type="text"
+                name="Email"
+                value={this.state.Email}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="namedetails">
+              <h3>Feedback</h3>
               <input
                 className="inputborder"
                 placeholder="Enter Your Feedback Here"
                 type="text"
-                name="feedback"
-                value={this.state.feedback}
+                name="Feedback"
+                value={this.state.Feedback}
                 onChange={this.handleChange}
               />
             </div>

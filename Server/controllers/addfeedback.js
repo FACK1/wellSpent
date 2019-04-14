@@ -6,10 +6,14 @@ exports.addfeedback = (req, res) => {
     process.env.DB_NAME,
   );
 
-  const { feedback, Brands, BrandName } = req.body;
+  const {
+    Brands, BrandName, Name, Feedback, Email,
+  } = req.body;
   base('Feedback').create(
     {
-      feedback,
+      Name,
+      Feedback,
+      Email,
       Brands,
       BrandName,
       like: 0,
