@@ -19,6 +19,7 @@ class Brand extends React.Component {
       .then(({ data }) => {
         const info = data.result[0];
         const { colourMap } = data;
+        console.log("colour", info);
         this.setState({
           image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
           name: info["BrandName"] || "-",
@@ -32,11 +33,13 @@ class Brand extends React.Component {
           AnimalRightshexa: colourMap
             ? colourMap[info["Animal Rights Score"]]
             : "#CCCCCF",
-          EnvironmentScorehexa: colourMap
+          EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
-          LabourScorehexa: colourMap ? colourMap[info.LaborScore] : "#CCCCCF",
-          OverallScorehexa: colourMap
+          LabourScorehexa: colourMap[info.LaborScore]
+            ? colourMap[info.LaborScore]
+            : "#CCCCCF",
+          OverallScorehexa: colourMap[info.OverallScore]
             ? colourMap[info.OverallScore]
             : "#CCCCCF",
           loading: false
@@ -64,7 +67,12 @@ class Brand extends React.Component {
       explanation,
       loading
     } = this.state;
-
+    console.log(
+      OverallScorehexa,
+      LabourScorehexa,
+      EnvironmentScorehexa,
+      AnimalRightshexa
+    );
     if (!loading) {
       return (
         <div className="root">

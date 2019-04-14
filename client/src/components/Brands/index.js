@@ -128,6 +128,9 @@ class Brands extends Component {
               const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
                 ? colourMap[brand.EnvironmentScore]
                 : "#CCCCCF";
+              const image = brand.Image
+                ? brand.Image[0].thumbnails.large.url
+                : defaultimage;
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -139,20 +142,9 @@ class Brands extends Component {
                     </div>
                   )}
                   <div className="div-box">
-                    {brand.Image !== undefined ? (
-                      <div className="imge">
-                        <img
-                          className="img-get"
-                          src={brand.Image[0].thumbnails.large.url}
-                          alt=""
-                        />
-                      </div>
-                    ) : (
-                      <div className="imge">
-                        <img className="img-get" src={defaultimage} alt="" />
-                      </div>
-                    )}
-
+                    <div className="imge">
+                      <img className="img-get" src={image} alt="" />
+                    </div>
                     <div className="descrip">
                       <p className="name">{nameCapitalized || "-"}</p>
                       <p className="description">
