@@ -27,7 +27,7 @@ class Brand extends React.Component {
           animalrightscore: info["Animal Rights Score"] || "-",
           cost: info["Cost"] || "-",
           producttype: info["Category Name"] || "-",
-          explanation: info["Explanation"] || "Not available",
+          explanation: info["Explanation"] || "-",
           AnimalRightshexa: info["Animal Rights hexa"],
           EnvironmentScorehexa: info["Environment Score hexa"]
             ? info["Environment Score hexa"][0]
