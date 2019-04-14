@@ -119,13 +119,13 @@ class Brands extends Component {
                 brand.BrandName.slice(1);
               const OverallScoreColour = brand.OverallScoreColour
                 ? brand.OverallScoreColour[0]
-                : "#808080";
+                : "#CCCCCF";
               const LabourScoreColour = brand.LabourScoreColour
                 ? brand.LabourScoreColour[0]
-                : "#808080";
+                : "#CCCCCF";
               const EnvironmentScoreColour = brand.EnvironmentScoreColour
                 ? brand.EnvironmentScoreColour[0]
-                : "#808080";
+                : "#CCCCCF";
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -172,7 +172,7 @@ class Brands extends Component {
                           "background-color": OverallScoreColour
                         }}
                       >
-                        {brand.OverallScore} <br /> Overall score
+                        {brand.OverallScore || "0"} <br /> Overall score
                       </div>
                       <div
                         className="scrol2"
@@ -180,7 +180,7 @@ class Brands extends Component {
                           "background-color": LabourScoreColour
                         }}
                       >
-                        {brand.LaborScore} <br /> Labour score
+                        {brand.LaborScore || "0"} <br /> Labour score
                       </div>
                       <div
                         className="scrol3"
