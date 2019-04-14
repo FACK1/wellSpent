@@ -20,10 +20,10 @@ class Brand extends React.Component {
         const info = data[0];
         this.setState({
           image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
-          name: info["BrandName"],
-          overallscore: info["OverallScore"],
-          environmentscore: info["EnvironmentScore"],
-          labourscore: info["LaborScore"] || "-",
+          name: info["BrandName"] || "-",
+          overallscore: info["OverallScore"] || "0",
+          environmentscore: info["EnvironmentScore"] || "0",
+          labourscore: info["LaborScore"] || "0",
           animalrightscore: info["Animal Rights Score"] || "-",
           cost: info["Cost"] || "-",
           producttype: info["Category Name"] || "-",
