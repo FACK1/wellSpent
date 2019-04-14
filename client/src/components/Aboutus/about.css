@@ -1,0 +1,18 @@
+.Number {
+  font-size: 25pt;
+  color: #c5c4b9;
+  font-weight: bold;
+}
+.pargrah-about {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 240px;
+}
+.about-title {
+  padding-top: 40px;
+}
+.Whatwecareabout {
+  margin-top: 70px;
+}

@@ -155,6 +155,18 @@ class Brands extends Component {
               const nameCapitalized =
                 brand.BrandName.charAt(0).toUpperCase() +
                 brand.BrandName.slice(1);
+              const OverallScoreColour = colourMap[brand.OverallScore]
+                ? colourMap[brand.OverallScore]
+                : "#CCCCCF";
+              const LabourScoreColour = colourMap[brand.LaborScore]
+                ? colourMap[brand.LaborScore]
+                : "#CCCCCF";
+              const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
+                ? colourMap[brand.EnvironmentScore]
+                : "#CCCCCF";
+              const image = brand.Image
+                ? brand.Image[0].thumbnails.large.url
+                : defaultimage;
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -166,23 +178,14 @@ class Brands extends Component {
                     </div>
                   )}
                   <div className="div-box">
-                    {brand.Image !== undefined ? (
-                      <div className="imge">
-                        <img
-                          className="img-get"
-                          src={brand.Image[0].thumbnails.large.url}
-                          alt=""
-                        />
-                      </div>
-                    ) : (
-                      <div className="imge">
-                        <img className="img-get" src={defaultimage} alt="" />
-                      </div>
-                    )}
-
+                    <div className="imge">
+                      <img className="img-get" src={image} alt="" />
+                    </div>
                     <div className="descrip">
-                      <p className="name">{nameCapitalized}</p>
-                      <p className="description">{brand.Explanation}</p>
+                      <p className="name">{nameCapitalized || "-"}</p>
+                      <p className="description">
+                        {brand.Explanation || "No-Explanation "}
+                      </p>
                       <div className="div-button">
                         <Link
                           to={`/Brand/${brand.BrandName}`}
@@ -196,28 +199,26 @@ class Brands extends Component {
                       <div
                         className="scrol1"
                         style={{
-                          "background-color": `${colourMap[brand.OverallScore]}`
+                          "background-color": `${OverallScoreColour}`
                         }}
                       >
-                        {brand.OverallScore} <br /> Overall score
+                        {brand.OverallScore || "0"} <br /> Overall score
                       </div>
                       <div
                         className="scrol2"
                         style={{
-                          "background-color": `${colourMap[brand.LaborScore]}`
+                          "background-color": `${LabourScoreColour}`
                         }}
                       >
-                        {brand.LaborScore} <br /> Labour score
+                        {brand.LaborScore || "0"} <br /> Labour score
                       </div>
                       <div
                         className="scrol3"
                         style={{
-                          "background-color": `${
-                            colourMap[brand.EnvironmentScore]
-                          }`
+                          "background-color": `${EnvironmentScoreColour}`
                         }}
                       >
-                        {brand.EnvironmentScore} <br /> Environment score
+                        {brand.EnvironmentScore || "0"} <br /> Environment score
                       </div>
                     </div>
                   </div>

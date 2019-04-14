@@ -1,11 +1,11 @@
 require('env2')('.env');
 const Airtable = require('airtable');
 
-exports.getAboutus = (req, res) => {
+exports.methodology = (req, res) => {
   const base = new Airtable({ apiKey: process.env.APIKEY }).base(
     process.env.DB_NAME,
   );
-  base('aboutus')
+  base('methodology')
     .select({
       view: 'Grid view',
     })

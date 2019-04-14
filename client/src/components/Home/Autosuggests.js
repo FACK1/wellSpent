@@ -36,7 +36,6 @@ function renderSuggestion(suggestion) {
     );
   }
 }
-
 export default class Autosuggests extends Component {
   state = {
     value: "",
@@ -50,7 +49,6 @@ export default class Autosuggests extends Component {
           return brand.BrandName;
         });
       })
-
       .catch(() => {
         console.log("Error");
       });

@@ -18,17 +18,29 @@ class Brand extends React.Component {
       .get(`/api/brand/${name}`)
       .then(({ data }) => {
         const info = data.result[0];
+        const { colourMap } = data;
         this.setState({
-          image: info.Image,
-          name: info["BrandName"],
-          overallscore: info["OverallScore"],
-          environmentscore: info["EnvironmentScore"],
-          labourscore: info["LaborScore"],
-          animalrightscore: info["Animal Rights Score"],
-          cost: info["Cost"],
-          category: info["category"],
-          explanation: info["Explanation"],
-          colourMap: data.colourMap,
+          image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
+          name: info["BrandName"] || "-",
+          overallscore: info["OverallScore"] || "0",
+          environmentscore: info["EnvironmentScore"] || "0",
+          labourscore: info["LaborScore"] || "0",
+          animalrightscore: info["Animal Rights Score"] || "0",
+          cost: info["Cost"] || "-",
+          producttype: info["Category Name"] || "-",
+          explanation: info["Explanation"] || "-",
+          AnimalRightshexa: colourMap
+            ? colourMap[info["Animal Rights Score"]]
+            : "#CCCCCF",
+          EnvironmentScorehexa: colourMap[info.EnvironmentScore]
+            ? colourMap[info.EnvironmentScore]
+            : "#CCCCCF",
+          LabourScorehexa: colourMap[info.LaborScore]
+            ? colourMap[info.LaborScore]
+            : "#CCCCCF",
+          OverallScorehexa: colourMap[info.OverallScore]
+            ? colourMap[info.OverallScore]
+            : "#CCCCCF",
           loading: false
         });
       })
@@ -42,15 +54,19 @@ class Brand extends React.Component {
       image,
       name,
       overallscore,
+      OverallScorehexa,
+      LabourScorehexa,
+      EnvironmentScorehexa,
+      AnimalRightshexa,
       labourscore,
       environmentscore,
       animalrightscore,
       cost,
       category,
       explanation,
-      colourMap,
       loading
     } = this.state;
+
     if (!loading) {
       return (
         <div className="root">
@@ -60,11 +76,8 @@ class Brand extends React.Component {
             </Link>
             <p className="pargraph"> Brand Details </p>
           </div>
-          {image !== undefined ? (
-            <img className="images" src={image[0].url} alt="" />
-          ) : (
-            <img className="images" src={defaultimage} alt="" />
-          )}
+
+          <img className="images" src={image} alt="" />
 
           <h3 className="brandname">{name}</h3>
 
@@ -73,7 +86,7 @@ class Brand extends React.Component {
               <div
                 className="score"
                 style={{
-                  "background-color": `${colourMap[overallscore]}`
+                  "background-color": `${OverallScorehexa}`
                 }}
               >
                 <h3>OverallScore</h3>
@@ -85,7 +98,7 @@ class Brand extends React.Component {
                 <div
                   className="score1"
                   style={{
-                    "background-color": `${colourMap[labourscore]}`
+                    "background-color": `${LabourScorehexa}`
                   }}
                 >
                   <h3> {labourscore}</h3>
@@ -96,7 +109,7 @@ class Brand extends React.Component {
                 <div
                   className="score2"
                   style={{
-                    "background-color": `${colourMap[environmentscore]}`
+                    "background-color": `${EnvironmentScorehexa}`
                   }}
                 >
                   <h3> {environmentscore}</h3>
@@ -107,7 +120,7 @@ class Brand extends React.Component {
                 <div
                   className="score3"
                   style={{
-                    "background-color": `${colourMap[animalrightscore]}`
+                    "background-color": `${AnimalRightshexa}`
                   }}
                 >
                   <h3> {animalrightscore}</h3>
@@ -126,7 +139,7 @@ class Brand extends React.Component {
               <div
                 className="score22"
                 style={{
-                  "background-color": `${colourMap[overallscore]}`
+                  "background-color": `${LabourScorehexa}`
                 }}
               >
                 <h3> {labourscore}</h3>
@@ -140,7 +153,7 @@ class Brand extends React.Component {
               <div
                 className="score22"
                 style={{
-                  "background-color": `${colourMap[environmentscore]}`
+                  "background-color": `${EnvironmentScorehexa}`
                 }}
               >
                 <h3> {environmentscore}</h3>
