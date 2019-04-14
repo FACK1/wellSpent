@@ -36,7 +36,6 @@ function renderSuggestion(suggestion) {
     );
   }
 }
-
 export default class Autosuggests extends Component {
   state = {
     value: "",
@@ -46,11 +45,10 @@ export default class Autosuggests extends Component {
     axios
       .get("/api/brands")
       .then(({ data }) => {
-        brands = data.map(brand => {
+        brands = data.result.map(brand => {
           return brand.BrandName;
         });
       })
-
       .catch(() => {
         console.log("Error");
       });
