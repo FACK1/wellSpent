@@ -89,7 +89,7 @@ class Brand extends React.Component {
                   "background-color": `${OverallScorehexa}`
                 }}
               >
-                <h3>OverallScore</h3>
+                <h3>OverallRating</h3>
                 <h3 className="os">{overallscore} </h3>
               </div>
             </div>
@@ -102,7 +102,7 @@ class Brand extends React.Component {
                   }}
                 >
                   <h3> {labourscore}</h3>
-                  <h3>Labour Score </h3>
+                  <h3>Labour Rating </h3>
                 </div>
               </div>
               <div className="enviorment">
@@ -113,7 +113,7 @@ class Brand extends React.Component {
                   }}
                 >
                   <h3> {environmentscore}</h3>
-                  <h3>Enviorment Score</h3>
+                  <h3>Enviorment Rating</h3>
                 </div>
               </div>
               <div className="animal">
@@ -124,7 +124,7 @@ class Brand extends React.Component {
                   }}
                 >
                   <h3> {animalrightscore}</h3>
-                  <h3>Animal Right Score </h3>
+                  <h3>Animal Right Rating </h3>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@ class Brand extends React.Component {
               >
                 <h3> {environmentscore}</h3>
               </div>
-              <h3 className="name2">EnvironmentScore </h3>
+              <h3 className="name2">EnvironmentRating </h3>
             </div>
             <p>The last six epsoides of catastrople are not unlike.</p>
           </div>
