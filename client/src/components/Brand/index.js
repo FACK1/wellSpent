@@ -144,7 +144,7 @@ class Brand extends React.Component {
               >
                 <h3> {labourscore}</h3>
               </div>
-              <h3 className="name2">LabourScore </h3>
+              <h3 className="name2">Labour Rating </h3>
             </div>
             <p>
               They are as they are , and their merceills candorwill be missed.
