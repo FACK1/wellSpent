@@ -18,6 +18,7 @@ class Brand extends React.Component {
       .get(`/api/brand/${name}`)
       .then(({ data }) => {
         const info = data.result[0];
+        const { colourMap } = data;
         this.setState({
           image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
           name: info["BrandName"] || "-",
@@ -28,17 +29,15 @@ class Brand extends React.Component {
           cost: info["Cost"] || "-",
           producttype: info["Category Name"] || "-",
           explanation: info["Explanation"] || "-",
-          AnimalRightshexa: info.colourMap
-            ? info.colourMap[info.result[0].AnimalRightsScore]
+          AnimalRightshexa: colourMap
+            ? colourMap[info["Animal Rights Score"]]
             : "#CCCCCF",
-          EnvironmentScorehexa: info.colourMap
-            ? info.colourMap[info.result[0].EnvironmentScore]
+          EnvironmentScorehexa: colourMap
+            ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
-          LabourScorehexa: info.colourMap
-            ? info.colourMap[info.result[0].LaborScore]
-            : "#CCCCCF",
-          OverallScorehexa: info.colourMap
-            ? info.colourMap[info.result[0].OverallScore]
+          LabourScorehexa: colourMap ? colourMap[info.LaborScore] : "#CCCCCF",
+          OverallScorehexa: colourMap
+            ? colourMap[info.OverallScore]
             : "#CCCCCF",
           loading: false
         });
