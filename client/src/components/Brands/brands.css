@@ -10,6 +10,14 @@
 .div11 {
   display: inline-flex;
 }
+.div-margin-bottm {
+  width: 100%;
+  height: 40px;
+}
+.brands-AnimalRigh {
+  display: flex;
+  margin-left: 7px;
+}
 .big-box {
   display: flex;
   flex-direction: column;

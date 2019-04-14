@@ -130,6 +130,9 @@ class Brands extends Component {
               const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
                 ? colourMap[brand.EnvironmentScore]
                 : "#CCCCCF";
+              const AnimalRightsScore = colourMap[brand.AnimalRightsScore]
+                ? colourMap[brand.AnimalRightsScore]
+                : "#CCCCCF";
               const image = brand.Image
                 ? brand.Image[0].thumbnails.large.url
                 : defaultimage;
@@ -196,8 +199,21 @@ class Brands extends Component {
                         </div>
                         <p className="ooo"> Environment score</p>
                       </div>
+
+                      <div className="brands-AnimalRigh">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": `${AnimalRightsScore}`
+                          }}
+                        >
+                          {brand.AnimalRightsScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Animal Rights</p>
+                      </div>
                     </div>
                   </div>
+                  <div className="div-margin-bottm" />
                 </div>
               );
             })
