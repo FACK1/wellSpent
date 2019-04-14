@@ -11,9 +11,7 @@ exports.getBrand = (req, res) => {
     })
     .eachPage(
       (records, fetchNextPage) => {
-        const result = records.map((record) => {
-          record.fields;
-        });
+        const result = records.map(record => record.fields);
         fetchNextPage();
         const colourMap = {};
         base('Score Colour')
