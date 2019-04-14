@@ -40,7 +40,7 @@ class AddFeedback extends React.Component {
         <div className="name2">
           <h3>Give Feedback</h3>
         </div>
-        <p>We're always looking to improve our brand ratings, so if there's anything we've missed, anything you think we should know, or just any other feedback about brand rankings, please submit here! </p>
+        <p>We are always looking to improve our brand ratings, so if there is anything we have missed, anything you think we should know, or just any other feedback about brand rankings, please submit here! </p>
         <form className="form" onSubmit={this.handleSubmitForm}>
           <div className="details">
             <div className="namedetails">
