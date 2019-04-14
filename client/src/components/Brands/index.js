@@ -169,7 +169,7 @@ class Brands extends Component {
                       </div>
                     </div>
                     <div className="scrol">
-                      <div className="OverallScore-brands">
+                      <div className="OverallScore-brands-Overall">
                         <div
                           className="scrol1"
                           style={{
@@ -192,7 +192,7 @@ class Brands extends Component {
                         </div>
                         <p className="ooo">Labour score</p>
                       </div>
-                      <div className="OverallScore-brands">
+                      <div className="OverallScore-brands-Environment">
                         <div
                           className="scrol3"
                           style={{
