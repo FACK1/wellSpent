@@ -3,7 +3,7 @@ import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
-import { RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
 
@@ -168,8 +168,8 @@ class Brand extends React.Component {
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader
-            color={"#1389A6"}
+          <FadeLoader
+            color={"black"}
             align-items={"center"}
             text-align={"center"}
           />
