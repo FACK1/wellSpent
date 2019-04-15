@@ -146,6 +146,18 @@ class Brand extends React.Component {
               <div
                 className="score22"
                 style={{
+                  "background-color": `${EnvironmentScorehexa}`
+                }}
+              >
+                <h3> {environmentscore}</h3>
+              </div>
+              <h3 className="name2">EnviormentRating </h3>
+            </div>
+            <p>{ReasonforEnvironmentScore}</p>
+            <div className="labour2">
+              <div
+                className="score22"
+                style={{
                   "background-color": `${LabourScorehexa}`
                 }}
               >
@@ -154,18 +166,6 @@ class Brand extends React.Component {
               <h3 className="name2">LabourRating </h3>
             </div>
             <p>{ReasonforLabourScore}</p>
-            <div className="labour2">
-              <div
-                className="score22"
-                style={{
-                  "background-color": `${EnvironmentScorehexa}`
-                }}
-              >
-                <h3> {environmentscore}</h3>
-              </div>
-              <h3 className="name2">EnvironmentRating </h3>
-            </div>
-            <p>{ReasonforEnvironmentScore}</p>
           </div>
           <Feedback name={name} />
         </div>
