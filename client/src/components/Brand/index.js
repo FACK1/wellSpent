@@ -94,15 +94,15 @@ class Brand extends React.Component {
               </div>
             </div>
             <div className="detail">
-              <div className="labour">
+              <div className="enviorment">
                 <div
-                  className="score1"
+                  className="score2"
                   style={{
                     "background-color": `${EnvironmentScorehexa}`
                   }}
                 >
                   <h3> {environmentscore}</h3>
-                  <h3>Environment Rating </h3>
+                  <h3>Environment Rating</h3>
                 </div>
               </div>
 
@@ -146,7 +146,7 @@ class Brand extends React.Component {
               >
                 <h3> {labourscore}</h3>
               </div>
-              <h3 className="name2">Labour Rating </h3>
+              <h3 className="name2">LabourRating </h3>
             </div>
             <p>
               They are as they are , and their merceills candorwill be missed.
