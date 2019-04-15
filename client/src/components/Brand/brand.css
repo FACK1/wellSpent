@@ -39,6 +39,8 @@
   padding:0.5px;
   text-align: center;
   border-radius: 5px;
+  margin-top: 11px;
+
 }
 
 .score1 h3{
@@ -50,6 +52,7 @@
   padding:0.5px;
   text-align: center;
   border-radius: 5px;
+  margin-bottom: 8px;
 }
 
 .score2 h3{
@@ -126,7 +129,7 @@ margin-bottom: 70px;
  .MoreDetails{
    float:left;
    width:40%;
-   padding-top: 20%;
+   padding-top: 15%;
    text-align: left !important;
 
  }
@@ -153,7 +156,7 @@ margin-bottom: 70px;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
    margin-left: 2%;
-
+   max-width: 0%;
  }
  .labour2{
    display: inline-flex;
@@ -258,8 +261,8 @@ width: 133px;
   padding-top: 12px;
  }
  .detail{
-   margin-top: -83px;
-  margin-left: -482px;
+   margin-top: -163px;
+   margin-left: -80px;
 }
 .details{
 margin-bottom: 70px;

@@ -29,11 +29,14 @@ class Brand extends React.Component {
           labourscore: info["LaborScore"] || "0",
           ReasonforLabourScore: info["Reason for Labour Score"] || "0",
           animalrightscore: info["Animal Rights Score"] || "0",
+          transparencyscore: info.TransparencyScore || "0",
+          ReasonforTransparencyScore:
+            info["Reason for Transparency Score"] || "0",
           cost: info["Cost"] || "-",
-          producttype: info["Category Name"] || "-",
+          producttype: info.category || "-",
           explanation: info["Explanation"] || "-",
-          AnimalRightshexa: colourMap
-            ? colourMap[info["Animal Rights Score"]]
+          TransparencyScorehexa: colourMap
+            ? colourMap[info.TransparencyScore]
             : "#CCCCCF",
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
@@ -62,14 +65,15 @@ class Brand extends React.Component {
       OverallScorehexa,
       LabourScorehexa,
       EnvironmentScorehexa,
-      AnimalRightshexa,
       ReasonforEnvironmentScore,
       ReasonforLabourScore,
+      TransparencyScorehexa,
+      ReasonforTransparencyScore,
       labourscore,
+      transparencyscore,
       environmentscore,
-      animalrightscore,
       cost,
-      category,
+      producttype,
       explanation,
       loading
     } = this.state;
@@ -101,6 +105,18 @@ class Brand extends React.Component {
               </div>
             </div>
             <div className="detail">
+              <div className="enviorment">
+                <div
+                  className="score2"
+                  style={{
+                    "background-color": `${EnvironmentScorehexa}`
+                  }}
+                >
+                  <h3> {environmentscore}</h3>
+                  <h3>Environment Rating</h3>
+                </div>
+              </div>
+
               <div className="labour">
                 <div
                   className="score1"
@@ -112,33 +128,23 @@ class Brand extends React.Component {
                   <h3>Labour Rating </h3>
                 </div>
               </div>
-              <div className="enviorment">
-                <div
-                  className="score2"
-                  style={{
-                    "background-color": `${EnvironmentScorehexa}`
-                  }}
-                >
-                  <h3> {environmentscore}</h3>
-                  <h3>Enviorment Rating</h3>
-                </div>
-              </div>
+
               <div className="animal">
                 <div
                   className="score3"
                   style={{
-                    "background-color": `${AnimalRightshexa}`
+                    "background-color": `${TransparencyScorehexa}`
                   }}
                 >
-                  <h3> {animalrightscore}</h3>
-                  <h3>Animal Right Rating </h3>
+                  <h3> {transparencyscore}</h3>
+                  <h3>Transparency Rating </h3>
                 </div>
               </div>
             </div>
             <div className="more">
               <p> Cost:{cost}</p>
-              <p> ProductType: {category}</p>
-              <p>Explanation: {explanation}</p>
+              <p> ProductType: {producttype}</p>
+              <p> Explanation: {explanation}</p>
             </div>
           </div>
           <div className="MoreDetails">
@@ -166,6 +172,18 @@ class Brand extends React.Component {
               <h3 className="name2">LabourRating </h3>
             </div>
             <p>{ReasonforLabourScore}</p>
+            <div className="labour2">
+              <div
+                className="score22"
+                style={{
+                  "background-color": `${TransparencyScorehexa}`
+                }}
+              >
+                <h3> {labourscore}</h3>
+              </div>
+              <h3 className="name2">TransparencyRating </h3>
+            </div>
+            <p>{ReasonforTransparencyScore}</p>
           </div>
           <Feedback name={name} />
         </div>
