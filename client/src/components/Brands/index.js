@@ -37,12 +37,12 @@ class Brands extends Component {
   };
 
   handleClick = () => {
-    const { BrandName } = this.state;
+    const { BrandName, Email, MoreInformation } = this.state;
     axios
-      .post("/api/brand", { BrandName })
+      .post("/api/brand", { BrandName, Email, MoreInformation })
       .then(({ data: { success } }) => {
         if (success) {
-          alert("Your suggestion added successfully, Thanks!");
+          alert("Thank you for your suggestion");
           window.location.reload();
         } else {
           console.log("error");
@@ -73,7 +73,7 @@ class Brands extends Component {
               <Link to="/">
                 <div className="back" />
               </Link>
-              <div className="par">Ethical Brands</div>
+              <div className="par"> Brands</div>
             </div>
             <div className="div11">
               <div className="div-pop">
@@ -90,35 +90,90 @@ class Brands extends Component {
                     <form className="form" onSubmit={this.handleSubmitForm}>
                       <h3> Suggest a brand</h3>
                       <div className="div-label">
-                        <label className="label" for="pop">
-                          brand name
-                        </label>
-                        <input
-                          className="name-input"
-                          type="text"
-                          name="Name"
-                          value={this.state.value}
-                          onChange={this.handleChange}
-                        />
+                        <p className="if-we-are">
+                          if we are missing a brand that you want to see ,<br />
+                          lets us know, and we will try and add it as soon as we
+                          can.
+                        </p>
+                        <div className="label-div">
+                          <div className="label-input-brand-name">
+                            <label className="label-brand-name" for="pop">
+                              brand name
+                            </label>
+                            <input
+                              className="name-input"
+                              type="text"
+                              name="BrandName"
+                              value={this.state.value}
+                              onChange={this.handleChange}
+                            />
+                          </div>
+                          <br />
+                          <label className="label-brand-name" for="pop">
+                            your email(optinal)
+                          </label>
+                          <input
+                            className="name-input"
+                            type="text"
+                            name="Email"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                          />
+                          <br />
+                          <p className="so-we-can">
+                            (so we can let you know when we have added the brand
+                            you suggested)
+                          </p>
+                          <br />
+                          <label className="label-brand-name" for="pop">
+                            Any other information we should now
+                          </label>
+                          <br />
+                          <input
+                            className="informationinput"
+                            type="text"
+                            name="MoreInformation"
+                            value={this.state.value}
+                            onChange={this.handleChange}
+                          />
+                        </div>
                       </div>
                       <br />
                       <button className="btn1" onClick={this.handleClick}>
-                        add
+                        Submit
                       </button>
                     </form>
                   </div>
                 </Popup>
               </div>
 
-               <div className="par2"> Suggest a brand </div>
-             </div>
-           </div>
+              <div className="par2"> Suggest a brand </div>
+            </div>
+          </div>
+          <div className="a-z">
+            A B C D E F G H I J K L M N O P Q R S V W X Y Z
+          </div>
 
           {brands.length !== 0 ? (
             brands.map(brand => {
               const nameCapitalized =
                 brand.BrandName.charAt(0).toUpperCase() +
                 brand.BrandName.slice(1);
+              const OverallScoreColour = colourMap[brand.OverallScore]
+                ? colourMap[brand.OverallScore]
+                : "#CCCCCF";
+              const LabourScoreColour = colourMap[brand.LaborScore]
+                ? colourMap[brand.LaborScore]
+                : "#CCCCCF";
+              const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
+                ? colourMap[brand.EnvironmentScore]
+                : "#CCCCCF";
+              const AnimalRightsScore = colourMap[brand.AnimalRightsScore]
+                ? colourMap[brand.AnimalRightsScore]
+                : "#CCCCCF";
+              const image = brand.Image
+                ? brand.Image[0].thumbnails.large.url
+                : defaultimage;
               letters.push(nameCapitalized.charAt(0));
 
               return (
@@ -130,61 +185,73 @@ class Brands extends Component {
                     </div>
                   )}
                   <div className="div-box">
-                    {brand.Image !== undefined ? (
-                      <div className="imge">
-                        <img
-                          className="img-get"
-                          src={brand.Image[0].thumbnails.large.url}
-                          alt=""
-                        />
-                      </div>
-                    ) : (
-                      <div className="imge">
-                        <img className="img-get" src={defaultimage} alt="" />
-                      </div>
-                    )}
-
+                    <div className="imge">
+                      <img className="img-get" src={image} alt="" />
+                    </div>
                     <div className="descrip">
-                      <p className="name">{nameCapitalized}</p>
-                      <p className="description">{brand.Explanation}</p>
+                      <p className="name">{nameCapitalized || "-"}</p>
+                      <p className="description">
+                        {brand.Explanation || "No-Explanation "}
+                      </p>
                       <div className="div-button">
                         <Link
                           to={`/Brand/${brand.BrandName}`}
                           className="button-link"
                         >
-                          <button className="view">view</button>
+                          <button className="view">More details</button>
                         </Link>
                       </div>
                     </div>
                     <div className="scrol">
-                      <div
-                        className="scrol1"
-                        style={{
-                          "background-color": `${colourMap[brand.OverallScore]}`
-                        }}
-                      >
-                        {brand.OverallScore} <br /> Overall score
+                      <div className="OverallScore-brands-Overall">
+                        <div
+                          className="scrol1"
+                          style={{
+                            "background-color": `${OverallScoreColour}`
+                          }}
+                        >
+                          {brand.OverallScore || "0"} <br />
+                        </div>
+
+                        <p className="ooo">Overall score</p>
                       </div>
-                      <div
-                        className="scrol2"
-                        style={{
-                          "background-color": `${colourMap[brand.LaborScore]}`
-                        }}
-                      >
-                        {brand.LaborScore} <br /> Labour score
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol2"
+                          style={{
+                            "background-color": `${LabourScoreColour}`
+                          }}
+                        >
+                          {brand.LaborScore || "0"} <br />
+                        </div>
+                        <p className="ooo">Labour score</p>
                       </div>
-                      <div
-                        className="scrol3"
-                        style={{
-                          "background-color": `${
-                            colourMap[brand.EnvironmentScore]
-                          }`
-                        }}
-                      >
-                        {brand.EnvironmentScore} <br /> Environment score
+                      <div className="OverallScore-brands-Environment">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": `${EnvironmentScoreColour}`
+                          }}
+                        >
+                          {brand.EnvironmentScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Environment score</p>
+                      </div>
+
+                      <div className="brands-AnimalRigh">
+                        <div
+                          className="scrol3"
+                          style={{
+                            "background-color": `${AnimalRightsScore}`
+                          }}
+                        >
+                          {brand.AnimalRightsScore || "0"} <br />
+                        </div>
+                        <p className="ooo"> Animal Rights</p>
                       </div>
                     </div>
                   </div>
+                  <div className="div-margin-bottm" />
                 </div>
               );
             })

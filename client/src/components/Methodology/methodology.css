@@ -1,0 +1,22 @@
+.div-father {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.page-titel {
+  height: 30px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 40%;
+}
+.description-final {
+  height: 200px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15%;
+}

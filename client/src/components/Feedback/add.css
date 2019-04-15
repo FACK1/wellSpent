@@ -4,6 +4,12 @@
   margin-right: 15%;
 }
 
+.root1 p{
+max-width: 80%;
+margin-left: 10%;
+margin-bottom: 4%;
+}
+
 .inputborder{
 margin-left: 10%;
 border-bottom: solid !important;
@@ -14,7 +20,9 @@ padding-left: 2%;
 font-size: 16pt;
 
 }
-
+.name2{
+  padding: 1% !important;
+}
 .name2 h3{
   font-size: 16pt;
   font-weight: bold;
