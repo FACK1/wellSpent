@@ -1,5 +1,5 @@
 import React from "react";
-import back from "./back.png";
+import back from "./left.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
