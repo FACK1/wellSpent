@@ -245,7 +245,7 @@ class Brands extends Component {
                         >
                           {brand.TransparencyScore || "0"} <br />
                         </div>
-                        <p className="ooo"> Animal Rating</p>
+                        <p className="ooo"> Transparency Rating</p>
                       </div>
                     </div>
                   </div>
