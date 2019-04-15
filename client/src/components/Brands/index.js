@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./brands.css";
 import axios from "axios";
-import { RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import defaultimage from "../Brand/x.jpg";
@@ -256,14 +256,14 @@ class Brands extends Component {
               );
             })
           ) : (
-            <RingLoader color={"#ff8094"} loading={loading} />
+            <FadeLoader color={"black"} loading={loading} />
           )}
         </div>
       );
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader color={"#1389a6"} loading={loading} />
+          <FadeLoader color={"black"} loading={loading} />
         </div>
       );
     }
