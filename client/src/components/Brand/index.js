@@ -3,7 +3,7 @@ import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
-import { RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
 
@@ -89,7 +89,7 @@ class Brand extends React.Component {
                   "background-color": `${OverallScorehexa}`
                 }}
               >
-                <h3>OverallScore</h3>
+                <h3>OverallRating</h3>
                 <h3 className="os">{overallscore} </h3>
               </div>
             </div>
@@ -101,8 +101,8 @@ class Brand extends React.Component {
                     "background-color": `${EnvironmentScorehexa}`
                   }}
                 >
-                  <h3> {environmentscore}</h3>
-                  <h3>Enviorment Score</h3>
+                  <h3> {labourscore}</h3>
+                  <h3>Labour Rating </h3>
                 </div>
               </div>
 
@@ -113,8 +113,8 @@ class Brand extends React.Component {
                     "background-color": `${LabourScorehexa}`
                   }}
                 >
-                  <h3> {labourscore}</h3>
-                  <h3>Labour Score </h3>
+                  <h3> {environmentscore}</h3>
+                  <h3>Enviorment Rating</h3>
                 </div>
               </div>
               <div className="animal">
@@ -125,7 +125,7 @@ class Brand extends React.Component {
                   }}
                 >
                   <h3> {transparencyscore}</h3>
-                  <h3>Transparency Score </h3>
+                  <h3>Transparency Rating </h3>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ class Brand extends React.Component {
               >
                 <h3> {labourscore}</h3>
               </div>
-              <h3 className="name2">LabourScore </h3>
+              <h3 className="name2">Labour Rating </h3>
             </div>
             <p>
               They are as they are , and their merceills candorwill be missed.
@@ -159,7 +159,7 @@ class Brand extends React.Component {
               >
                 <h3> {environmentscore}</h3>
               </div>
-              <h3 className="name2">EnvironmentScore </h3>
+              <h3 className="name2">EnvironmentRating </h3>
             </div>
             <p>The last six epsoides of catastrople are not unlike.</p>
           </div>
@@ -169,8 +169,8 @@ class Brand extends React.Component {
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader
-            color={"#1389A6"}
+          <FadeLoader
+            color={"black"}
             align-items={"center"}
             text-align={"center"}
           />

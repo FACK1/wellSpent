@@ -32,7 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #1389a6;
+  color: black;
+  margin-top: 20% !important;
 }
 
 .back {
