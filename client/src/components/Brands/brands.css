@@ -15,9 +15,9 @@
   width: 100%;
   height: 40px;
 }
-.brands-AnimalRigh {
+.brands-trans {
   display: flex;
-  margin-left: 7px;
+  margin-left:50px;
 }
 .big-box {
   display: flex;

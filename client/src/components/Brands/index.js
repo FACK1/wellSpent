@@ -168,8 +168,8 @@ class Brands extends Component {
               const EnvironmentScoreColour = colourMap[brand.EnvironmentScore]
                 ? colourMap[brand.EnvironmentScore]
                 : "#CCCCCF";
-              const AnimalRightsScore = colourMap[brand.AnimalRightsScore]
-                ? colourMap[brand.AnimalRightsScore]
+              const TransparencyScoreColour = colourMap[brand.TransparencyScore]
+                ? colourMap[brand.TransparencyScore]
                 : "#CCCCCF";
               const image = brand.Image
                 ? brand.Image[0].thumbnails.large.url
@@ -215,17 +215,6 @@ class Brands extends Component {
 
                         <p className="ooo">Overall Rating</p>
                       </div>
-                      <div className="OverallScore-brands">
-                        <div
-                          className="scrol2"
-                          style={{
-                            "background-color": `${LabourScoreColour}`
-                          }}
-                        >
-                          {brand.LaborScore || "0"} <br />
-                        </div>
-                        <p className="ooo">Labour Rating</p>
-                      </div>
                       <div className="OverallScore-brands-Environment">
                         <div
                           className="scrol3"
@@ -235,17 +224,27 @@ class Brands extends Component {
                         >
                           {brand.EnvironmentScore || "0"} <br />
                         </div>
+                        <p className="ooo">Labour Rating</p>
+                      </div>
+                      <div className="OverallScore-brands">
+                        <div
+                          className="scrol2"
+                          style={{
+                            "background-color": `${LabourScoreColour}`
+                          }}
+                        >
+                          {brand.LaborScore || "0"} <br />
+                        </div>
                         <p className="ooo"> Environment Rating</p>
                       </div>
-
-                      <div className="brands-AnimalRigh">
+                      <div className="brands-trans">
                         <div
                           className="scrol3"
                           style={{
-                            "background-color": `${AnimalRightsScore}`
+                            "background-color": `${TransparencyScoreColour}`
                           }}
                         >
-                          {brand.AnimalRightsScore || "0"} <br />
+                          {brand.TransparencyScore || "0"} <br />
                         </div>
                         <p className="ooo"> Animal Rating</p>
                       </div>
