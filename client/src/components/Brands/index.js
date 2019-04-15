@@ -212,7 +212,7 @@ class Brands extends Component {
                           {brand.OverallScore || "0"} <br />
                         </div>
 
-                        <p className="ooo">Overall score</p>
+                        <p className="ooo">Overall Rating</p>
                       </div>
                       <div className="OverallScore-brands">
                         <div
@@ -223,7 +223,7 @@ class Brands extends Component {
                         >
                           {brand.LaborScore || "0"} <br />
                         </div>
-                        <p className="ooo">Labour score</p>
+                        <p className="ooo">Labour Rating</p>
                       </div>
                       <div className="OverallScore-brands-Environment">
                         <div
@@ -234,7 +234,7 @@ class Brands extends Component {
                         >
                           {brand.EnvironmentScore || "0"} <br />
                         </div>
-                        <p className="ooo"> Environment score</p>
+                        <p className="ooo"> Environment Rating</p>
                       </div>
 
                       <div className="brands-AnimalRigh">
@@ -246,7 +246,7 @@ class Brands extends Component {
                         >
                           {brand.AnimalRightsScore || "0"} <br />
                         </div>
-                        <p className="ooo"> Animal Rights</p>
+                        <p className="ooo"> Animal Rating</p>
                       </div>
                     </div>
                   </div>
