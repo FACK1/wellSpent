@@ -184,11 +184,12 @@ class Brand extends React.Component {
                     {ReasonForTransparencyScore}
                   </p>
                 </div>
-
-                <div className="btn-metodolegy-brand">
-                  {" "}
-                  Find out more about now we score
-                </div>
+                <Link to="/methodology">
+                  <div className="btn-metodolegy-brand">
+                    {" "}
+                    Find out more about now we score
+                  </div>
+                </Link>
               </div>
             </div>
 
