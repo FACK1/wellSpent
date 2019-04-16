@@ -3,9 +3,10 @@ import back from "./back.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
-import { RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
+import AddFeedback from "../Feedback/add.js";
 
 class Brand extends React.Component {
   state = {
@@ -24,13 +25,18 @@ class Brand extends React.Component {
           name: info["BrandName"] || "-",
           overallscore: info["OverallScore"] || "0",
           environmentscore: info["EnvironmentScore"] || "0",
+          ReasonForEnvironmentScore:
+            info["Reason for Environment Score"] || "No Result",
           labourscore: info["LaborScore"] || "0",
-          animalrightscore: info["Animal Rights Score"] || "0",
+          ReasonForLabourScore: info["Reason for Labour Score"] || "No Result",
+          transparencyscore: info.TransparencyScore || "0",
+          ReasonForTransparencyScore:
+            info["Reason for Transparency Score"] || "No Result",
           cost: info["Cost"] || "-",
-          producttype: info["Category Name"] || "-",
+          producttype: info.category || "-",
           explanation: info["Explanation"] || "-",
-          AnimalRightshexa: colourMap
-            ? colourMap[info["Animal Rights Score"]]
+          TransparencyScorehexa: colourMap
+            ? colourMap[info.TransparencyScore]
             : "#CCCCCF",
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
@@ -57,12 +63,15 @@ class Brand extends React.Component {
       OverallScorehexa,
       LabourScorehexa,
       EnvironmentScorehexa,
-      AnimalRightshexa,
+
+      ReasonForEnvironmentScore,
+      ReasonForLabourScore,
+      ReasonForTransparencyScore,
       labourscore,
+      transparencyscore,
       environmentscore,
-      animalrightscore,
       cost,
-      category,
+      producttype,
       explanation,
       loading
     } = this.state;
@@ -76,100 +85,108 @@ class Brand extends React.Component {
             </Link>
             <p className="pargraph"> Brand Details </p>
           </div>
-
-          <img className="images" src={image} alt="" />
-
-          <h3 className="brandname">{name}</h3>
-
-          <div className="ALLdetails">
-            <div className="overall">
-              <div
-                className="score"
-                style={{
-                  "background-color": `${OverallScorehexa}`
-                }}
-              >
-                <h3>OverallRating</h3>
-                <h3 className="os">{overallscore} </h3>
+          <div className="big-box-brand">
+            <div className="div-box-brand">
+              <div className="imge-brand">
+                <img className="img-get" src={image} alt="" />
               </div>
-            </div>
-            <div className="detail">
-              <div className="labour">
-                <div
-                  className="score1"
-                  style={{
-                    "background-color": `${LabourScorehexa}`
-                  }}
-                >
-                  <h3> {labourscore}</h3>
-                  <h3>Labour Rating </h3>
+              <div className="descrip-brand">
+                <p className="name-brand">{name || "-"}</p>
+                <p className="description-brand">
+                  {explanation || "No-Explanation "}
+                </p>
+              </div>
+              <div className="scrol-brand">
+                <div className="OverallScore-brands-Overall-brand">
+                  <div
+                    className="scrol1-brand"
+                    style={{
+                      "background-color": `${OverallScorehexa}`
+                    }}
+                  >
+                    {overallscore || "0"} <br />
+                  </div>
+
+                  <p className="ooo">Overall Rating</p>
                 </div>
-              </div>
-              <div className="enviorment">
-                <div
-                  className="score2"
-                  style={{
-                    "background-color": `${EnvironmentScorehexa}`
-                  }}
-                >
-                  <h3> {environmentscore}</h3>
-                  <h3>Enviorment Rating</h3>
+                <div className="OverallScore-brands-Environment-brand">
+                  <div
+                    className="scrol3-brand"
+                    style={{
+                      "background-color": `${EnvironmentScorehexa}`
+                    }}
+                  >
+                    {environmentscore || "0"} <br />
+                  </div>
+                  <p className="ooo">Labour Rating</p>
                 </div>
-              </div>
-              <div className="animal">
-                <div
-                  className="score3"
-                  style={{
-                    "background-color": `${AnimalRightshexa}`
-                  }}
-                >
-                  <h3> {animalrightscore}</h3>
-                  <h3>Animal Right Rating </h3>
+                <div className="OverallScore-brands-brand">
+                  <div
+                    className="scrol2-brand"
+                    style={{
+                      "background-color": `${LabourScorehexa}`
+                    }}
+                  >
+                    {labourscore || "0"} <br />
+                  </div>
+                  <p className="ooo"> Environment Rating</p>
                 </div>
               </div>
             </div>
-            <div className="more">
-              <p> Cost:{cost}</p>
-              <p> ProductType: {category}</p>
-              <p>Explanation: {explanation}</p>
+            <div className="div-margin-bottm" />
+          </div>
+          <div className="details-feedback-container">
+            <div className="score-reasons">
+              <div className="MoreDetails">
+                <div className="labour2">
+                  <div
+                    className="score22"
+                    style={{
+                      "background-color": `${EnvironmentScorehexa}`
+                    }}
+                  >
+                    <h3> {environmentscore}</h3>
+                  </div>
+                  <h3 className="name2">Environment Rating </h3>
+                </div>
+                <div className="pargrah-brand">
+                  <p className="They-areas-they-are">
+                    {ReasonForEnvironmentScore}
+                  </p>
+                </div>
+                <div className="labour2">
+                  <div
+                    className="score22"
+                    style={{
+                      "background-color": `${LabourScorehexa}`
+                    }}
+                  >
+                    <h3> {labourscore}</h3>{" "}
+                  </div>
+                  <h3 className="name2">Labour Rating </h3>
+                </div>
+                <div className="pargrah-brand">
+                  <p className="They-areas-they-are">{ReasonForLabourScore}</p>
+                </div>
+                <div className="btn-metodolegy-brand">
+                  {" "}
+                  Find out more about now we score
+                </div>
+              </div>
+            </div>
+
+            <div className="feedback-section">
+              <Feedback name={name} />
             </div>
           </div>
-          <div className="MoreDetails">
-            <div className="labour2">
-              <div
-                className="score22"
-                style={{
-                  "background-color": `${LabourScorehexa}`
-                }}
-              >
-                <h3> {labourscore}</h3>
-              </div>
-              <h3 className="name2">Labour Rating </h3>
-            </div>
-            <p>
-              They are as they are , and their merceills candorwill be missed.
-            </p>
-            <div className="labour2">
-              <div
-                className="score22"
-                style={{
-                  "background-color": `${EnvironmentScorehexa}`
-                }}
-              >
-                <h3> {environmentscore}</h3>
-              </div>
-              <h3 className="name2">EnvironmentRating </h3>
-            </div>
-            <p>The last six epsoides of catastrople are not unlike.</p>
-          </div>
-          <Feedback name={name} />
+          <AddFeedback name={name} />
         </div>
       );
     } else {
       return (
         <div className="sweet-loading">
-          <RingLoader
-            color={"#1389A6"}
+          <FadeLoader
+            color={"black"}
             align-items={"center"}
             text-align={"center"}
           />
