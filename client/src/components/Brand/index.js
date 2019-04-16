@@ -2,7 +2,6 @@ import React from "react";
 import back from "./left.png";
 import "./brand.css";
 import axios from "axios";
-import Feedback from "../Feedback";
 import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
@@ -150,12 +149,13 @@ class Brand extends React.Component {
                     <h3> {environmentscore}</h3>
                   </div>
                   <h3 className="name2">Environment Rating </h3>
+                  <div className="pargrah-brand">
+                    <p className="They-areas-they-are">
+                      {ReasonForEnvironmentScore}
+                    </p>
+                  </div>
                 </div>
-                <div className="pargrah-brand">
-                  <p className="They-areas-they-are">
-                    {ReasonForEnvironmentScore}
-                  </p>
-                </div>
+
                 <div className="labour2">
                   <div
                     className="score22"
@@ -166,9 +166,13 @@ class Brand extends React.Component {
                     <h3> {labourscore}</h3>{" "}
                   </div>
                   <h3 className="name2">Labour Rating </h3>
+                  <div className="pargrah-brand">
+                  <p className="They-areas-they-are">{ReasonForLabourScore}</p>
+
+                  </div>
+
                 </div>
                 <div className="pargrah-brand">
-                  <p className="They-areas-they-are">{ReasonForLabourScore}</p>
                   <div className="labour2">
                     <div
                       className="score22"
@@ -178,11 +182,14 @@ class Brand extends React.Component {
                     >
                       <h3> {labourscore}</h3>
                     </div>
-                    <h3 className="name2">TransparencyRating </h3>
+                    <h3 className="name2">Transparency Rating </h3>
+                    <div className="pargrah-brand">
+                    <p className="They-areas-they-are">
+                      {ReasonForTransparencyScore}
+                    </p>
+                    </div>
                   </div>
-                  <p className="They-areas-they-are">
-                    {ReasonForTransparencyScore}
-                  </p>
+
                 </div>
 
                 <div className="btn-metodolegy-brand">
@@ -192,9 +199,6 @@ class Brand extends React.Component {
               </div>
             </div>
 
-            <div className="feedback-section">
-              <Feedback name={name} />
-            </div>
           </div>
           <AddFeedback name={name} />
         </div>

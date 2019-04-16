@@ -42,6 +42,7 @@
   display: flex;
   flex-direction: row;
   text-align: left !important;
+  margin-bottom: 3%;
 }
 .score1 {
   width: 170px;
@@ -112,7 +113,7 @@
   margin-bottom: 70px;
 }
 .MoreDetails {
-  margin-left: 17px;
+  margin-left: 25%;
   max-width: 100%;
   padding-top: 6%;
   text-align: left !important;
@@ -277,9 +278,13 @@
 }
 .They-areas-they-are {
   display: initial;
+  text-align: center !important;
+  margin-left: 10% !important;
 }
 .pargrah-brand {
   margin-top: 10px;
+  width: 60%;
+
 }
 .animal {
   padding-left: 700px;
@@ -457,6 +462,7 @@
 }
 
 .details-feedback-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   float: left;
