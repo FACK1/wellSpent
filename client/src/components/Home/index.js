@@ -26,7 +26,7 @@ export default class Home extends Component {
     return (
       <div className="main">
         <div>
-          <h1>Well Spent</h1>
+          <h1>WELL SPENT</h1>
           <h2>Helping you to make your shop more ethical</h2>
         </div>
         <div className="main-2">
@@ -37,7 +37,7 @@ export default class Home extends Component {
         </div>
         <br />
         <div className="tabout">
-          <h3>About US</h3>
+          <h3>About Us</h3>
           <div className="aboutus">
             <div className="a1">
               <p className="Number">{Object.keys(info)[1]}</p>
@@ -56,9 +56,8 @@ export default class Home extends Component {
 
         <div className="ext">
           <h1>
-            {" "}
-            Don’t have our Chrome Extension yet? Find out more information{" "}
-            <a href="#">Here</a>{" "}
+            <a href="#">Click here </a>
+            to find out more about our tool to help you shop more Ethically.
           </h1>
         </div>
       </div>

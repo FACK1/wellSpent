@@ -1,5 +1,5 @@
 import React from "react";
-import back from "./back.png";
+import back from "./left.png";
 import "./brand.css";
 import axios from "axios";
 import Feedback from "../Feedback";
@@ -41,6 +41,8 @@ class Brand extends React.Component {
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
+          ReasonForEnvironmentScore:
+            info["Reason for Environment Score"] || "-",
           LabourScorehexa: colourMap[info.LaborScore]
             ? colourMap[info.LaborScore]
             : "#CCCCCF",
@@ -63,10 +65,10 @@ class Brand extends React.Component {
       OverallScorehexa,
       LabourScorehexa,
       EnvironmentScorehexa,
-
       ReasonForEnvironmentScore,
       ReasonForLabourScore,
       ReasonForTransparencyScore,
+      TransparencyScorehexa,
       labourscore,
       transparencyscore,
       environmentscore,
@@ -83,7 +85,7 @@ class Brand extends React.Component {
             <Link to="/Brands">
               <img className="backimages" src={back} alt="img" />
             </Link>
-            <p className="pargraph"> Brand Details </p>
+            <p className="pargraph-Brand-Details"> Brand Details </p>
           </div>
           <div className="big-box-brand">
             <div className="div-box-brand">
@@ -129,7 +131,7 @@ class Brand extends React.Component {
                   >
                     {labourscore || "0"} <br />
                   </div>
-                  <p className="ooo"> Environment Rating</p>
+                  <p className="ooo">Environment Rating</p>
                 </div>
               </div>
             </div>
@@ -167,7 +169,22 @@ class Brand extends React.Component {
                 </div>
                 <div className="pargrah-brand">
                   <p className="They-areas-they-are">{ReasonForLabourScore}</p>
+                  <div className="labour2">
+                    <div
+                      className="score22"
+                      style={{
+                        "background-color": `${TransparencyScorehexa}`
+                      }}
+                    >
+                      <h3> {labourscore}</h3>
+                    </div>
+                    <h3 className="name2">TransparencyRating </h3>
+                  </div>
+                  <p className="They-areas-they-are">
+                    {ReasonForTransparencyScore}
+                  </p>
                 </div>
+
                 <div className="btn-metodolegy-brand">
                   {" "}
                   Find out more about now we score

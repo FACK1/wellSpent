@@ -10,31 +10,38 @@
   height: 50px;
   padding-top: 4px;
   padding-right: 40px;
+  /* .backimages{
+  width: 48px;
+  height: 41px;
+  padding-top: 13px;
+  padding-right: 38px;
+  margin-left: -26%; */
 }
-/* .pargraph{
+.pargraph-Brand-Details {
   font-size: 16pt;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.images{
+.images {
   width: 280px;
   height: 250px;
   margin-right: 65%;
   border: 5px groove;
   border-radius: 10px;
   max-width: 50%;
-} */
-/* .score{
- width: 150px;
- padding:0.5px;
- text-align: center;
- height:150px;
- border-radius: 5px;
-} */
+}
+.score {
+  width: 150px;
+  padding: 0.5px;
+  text-align: center;
+  height: 150px;
+  border-radius: 5px;
+}
 
 .labour2 {
   display: flex;
   flex-direction: row;
+  text-align: left !important;
 }
 .score1 {
   width: 170px;
@@ -66,10 +73,6 @@
   padding: 0.5px;
   text-align: center;
   border-radius: 5px;
-}
-.score3 h3 {
-  display: inline-block;
-  padding: 4px;
 }
 
 .overall {
@@ -110,7 +113,9 @@
 }
 .MoreDetails {
   margin-left: 17px;
-  margin-top: 16px;
+  max-width: 100%;
+  padding-top: 6%;
+  text-align: left !important;
 }
 
 .root {
@@ -123,7 +128,6 @@
   display: flex;
   flex-direction: row;
 }
-
 .os {
   font-size: 30pt !important;
 }
@@ -144,12 +148,33 @@
   justify-content: center;
   align-items: center;
   width: 397px;
+  margin-top: 47px;
 }
 .name2 {
   font-size: 12pt;
   font-family: "Roboto", sans-serif;
-  padding: 5%;
   font-weight: bold;
+  padding-left: -14px;
+}
+.score22 h3 {
+  text-align: center;
+}
+.MoreDetails p {
+  font-size: 12pt;
+  font-family: "Roboto", sans-serif;
+  text-align: left !important;
+  margin-left: 2%;
+  max-width: 0%;
+}
+
+.div1 {
+  display: inline-flex;
+}
+
+.div10 {
+  display: inline-flex;
+  margin-left: 0px;
+  margin-right: 700px;
 }
 .score22 h3 {
   text-align: center;
@@ -168,14 +193,17 @@
   font-family: "Roboto", sans-serif;
 }
 
-.div1 {
-  display: inline-flex;
+.pargraph {
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-right: 27%;
 }
-
-.div10 {
-  display: inline-flex;
-  margin-left: 0px;
-  margin-right: 700px;
+.backimages {
+  width: 30px;
+  height: 40px;
+  padding-right: 16px;
+  padding-top: 1%;
 }
 .div11 {
   display: inline-flex;
@@ -280,6 +308,28 @@
 }
 .pargrah-brand {
   margin-top: 10px;
+}
+.animal {
+  padding-left: 700px;
+  font-size: 12px;
+  padding-top: 12px;
+}
+.detail {
+  margin-top: -163px;
+  margin-left: -80px;
+}
+.details {
+  margin-bottom: 70px;
+}
+.root {
+  padding: 30px;
+  padding-left: 12%;
+}
+.container {
+  display: inline-flex;
+  float: left;
+  margin-bottom: 5%;
+  max-width: 30%;
 }
 
 .descrip-brand {

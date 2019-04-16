@@ -17,6 +17,7 @@ exports.getBrands = (req, res) => {
           LaborScore: record.get('LaborScore'),
           EnvironmentScore: record.get('EnvironmentScore'),
           OverallScore: record.get('OverallScore'),
+          TransparencyScore: record.get('TransparencyScore'),
         }));
         fetchNextPage();
         const colourMap = {};

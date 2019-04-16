@@ -6,7 +6,7 @@ import like from "./assets/like.png";
 import dislike from "./assets/dislike.png";
 import AddFeedback from "./add.js";
 import axios from "axios";
-import { RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 export default class Feedback extends Component {
   state = {
@@ -142,8 +142,8 @@ export default class Feedback extends Component {
                   })
                 ) : (
                   <div className="sweet-loading">
-                    <RingLoader
-                      color={"#1389A6"}
+                    <FadeLoader
+                       color={"black"}
                       loading={this.state.loading}
                     />
                   </div>
