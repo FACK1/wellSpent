@@ -190,6 +190,7 @@ margin-bottom: 70px;
  }
  .score-reasons{
    border: solid gray 1px;
+       width: 100%;
  }
  .label-div{
    display: inline-block;
