@@ -6,11 +6,11 @@
 }
 
 .backimages{
-  width: 50px;
-  height: 50px;
-  padding-top: 4px;
-  padding-right: 40px;
-
+  width: 48px;
+  height: 41px;
+  padding-top: 13px;
+  padding-right: 38px;
+  margin-left: -26%;
 }
 .pargraph{
   font-size: 16pt;

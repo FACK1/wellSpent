@@ -78,7 +78,7 @@ export default class Autosuggests extends Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "Search for brands",
+      placeholder: "Find a brand",
       value,
       onChange: this.onChange
     };
