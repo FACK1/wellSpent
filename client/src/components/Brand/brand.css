@@ -12,7 +12,7 @@
   padding-right: 40px;
 
 }
-.pargraph{
+/* .pargraph{
   font-size: 16pt;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -24,16 +24,20 @@
   border: 5px groove;
   border-radius: 10px;
   max-width: 50%;
-}
-.score{
+} */
+/* .score{
  width: 150px;
  padding:0.5px;
  text-align: center;
  height:150px;
  border-radius: 5px;
 
-}
+} */
 
+.labour2 {
+    display: flex;
+    flex-direction: row;
+}
 .score1{
   width: 170px;
   padding:0.5px;
@@ -117,20 +121,16 @@ margin-bottom: 70px;
  }
 
  .container{
-   display: inline-flex;
-   float: left;
-   margin-bottom: 5%;
    max-width: 30%;
+       display: flex;
+       flex-direction: row;
  }
 
  .os{
        font-size: 30pt !important;
  }
  .MoreDetails{
-   float:left;
-   width:40%;
-   padding-top: 20%;
-   text-align: left !important;
+
 
  }
  .score22{
@@ -157,10 +157,6 @@ margin-bottom: 70px;
    text-align: left !important;
    margin-left: 2%;
 
- }
- .labour2{
-   display: inline-flex;
-   text-align: left !important;
  }
 
  .brandname{
@@ -168,165 +164,271 @@ margin-bottom: 70px;
    margin-left: 9%;
    font-family: 'Roboto', sans-serif;
  }
- @media only screen and (max-width: 600px) {
-   .pargraph{
-      font-size: 10pt;
-      font-weight: bold;
-      font-family: 'Roboto', sans-serif;
-      margin-right: 27%
-   }
-   .backimages {
-     width: 30px;
-     height: 40px;
-     padding-right: 16px;
-     padding-top: 1%;
-}
-.images{
-  width: 118px;
-  height: 136px;
-  margin-right: 83%;
-  border: 5px groove;
-  border-radius: 10px;
-  max-width: 50%;
-}
-  .score{
-    width: 67px;
-  padding: 0.5px;
-  text-align: center;
-  height: 83px;
-  border-radius: 5px
 
-  }
-.score1{
-  width: 133px;
-  padding:0.5px;
-  text-align: center;
-  border-radius: 5px;
-}
-.scoe1 h3{
-  display: inline-block;
-  padding:7px;
-  font-size: 10px;
-}
-.score2{
-  width: 133px;
-  padding:0.5px;
-  text-align: center;
-  border-radius: 5px;
-}
-.score2 h3{
-  display: inline-block;
-  padding:4px;
-  font-size: 10px;
-}
-.score3{
-width: 133px;
-  padding:0.5px;
-  text-align: center;
-  border-radius: 5px;
-}
-.score3 h3{
-  display: inline-block;
-  padding:4px;
-  font-size: 10px;
-}
- .overall{
+ .div1 {
+   display: inline-flex;
+ }
+
+
+ .div10 {
+   display: inline-flex;
+   margin-left: 0px;
+   margin-right: 700px;
+ }
+ .div11 {
+   display: inline-flex;
+ }
+ .div-margin-bottm {
+   width: 100%;
+   height: 40px;
+ }
+
+ .big-box {
+   display: flex;
+   flex-direction: column;
+       float: left;
+ }
+ .score-reasons{
+   border: solid gray 1px;
+ }
+ .label-div{
+   display: inline-block;
+ }
+ .sweet-loading {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    color: black;
-   font-size: 12pt;
-   font-family: 'Roboto', sans-serif;
-   padding-left: 1%;
-   padding-left: 136px;
-   margin-top: -204px;
+   margin-top: 20% !important;
  }
- .more {
-   padding-right: 150px;
-   margin-left: 28%;
-   font-size: 8pt;
-   text-align: left !important;
+
+ .par {
+   font-family: "Alegreya Sans SC", sans-serif;
+   font-weight: bold;
+   font-size: 25pt;
+   margin-top: 30px;
+   margin-left: 40px;
  }
- .labour {
-   padding-left: 700px;
-   padding-right: 0.2px;
+
+ .par2 {
+   font-family: "Roboto", sans-serif;
+   font-weight: bold;
+   font-size: 15pt;
+   margin-top: 40px;
+   margin-left: 10px;
+ }
+ .diva {
+   background-color: #080404;
+   width: 85%;
+   height: 30px;
+   margin-top: 20px;
+   padding-top: 10px;
+ }
+ .a-z {
+   background-color: #f4f4f4;
+   width: 85%;
+   height: 30px;
+   font-family: "Roboto", sans-serif;
+   font-weight: bold;
+   color: black;
+   padding-top: 10px;
+   margin-left: 95px;
+   margin-top: 10px;
+ }
+ .par3 {
+   font-family: "Roboto", sans-serif;
+   font-weight: bold;
+   font-size: 15pt;
+   text-align: left;
+   margin-left: 30px;
+   color: white;
+ }
+ .div-box {
+   padding-left: 38px;
+   background-color: white;
+   border-color: #e5e5e5;
+   max-width: 100%;
+   border-style: groove;
+   margin-top: 30px;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .imge {
+   max-width: 30%;
+   height: 259px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+ }
+ .name {
+   font-family: "Alegreya Sans SC", sans-serif;
+   color: black;
+   margin-right: 100px;
+   font-size: 25pt;
+   margin-top: 20px;
+   float: left;
+   margin-left: 10px;
+ }
+ .descrip {
+   max-width: 50%;
+   display: flex;
+   flex-direction: column;
+ }
+ .OverallScore-brands-Overall {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-right: 48px;
+ }
+
+ .OverallScore-brands-Environment {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+    margin-right: 53px;
+ }
+ .OverallScore-brands {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-right: 15px;
+ }
+
+ .brands-trans {
+   display: flex;
+   margin-right: 6px;
+ }
+ .description {
+   font-family: "Roboto", sans-serif;
+   width: 430px;
+   float: left;
+ }
+ .div-button {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-top: 30px;
+ }
+ .view {
+   width: 160px;
+   height: 30px;
+   background-color: black;
+   color: white;
+   font-family: "Roboto", sans-serif;
+ }
+ .scrol {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-left: 124px;
+   padding-right: 20px;
+   margin-top: -30px;
+ }
+ .scrol1 {
+   height: 34px;
+   margin-top: 10px;
+   text-align: center;
+   padding: 7px;
+   width: 46px;
+ }
+ .ooo {
+   padding-left: 10px;
+ }
+ .scrol2 {
+   height: 30px;
+   margin-top: 6px;
+   margin-left: 10px;
+   font-size: 10pt;
+   text-align: center;
+   padding-top: 6px;
+   padding: 7px;
+   width: 30px;
+ }
+ .scrol3 {
+   height: 30px;
+   margin-top: 10px;
+   margin-left: 6px;
+   font-size: 10pt;
+   text-align: center;
+   padding-top: 6px;
+   padding: 7px;
+   width: 30px;
+ }
+
+ .img-get {
+   width: 180px;
+   height: 150px;
+   padding: 10px;
+ }
+ .close {
+   float: right;
+   background-color: white;
+   width: 20px;
+   margin-top: -17px;
+ }
+ .modal {
+       height: 356px;
+   border-radius: 10px;
+ }
+ .div-pop {
+   border-radius: 10px;
+ }
+
+ .name-input {
+   color: black;
+   text-align: center;
+   text-decoration: none;
+   font-size: 16px;
+   border: none;
+   border-bottom: 2px solid black;
+   margin-left: 30px;
+   width: 300px;
+ }
+ .if-we-are{
+   font-size: 14px;
+ }
+ .informationinput{
+   color: black;
+   text-align: center;
+   text-decoration: none;
+   font-size: 16px;
+   margin-left: 30px;
+   border-style: solid;
+   width: 374px;
+ height: 50px;
+
+ }
+ .label-input-brand-name{
+   margin-right: -25px;
+   display: flex;
+   justify-content: center;
+ }
+ .so-we-can{
    font-size: 12px;
  }
- .enviorment{
-  padding-left: 700px;
-  font-size: 12px;
-   padding-top: 12px;
 
- }
- .animal{
-  padding-left: 700px;
-  font-size: 12px;
-  padding-top: 12px;
- }
- .detail{
-   margin-top: -163px;
-   margin-left: -80px;
-}
-.details{
-margin-bottom: 70px;
-}
- .root{
-   padding: 30px;
-   padding-left: 12%;
- }
- .container{
-   display: inline-flex;
-   float: left;
-   margin-bottom: 5%;
-   max-width: 30%;
+ .btn1 {
+   margin-top: 20px;
+   border-radius: 5px;
+   width: 110px;
+   height: 30px;
+   color: white;
+   background-color: black;
  }
 
- .os{
-   font-size: 15pt !important;
-
+ .div-label {
+   display: inline-block;
+   justify-content: center;
  }
- .score h3{
-   font-size: 8pt;
- }
- .MoreDetails{
-   float:left;
-   width:40%;
-   padding-top: 20%;
-   text-align: left !important;
-
- }
- .score22{
-    width: 70px;
-    padding:2px;
-    text-align: center;
-    height:70px;
-    border-radius: 5px;
-
-}
- .name2{
-   font-size: 10pt;
-   font-family: 'Roboto', sans-serif;
-   padding:5%;
+ .form h3{
    font-weight: bold;
-
- }
- .score22 h3{
-   text-align: center;
-   font-size: 10px;
-
- }
- .MoreDetails p{
-   font-size: 9pt;
-   font-family: 'Roboto', sans-serif;
-   text-align: left !important;
-   margin-left: 2%;
-
- }
- .labour2{
-   display: inline-flex;
-   text-align: left !important;
- }
- .brandname{
-   text-align: left;
-   margin-left: 10%;
-   font-family: 'Roboto', sans-serif;
  }
 
- }
+ .details-feedback-container{
+ display: flex;
+flex-direction: row;
+float: left;
+}

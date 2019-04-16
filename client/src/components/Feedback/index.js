@@ -155,7 +155,6 @@ export default class Feedback extends Component {
             </div>
           </div>
         </div>
-        <AddFeedback name={this.props.name} />
       </div>
     );
   }

@@ -6,6 +6,7 @@ import Feedback from "../Feedback";
 import { FadeLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
+import AddFeedback from "../Feedback/add.js";
 
 class Brand extends React.Component {
   state = {
@@ -70,102 +71,113 @@ class Brand extends React.Component {
     if (!loading) {
       return (
         <div className="root">
-          <div className="container">
-            <Link to="/Brands">
-              <img className="backimages" src={back} alt="img" />
-            </Link>
-            <p className="pargraph"> Brand Details </p>
-          </div>
+        <div className="container">
+          <Link to="/Brands">
+            <img className="backimages" src={back} alt="img" />
+          </Link>
+          <p className="pargraph"> Brand Details </p>
+        </div>
 
-          <img className="images" src={image} alt="" />
-
-          <h3 className="brandname">{name}</h3>
-
-          <div className="ALLdetails">
-            <div className="overall">
-              <div
-                className="score"
-                style={{
-                  "background-color": `${OverallScorehexa}`
-                }}
-              >
-                <h3>OverallRating</h3>
-                <h3 className="os">{overallscore} </h3>
-              </div>
+        <div className="big-box">
+          <div className="div-box">
+            <div className="imge">
+              <img className="img-get" src={image} alt="" />
             </div>
-            <div className="detail">
-              <div className="enviorment">
+            <div className="descrip">
+              <p className="name">{name || "-"}</p>
+              <p className="description">
+                {explanation || "No-Explanation "}
+              </p>
+            </div>
+            <div className="scrol">
+              <div className="OverallScore-brands-Overall">
                 <div
-                  className="score2"
+                  className="scrol1"
+                  style={{
+                    "background-color": `${OverallScorehexa}`
+                  }}
+                >
+                  {overallscore || "0"} <br />
+                </div>
+
+                <p className="ooo">Overall Rating</p>
+              </div>
+              <div className="OverallScore-brands-Environment">
+                <div
+                  className="scrol3"
                   style={{
                     "background-color": `${EnvironmentScorehexa}`
                   }}
                 >
-                  <h3> {environmentscore}</h3>
-                  <h3>Environment Rating</h3>
+                  {environmentscore || "0"} <br />
                 </div>
+                <p className="ooo">Labour Rating</p>
               </div>
-
-              <div className="labour">
+              <div className="OverallScore-brands">
                 <div
-                  className="score1"
+                  className="scrol2"
                   style={{
                     "background-color": `${LabourScorehexa}`
                   }}
                 >
-                  <h3> {labourscore}</h3>
-                  <h3>Labour Rating </h3>
+                  {labourscore || "0"} <br />
                 </div>
+                <p className="ooo"> Environment Rating</p>
               </div>
-
-              <div className="animal">
+              <div className="brands-trans">
                 <div
-                  className="score3"
+                  className="scrol3"
                   style={{
                     "background-color": `${TransparencyScorehexa}`
                   }}
                 >
-                  <h3> {transparencyscore}</h3>
-                  <h3>Transparency Rating </h3>
+                  {transparencyscore || "0"} <br />
                 </div>
+                <p className="ooo"> Transparency Rating</p>
               </div>
-            </div>
-            <div className="more">
-              <p> Cost:{cost}</p>
-              <p> ProductType: {producttype}</p>
-              <p> Explanation: {explanation}</p>
             </div>
           </div>
-          <div className="MoreDetails">
-            <div className="labour2">
-              <div
-                className="score22"
-                style={{
-                  "background-color": `${LabourScorehexa}`
-                }}
-              >
-                <h3> {labourscore}</h3>
-              </div>
-              <h3 className="name2">LabourRating </h3>
-            </div>
-            <p>
-              They are as they are , and their merceills candorwill be missed.
-            </p>
-            <div className="labour2">
-              <div
-                className="score22"
-                style={{
-                  "background-color": `${EnvironmentScorehexa}`
-                }}
-              >
-                <h3> {environmentscore}</h3>
-              </div>
-              <h3 className="name2">EnvironmentRating </h3>
-            </div>
-            <p>The last six epsoides of catastrople are not unlike.</p>
-          </div>
-          <Feedback name={name} />
+          <div className="div-margin-bottm" />
         </div>
+        <div className="details-feedback-container">
+<div className="score-reasons">
+<div className="MoreDetails">
+  <div className="labour2">
+    <div
+      className="score22"
+      style={{
+        "background-color": `${LabourScorehexa}`
+      }}
+    >
+      <h3> {labourscore}</h3>
+    </div>
+    <h3 className="name2">LabourRating </h3>
+  </div>
+  <p>
+    They are as they are , and their merceills candorwill be missed.
+  </p>
+  <div className="labour2">
+    <div
+      className="score22"
+      style={{
+        "background-color": `${EnvironmentScorehexa}`
+      }}
+    >
+      <h3> {environmentscore}</h3>
+    </div>
+    <h3 className="name2">EnvironmentRating </h3>
+  </div>
+  <p>The last six epsoides of catastrople are not unlike.</p>
+</div>
+
+
+</div>
+<div className="feedback-section">
+  <Feedback name={name} />
+</div>
+</div>
+<AddFeedback name={name} />
+</div>
       );
     } else {
       return (
