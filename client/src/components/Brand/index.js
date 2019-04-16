@@ -25,8 +25,14 @@ class Brand extends React.Component {
           name: info["BrandName"] || "-",
           overallscore: info["OverallScore"] || "0",
           environmentscore: info["EnvironmentScore"] || "0",
+          ReasonforEnvironmentScore:
+            info["Reason for Environment Score"] || "0",
           labourscore: info["LaborScore"] || "0",
+          ReasonforLabourScore: info["Reason for Labour Score"] || "0",
+          animalrightscore: info["Animal Rights Score"] || "0",
           transparencyscore: info.TransparencyScore || "0",
+          ReasonforTransparencyScore:
+            info["Reason for Transparency Score"] || "0",
           cost: info["Cost"] || "-",
           producttype: info.category || "-",
           explanation: info["Explanation"] || "-",
@@ -36,6 +42,8 @@ class Brand extends React.Component {
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
+          ReasonForEnvironmentScore:
+            info["Reason for Environment Score"] || "-",
           LabourScorehexa: colourMap[info.LaborScore]
             ? colourMap[info.LaborScore]
             : "#CCCCCF",
@@ -58,7 +66,10 @@ class Brand extends React.Component {
       OverallScorehexa,
       LabourScorehexa,
       EnvironmentScorehexa,
+      ReasonforEnvironmentScore,
+      ReasonforLabourScore,
       TransparencyScorehexa,
+      ReasonforTransparencyScore,
       labourscore,
       transparencyscore,
       environmentscore,

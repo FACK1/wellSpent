@@ -156,7 +156,7 @@ margin-bottom: 70px;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
    margin-left: 2%;
-
+   max-width: 0%;
  }
 
  .brandname{
