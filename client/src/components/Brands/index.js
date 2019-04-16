@@ -74,9 +74,9 @@ class Brands extends Component {
               </Link>
               <div className="par"> Brands</div>
             </div>
-            <div className="div11">
+            <div className="div11" onClick={this.openModal}>
               <div className="div-pop">
-                <div className="add" onClick={this.openModal} />
+                <div className="add" />
                 <Popup
                   open={this.state.open}
                   closeOnDocumentClick
@@ -214,27 +214,27 @@ class Brands extends Component {
 
                         <p className="ooo">Overall Rating</p>
                       </div>
-                      <div className="OverallScore-brands-Environment">
+                      <div className="OverallScore-brands">
                         <div
-                          className="scrol3"
+                          className="scrol2"
                           style={{
                             "background-color": `${EnvironmentScoreColour}`
                           }}
                         >
                           {brand.EnvironmentScore || "0"} <br />
                         </div>
-                        <p className="ooo">Labour Rating</p>
+                        <p className="ooo"> Environment Rating</p>
                       </div>
-                      <div className="OverallScore-brands">
+                      <div className="OverallScore-brands-Environment">
                         <div
-                          className="scrol2"
+                          className="scrol3"
                           style={{
                             "background-color": `${LabourScoreColour}`
                           }}
                         >
                           {brand.LaborScore || "0"} <br />
                         </div>
-                        <p className="ooo"> Environment Rating</p>
+                        <p className="ooo">Labour Rating</p>
                       </div>
                       <div className="brands-trans">
                         <div

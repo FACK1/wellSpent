@@ -6,10 +6,15 @@
 .div10 {
   display: inline-flex;
   margin-left: 0px;
-  margin-right: 700px;
+  margin-right: 560px;
 }
 .div11 {
   display: inline-flex;
+  background-color: black;
+  margin-top: 20px;
+  margin-bottom: 19px;
+  padding: 5px;
+  margin-right: 70px;
 }
 .div-margin-bottm {
   width: 100%;
@@ -34,12 +39,15 @@
 }
 
 .back {
-  background-image: url("image 10.png");
-  height: 50px;
-  width: 50px;
-  background-repeat: no-repeat;
-  background-color: white;
+  background-image: url("left.png");
+  background-repeat: round;
   border: none;
+  width: 19px;
+  height: 33px;
+  padding-top: 14px;
+  padding-right: 40px;
+  margin-top: 41%;
+
 }
 .par {
   font-family: "Alegreya Sans SC", sans-serif;
@@ -47,22 +55,23 @@
   font-size: 25pt;
   margin-top: 30px;
   margin-left: 40px;
+  margin-right: 200px;
 }
 .add {
-  background-image: url("image 9.1.png");
+  background-image: url("add-icon.png");
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
-  background-color: white;
   border: none;
-  margin-top: 40px;
+  margin-top: 5px;
 }
 .par2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 15pt;
-  margin-top: 40px;
+  margin-top: 5px;
   margin-left: 10px;
+  color: white;
 }
 .diva {
   background-color: #080404;
@@ -292,7 +301,7 @@ height: 50px;
     margin-left: -51px;
   }
   .back {
-    background-image: url("image 10.png");
+    background-image: url("left.png");
     height: 50px;
     width: 50px;
     background-repeat: no-repeat;
@@ -302,7 +311,7 @@ height: 50px;
     margin-right: 35px;
   }
   .add {
-    background-image: url("image 9.1.png");
+    background-image: url("add-icon.png");
     height: 30px;
     width: 30px;
     background-repeat: no-repeat;
