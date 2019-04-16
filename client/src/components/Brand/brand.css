@@ -129,7 +129,7 @@ margin-bottom: 70px;
  .MoreDetails{
    float:left;
    width:40%;
-   padding-top: 20%;
+   padding-top: 15%;
    text-align: left !important;
 
  }
@@ -156,7 +156,7 @@ margin-bottom: 70px;
    font-family: 'Roboto', sans-serif;
    text-align: left !important;
    margin-left: 2%;
-
+   max-width: 0%;
  }
  .labour2{
    display: inline-flex;
