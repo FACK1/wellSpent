@@ -111,27 +111,27 @@ class Brand extends React.Component {
 
                   <p className="ooo">Overall Rating</p>
                 </div>
-                <div className="OverallScore-brands-Environment-brand">
+                <div className="OverallScore-brands-brand">
                   <div
-                    className="scrol3-brand"
+                    className="scrol2-brand"
                     style={{
                       "background-color": `${EnvironmentScorehexa}`
                     }}
                   >
                     {environmentscore || "0"} <br />
                   </div>
-                  <p className="ooo">Labour Rating</p>
+                  <p className="ooo">Environment Rating</p>
                 </div>
-                <div className="OverallScore-brands-brand">
+                <div className="OverallScore-brands-Environment-brand">
                   <div
-                    className="scrol2-brand"
+                    className="scrol3-brand"
                     style={{
                       "background-color": `${LabourScorehexa}`
                     }}
                   >
                     {labourscore || "0"} <br />
                   </div>
-                  <p className="ooo">Environment Rating</p>
+                  <p className="ooo">Labour Rating</p>
                 </div>
               </div>
             </div>

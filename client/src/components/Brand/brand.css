@@ -166,16 +166,6 @@
   margin-left: 2%;
   max-width: 0%;
 }
-
-.div1 {
-  display: inline-flex;
-}
-
-.div10 {
-  display: inline-flex;
-  margin-left: 0px;
-  margin-right: 700px;
-}
 .score22 h3 {
   text-align: center;
 }
@@ -205,9 +195,6 @@
   padding-right: 16px;
   padding-top: 1%;
 }
-.div11 {
-  display: inline-flex;
-}
 .div-margin-bottm {
   width: 100%;
   height: 40px;
@@ -235,21 +222,6 @@
   margin-top: 20% !important;
 }
 
-.par {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: bold;
-  font-size: 25pt;
-  margin-top: 30px;
-  margin-left: 40px;
-}
-
-.par2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 15pt;
-  margin-top: 40px;
-  margin-left: 10px;
-}
 .diva {
   background-color: #080404;
   width: 85%;
@@ -328,7 +300,6 @@
 .container {
   display: inline-flex;
   float: left;
-  margin-bottom: 5%;
   max-width: 30%;
 }
 
@@ -433,9 +404,6 @@
 }
 .modal {
   height: 356px;
-  border-radius: 10px;
-}
-.div-pop {
   border-radius: 10px;
 }
 
