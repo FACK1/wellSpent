@@ -4,7 +4,11 @@
   align-items: center;
   color: #1389a6;
 }
-
+.animal {
+  padding-left: 700px;
+  font-size: 12px;
+  padding-top: 12px;
+}
 .backimages {
   width: 50px;
   height: 50px;
@@ -99,11 +103,7 @@
   font-size: 12px;
   padding-top: 12px;
 }
-.animal {
-  padding-left: 700px;
-  font-size: 12px;
-  padding-top: 12px;
-}
+
 .detail {
   margin-top: -150px;
   margin-left: -80px;
@@ -281,11 +281,7 @@
 .pargrah-brand {
   margin-top: 10px;
 }
-.animal {
-  padding-left: 700px;
-  font-size: 12px;
-  padding-top: 12px;
-}
+
 .detail {
   margin-top: -163px;
   margin-left: -80px;
@@ -320,6 +316,12 @@
   flex-direction: row;
   justify-content: center;
   margin-right: 53px;
+}
+.OverallScore-brands-transparancy-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 10px;
 }
 .OverallScore-brands-brand {
   display: flex;
