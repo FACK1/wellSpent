@@ -99,7 +99,6 @@ export default class Feedback extends Component {
               <h3>What does the community think about {this.props.name} </h3>
             </div>
             <div className="mainorg">
-              <div className="line" />
               <div className="cards">
                 <h3>Feedback</h3>
                 <h3>{this.state.NoData}</h3>
@@ -137,8 +136,6 @@ export default class Feedback extends Component {
                               </div>
                             </div>
                           </div>
-
-                          <div className="line2" />
                         </div>
                       </div>
                     );
@@ -154,8 +151,8 @@ export default class Feedback extends Component {
               </div>
             </div>
           </div>
+          <div className="btn-metodo"> submit your feedback below</div>
         </div>
-        <AddFeedback name={this.props.name} />
       </div>
     );
   }
