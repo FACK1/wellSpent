@@ -96,6 +96,12 @@ class Brand extends React.Component {
                 <p className="description-brand">
                   {explanation || "No-Explanation "}
                 </p>
+                <p className="description-brand">
+                  Product Type : {producttype || "No-Product Type "}
+                </p>
+                <p className="description-brand">
+                  Product Cost : {cost || "No-Product cost "}
+                </p>
               </div>
               <div className="scrol-brand">
                 <div className="OverallScore-brands-Overall-brand">
