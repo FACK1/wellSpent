@@ -135,6 +135,18 @@ class Brand extends React.Component {
                   </div>
                   <p className="ooo">Labour Rating</p>
                 </div>
+
+                <div className="OverallScore-brands-transparancy-brand">
+                  <div
+                    className="scrol3-brand"
+                    style={{
+                      "background-color": `${TransparencyScorehexa}`
+                    }}
+                  >
+                    {transparencyscore || "0"} <br />
+                  </div>
+                  <p className="ooo">Transparency Rating</p>
+                </div>
               </div>
             </div>
             <div className="div-margin-bottm" />
