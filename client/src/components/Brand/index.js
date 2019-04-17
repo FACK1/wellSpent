@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import defaultimage from "./x.jpg";
 import AddFeedback from "../Feedback/add.js";
 
+
 class Brand extends React.Component {
   state = {
     info: [],
