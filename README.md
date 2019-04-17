@@ -22,11 +22,13 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
     - Enable to delete feedback.
  - Leave the account
  
- # Key Technologies   
- - Express JS : https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
- - React.js : https://reactjs.org/docs/getting-started.html
- - Airtable:https://airtable.com/
- - Axios : https://www.npmjs.com/package/axios
+
+# heroku Link - this version contains feedback section
+https://wellspent-ethical.herokuapp.com/#/
+
+# This version doesn't contain feedback section 
+https://wellspent2.herokuapp.com/#/ 
+
 
  # How to run our app on your local machine?
  Follow these instruction in order:
@@ -56,12 +58,13 @@ WellSpent is a web app that enables you to shop ethically and get the ethical de
 8- Open the app by write in your browser `http://localhost:3000/`
  
 
+ # Key Technologies   
+ - Express JS : https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
+ - React.js : https://reactjs.org/docs/getting-started.html
+ - Airtable:https://airtable.com/
+ - Axios : https://www.npmjs.com/package/axios
 
 
-# heroku Link
-https://wellspent-ethical.herokuapp.com/#/
-# heroku Link version 2
-https://wellspent2.herokuapp.com/#/
 # DataBase Structure 
 ![111](https://user-images.githubusercontent.com/35188117/54487653-44a35480-48a1-11e9-9857-45ec9e62c430.png)
 
