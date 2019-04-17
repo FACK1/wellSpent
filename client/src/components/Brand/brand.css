@@ -4,6 +4,17 @@
   align-items: center;
   color: #1389a6;
 }
+.atrbute{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prototype{
+display: flex;
+flex-direction: row;
+float: left;
+margin-right: 30px;
+}
 
 .backimages {
   width: 50px;
