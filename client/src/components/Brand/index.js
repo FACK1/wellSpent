@@ -41,8 +41,6 @@ class Brand extends React.Component {
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
-          ReasonForEnvironmentScore:
-            info["Reason for Environment Score"] || "-",
           LabourScorehexa: colourMap[info.LaborScore]
             ? colourMap[info.LaborScore]
             : "#CCCCCF",
@@ -97,6 +95,10 @@ class Brand extends React.Component {
                 <p className="description-brand">
                   {explanation || "No-Explanation "}
                 </p>
+                <div className="atrbute">
+                  <div className="prototype">producttype:{producttype}</div>
+                  <div className="cost">cost:{cost}</div>
+                </div>
               </div>
               <div className="scrol-brand">
                 <div className="OverallScore-brands-Overall-brand">
@@ -188,9 +190,9 @@ class Brand extends React.Component {
                         "background-color": `${TransparencyScorehexa}`
                       }}
                     >
-                      <h3> {labourscore}</h3>
+                      <h3> {transparencyscore}</h3>
                     </div>
-                    <h3 className="name2">TransparencyRating </h3>
+                    <h3 className="name2">Transparency Rating </h3>
                   </div>
                   <p className="They-areas-they-are">
                     {ReasonForTransparencyScore}
