@@ -172,7 +172,6 @@ class Brand extends React.Component {
                   </div>
 
                 </div>
-                <div className="pargrah-brand">
                   <div className="labour2">
                     <div
                       className="score22"
@@ -180,7 +179,7 @@ class Brand extends React.Component {
                         "background-color": `${TransparencyScorehexa}`
                       }}
                     >
-                      <h3> {labourscore}</h3>
+                      <h3> {transparencyscore}</h3>
                     </div>
                     <h3 className="name2">Transparency Rating </h3>
                     <div className="pargrah-brand">
@@ -188,7 +187,6 @@ class Brand extends React.Component {
                       {ReasonForTransparencyScore}
                     </p>
                     </div>
-                  </div>
 
                 </div>
 
