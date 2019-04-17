@@ -176,9 +176,9 @@ class Brand extends React.Component {
                         "background-color": `${TransparencyScorehexa}`
                       }}
                     >
-                      <h3> {labourscore}</h3>
+                      <h3> {transparencyscore}</h3>
                     </div>
-                    <h3 className="name2">TransparencyRating </h3>
+                    <h3 className="name2">Transparency Rating </h3>
                   </div>
                   <p className="They-areas-they-are">
                     {ReasonForTransparencyScore}
