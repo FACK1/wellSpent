@@ -40,8 +40,6 @@ class Brand extends React.Component {
           EnvironmentScorehexa: colourMap[info.EnvironmentScore]
             ? colourMap[info.EnvironmentScore]
             : "#CCCCCF",
-          ReasonForEnvironmentScore:
-            info["Reason for Environment Score"] || "-",
           LabourScorehexa: colourMap[info.LaborScore]
             ? colourMap[info.LaborScore]
             : "#CCCCCF",
@@ -96,12 +94,10 @@ class Brand extends React.Component {
                 <p className="description-brand">
                   {explanation || "No-Explanation "}
                 </p>
-                <p className="description-brand">
-                  Product Type : {producttype || "No-Product Type "}
-                </p>
-                <p className="description-brand">
-                  Product Cost : {cost || "No-Product cost "}
-                </p>
+                <div className="atrbute">
+                  <div className="prototype">producttype:{producttype}</div>
+                  <div className="cost">cost:{cost}</div>
+                </div>
               </div>
               <div className="scrol-brand">
                 <div className="OverallScore-brands-Overall-brand">
