@@ -209,7 +209,7 @@ class Brands extends Component {
                             "background-color": `${OverallScoreColour}`
                           }}
                         >
-                          {brand.OverallScore || "0"} <br />
+                          {brand.OverallScore || "TBD"} <br />
                         </div>
 
                         <p className="ooo">Overall Rating</p>
@@ -221,7 +221,7 @@ class Brands extends Component {
                             "background-color": `${EnvironmentScoreColour}`
                           }}
                         >
-                          {brand.EnvironmentScore || "0"} <br />
+                          {brand.EnvironmentScore || "TBD"} <br />
                         </div>
                         <p className="ooo"> Environment Rating</p>
                       </div>
@@ -232,7 +232,7 @@ class Brands extends Component {
                             "background-color": `${LabourScoreColour}`
                           }}
                         >
-                          {brand.LaborScore || "0"} <br />
+                          {brand.LaborScore || "TBD"} <br />
                         </div>
                         <p className="ooo">Labour Rating</p>
                       </div>
@@ -243,7 +243,7 @@ class Brands extends Component {
                             "background-color": `${TransparencyScoreColour}`
                           }}
                         >
-                          {brand.TransparencyScore || "0"} <br />
+                          {brand.TransparencyScore || "TBD"} <br />
                         </div>
                         <p className="ooo"> Transparency Rating</p>
                       </div>
