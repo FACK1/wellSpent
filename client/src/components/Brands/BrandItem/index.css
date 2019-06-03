@@ -1,0 +1,185 @@
+.item-wrap {
+  padding: 20px;
+  background-color: white;
+  border-color: black;
+  width: 75%;
+  height: 220px;
+  border-style: solid;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+}
+
+.image-wrap {
+  max-width: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid grey 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 180px;
+  padding: 10px;
+}
+
+.name {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: black;
+  margin-right: 100px;
+  font-size: 25pt;
+  margin-top: 20px;
+  float: left;
+  margin-left: 10px;
+}
+.info-wrap {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.scores-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.score-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-weight: bold;
+}
+.score-overall {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  margin-right: 5px;
+}
+.score-labour {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  margin-right: 5px;
+}
+.score-environment {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-wrap {
+    background-color: #f4f4f4;
+    max-width: 32%;
+    height: 170px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: -26px;
+  }
+  .logo {
+    width: 85px;
+    height: 120px;
+    padding: 10px;
+  }
+
+  .info-wrap {
+    max-width: 7%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-wrap {
+    font-family: "Roboto", sans-serif;
+    margin-top: -8px;
+    margin-left: 11px;
+    width: 92px;
+    float: left;
+    font-size: 10pt;
+  }
+  .view-button {
+    border-radius: 20px;
+    width: 77px;
+    height: 25px;
+    background-color: #1389a6;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin-left: 73px;
+  }
+  .score-wrap {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    padding-left: 88px;
+    padding-bottom: 19px;
+    padding-top: 5px;
+    padding-right: 20px;
+  }
+
+  .score-overall {
+    max-width: 140px;
+    height: 33px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 7px;
+    font-size: 10px;
+  }
+  .score-labour {
+    max-width: 105px;
+    height: 36px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 10pt;
+    text-align: center;
+    padding-top: 6px;
+    padding: 7px;
+    font-size: 8pt;
+  }
+  .score-environment {
+    max-width: 115px;
+    height: 34px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 6px;
+    font-size: 10pt;
+    text-align: center;
+    padding-top: 6px;
+    padding: 7px;
+    font-size: 7pt;
+  }
+
+  .view-button {
+    border-radius: 20px;
+    width: 79px;
+    height: 30px;
+    background-color: #1389a6;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+  }
+}
