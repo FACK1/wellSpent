@@ -23,13 +23,13 @@ class Brand extends React.Component {
         this.setState({
           image: info.Image ? info.Image[0].thumbnails.large.url : defaultimage,
           name: info["BrandName"] || "-",
-          overallscore: info["OverallScore"] || "0",
-          environmentscore: info["EnvironmentScore"] || "0",
+          overallscore: info["OverallScore"] || "TBD",
+          environmentscore: info["EnvironmentScore"] || "TBD",
           ReasonForEnvironmentScore:
             info["Reason for Environment Score"] || "No Result",
-          labourscore: info["LaborScore"] || "0",
+          labourscore: info["LaborScore"] || "TBD",
           ReasonForLabourScore: info["Reason for Labour Score"] || "No Result",
-          transparencyscore: info.TransparencyScore || "0",
+          transparencyscore: info.TransparencyScore || "TBD",
           ReasonForTransparencyScore:
             info["Reason for Transparency Score"] || "No Result",
           cost: info["Cost"] || "-",
@@ -96,8 +96,8 @@ class Brand extends React.Component {
                   {explanation || "No-Explanation "}
                 </p>
                 <div className="atrbute">
-                  <div className="prototype">producttype:{producttype}</div>
-                  <div className="cost">cost:{cost}</div>
+                  <div className="prototype">producttype : {producttype} </div>
+                  <div className="cost">cost : {cost} </div>
                 </div>
               </div>
               <div className="scrol-brand">
@@ -108,7 +108,7 @@ class Brand extends React.Component {
                       "background-color": `${OverallScorehexa}`
                     }}
                   >
-                    {overallscore || "0"} <br />
+                    {overallscore || "TBD"} <br />
                   </div>
 
                   <p className="ooo">Overall Rating</p>
@@ -120,7 +120,7 @@ class Brand extends React.Component {
                       "background-color": `${EnvironmentScorehexa}`
                     }}
                   >
-                    {environmentscore || "0"} <br />
+                    {environmentscore || "TBD"} <br />
                   </div>
                   <p className="ooo">Environment Rating</p>
                 </div>
@@ -131,7 +131,7 @@ class Brand extends React.Component {
                       "background-color": `${LabourScorehexa}`
                     }}
                   >
-                    {labourscore || "0"} <br />
+                    {labourscore || "TBD"} <br />
                   </div>
                   <p className="ooo">Labour Rating</p>
                 </div>
@@ -143,7 +143,7 @@ class Brand extends React.Component {
                       "background-color": `${TransparencyScorehexa}`
                     }}
                   >
-                    {transparencyscore || "0"} <br />
+                    {transparencyscore || "TBD"} <br />
                   </div>
                   <p className="ooo">Transparency Rating</p>
                 </div>
