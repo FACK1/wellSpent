@@ -97,7 +97,7 @@ class Brand extends React.Component {
                 </p>
                 <div className="atrbute">
                   <div className="prototype">Product Type: {producttype} </div>
-                  <div className="cost">cost : {cost} s</div>
+                  <div className="cost">Cost: {cost}</div>
                 </div>
               </div>
               <div className="scrol-brand">
